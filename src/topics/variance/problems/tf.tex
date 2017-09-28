@@ -1,0 +1,11 @@
+\question \textbf{True or False?}\newline
+Assume that $X$ is a discrete random variable. If $Var(X) = 0$, then 
+$X$ is a constant.
+
+\begin{solution}
+TRUE. Let $\mu = \E[X]$. By definition,
+ \[0 = \var(X) = \E[(X - \mu)^2] = \sum \omega ∈Ω \P[\omega](X(\omega)- \mu)^2 \]
+The RHS is the sum of non-negative numbers, so if the sum is 0, each term must be 0. So 
+\[\P[\omega] > 0 \rightarrow (X(\omega) - \mu)^2 = 0 =⇒ X(\omega) = \mu. \]
+Therefore $X$ is constant (equal to $\mu = \E[X]$).
+\end{solution}

@@ -1,0 +1,77 @@
+\documentclass{exam}
+\usepackage{../../scripts/meta}
+
+%%% Change these %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\discnumber{3}
+\title{CRT, Bijections, FLT, RSA}
+\date{September 18 to September 22, 2017}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\rule{\textwidth}{0.15em}
+\fontsize{12}{15}\selectfont
+\thispagestyle{empty}
+
+
+%%% General Notes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{General Comments}
+\begin{questions}
+\item Logistics
+\begin{itemize}
+\item There will be no sections on Monday; the midterm is then. 
+\end{itemize}
+\item Bijections
+\begin{itemize}
+\item Make sure that they understand one-to-one = injective and onto = surjective
+\item Make sure to go over what it means to be a well-defined function, this is \textit{essential} to understanding injective/surjective.
+\item Don't be afraid to spend a good chunk of time talking through the drawings.
+\item Many students will assume that surjections are just injections from the codomain to the domain (they are not!).
+% \item[injection] For a function $f : C \to D$ $\forall x, y \in C\ldotp f(x) = f(y) \implies x = y$
+% \item[surjection] For a function $f : C \to D$ $\forall y \in D\ldotp \exists x \in C\ldotp f(x) = y$
+\item The “why is this mapping (not) bijective” questions are important
+\item Make sure they’re comfortable with bijections (this will be especially important in RSA)
+\item Emphasize that bijection is equivalent to invertibility.
+\end{itemize}
+\item FLT
+\begin{itemize}
+\item Last question is kind of repetitive – skip if low on time
+\end{itemize}
+
+\item RSA
+\begin{itemize}
+\item Sections earlier in the week may not have strong RSA practice, so don’t spend too much time if they aren’t very familiar with it
+\item If you don’t get to the RSA questions, briefly explain how it works on a high-level
+\item Make sure they understand how RSA actually works – the implementation questions test for that pretty well
+\item Draw a picture! Ask what is public? What is private?
+\item Coin tosses question is interesting. Tests if they actually understand why RSA works, rather than just how it’s implemented
+\item Go over the proof from notes on how/why RSA works
+\end{itemize}
+
+\item CRT
+\begin{itemize}
+\item This may or not be covered. 
+% UPDATE THIS^
+\item This is something that students have a bit of trouble with, but I'd say work through a simple case. 
+\end{itemize}
+
+\item Polynomials
+\begin{itemize}
+\item Monday-Wednesday will probably not get to this
+\end{itemize}
+
+\item Secret Sharing
+\begin{itemize}
+\item This is in there just for Friday people
+\end{itemize}
+\item Mandatory questions you have to get to
+\begin{itemize}
+\item Bijections:  Why you can’t find injections/bijections between some spaces
+\item FLT: FLT Proof
+\item RSA: That one proof about how it works and applies FLT
+\item Polynomials: Only do this if you have time, if you get to this do a vanilla intro
+\item Secret Sharing: Again do a vanilla intro if you get to this section
+\end{itemize}
+
+\end{questions}
+\end{document}

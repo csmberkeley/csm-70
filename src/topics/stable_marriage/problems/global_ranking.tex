@@ -1,0 +1,52 @@
+\question Imagine that in the context of stable marriage all 
+men have the same preference list. That is to say there is a 
+global ranking of women, and men's preferences are directly 
+determined by that ranking.
+Use any method of proof to answer the following questions.
+
+\begin{questions}
+\item Prove that the first woman in the ranking has to be paired with 
+her first choice in any stable pairing.
+\begin{solution} [1.2 in]
+ If the first woman is not paired with her first choice, then she and 
+ her first choice would form a rogue couple, because her first choice 
+ prefers her over any other woman, and vice versa.
+\end{solution}
+
+\item Prove that the second woman has to be paired with her first 
+choice if that choice is not the same as the first woman's first choice. 
+Otherwise she has to be paired with her second choice.
+\begin{solution}[1.2 in]
+If the first and second women have different first choices, then the 
+second woman must be matched to her first choice. Otherwise she and her 
+first choice would form a rogue couple (since her first choice is not 
+matched to the first woman, he would prefer the second woman over his 
+current match).
+If the first choices are the same, then the second woman must be paired 
+with her second choice, otherwise she and her second choice would form 
+a rogue couple (neither of them are matched to their first choices, 
+and they are each other's second choice).
+\end{solution}
+
+\item Continuing this way, assume that we have determined the pairs 
+for the first $k-1$ women in the ranking. Who should the $k$-th woman 
+be paired with?
+\begin{solution}[1.2 in]
+The $k$-th woman should be paired with the first man on her list who 
+has not been matched yet (with the first $k-1$ women). If she's not 
+matched to him, they would form a rogue couple. This is because the 
+man would have to be matched to a woman ranked worse than $k$, so she 
+would prefer the $k$-th woman over his current partner, and the $k$-th 
+woman obviously prefers him to whoever she's matched with.
+\end{solution}
+
+\item  Prove that there is a unique stable pairing.
+\begin{solution}
+In the previous parts, we saw that for each woman, given the pairs 
+for the lower-ranked women, her pair would be determined uniquely. So 
+there is only one stable pairing.
+This can be stated and proved more rigorously using induction. Namely 
+that there is a unique pairing for the first $k$ women, assuming 
+stability. An induction on $k$ would prove this.
+\end{solution}
+\end{questions}

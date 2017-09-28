@@ -1,0 +1,27 @@
+\q{5}{Bomb Bounds}
+
+\begin{enumerate}
+\item Let X be the sum of 20 i.i.d. Poisson Random Variables $X_1 \dotsc X_{20}$ with E[$X_i$] = 1. Use Markov's inequality and Chebyshev's inequality to find two upper bounds on $Pr(X \geq 26)$
+
+% \solution{
+% Using Markov’s inequality, we have 20/26 = 10/13. We note that since these are Poisson RVs, that the variance will also be 1. Using Chebyshev’s inequality we are bounding the probability that $|x-20| \geq 6$, thus have $\frac{20}{36} = \frac{5}{9}$
+% }
+
+\vspace{6cm}
+
+\item Let $Y$ be a Binomial Random Variable with $n$ trials and an unknown probability of success $p$. Given that we don’t know $p$, give the tightest bound possible using Chebyshev's on the probability that $Y \geq 5$
+
+% \solution{
+% Since $p$ is between 1 and 0, and since the variance of a Binomial RV is $np(1-p)$, the $p$ that maximises the variance is $\frac{1}{2}$, so we know that $Var(Y) \leq \frac{n}{4}$, so we can use this in chebyshev's to get an upper bound even without knowing $p$. By using this value as variance, we get $\frac{n}{100}$ as our bound.
+% }
+
+\vspace{6cm}
+
+\item Let $Z$ be a normally distributed Random Variable (with mean $\mu$ and SD $\sigma$). Use Chebyshev's inequality to bound as tightly as possible the probability of falling more than $k \in R$ standard deviations above the mean. 
+
+% \solution{
+% By plugging in $k*\sigma $ as our $\alpha$, and knowing that $sigma^2$ is our variance, we get $\frac{1}{k}$. We can tighten this bound by noting that a normal distribution is symmetric, so if we want the probability that we are specifically above a certain point (as we do in this case) we can divide the result of Chebyshev's in half, leaving us with $\frac{1}{2k}$ as the tightest bound that we can get using Chebyshev's.
+% }
+
+
+\end{enumerate}

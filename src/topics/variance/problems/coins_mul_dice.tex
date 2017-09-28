@@ -1,0 +1,11 @@
+\question Say you're playing a game with a coin and die, where you 
+flip the coin 3 times and roll the die once. In this game, your score 
+is given by the number of heads that show multiplied with the die result. 
+What is the expected value of your score? What’s the variance?
+%\vspace{5cm}
+\begin{solution}[3cm]
+$\E(XY) = \E(X)\E(Y) =\frac{21}{4}$ since $X$ and $Y$ are independent.
+$\var(XY) = \E(X^2Y^2) - \E(XY)^2 = \E(X^2)\E(Y^2) - \E(X)^2 \E(Y)^2$
+               $= 3*\frac{91}{6} - \frac{3}{2}^2 * \frac{7}{2}^2 = 
+               \frac{91}{2} - \frac{9}{4} * \frac{49}{4} = 17.9375 = \frac{287}{16}$
+\end{solution}

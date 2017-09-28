@@ -1,0 +1,72 @@
+\documentclass{exam}
+\usepackage{../../scripts/meta}
+
+%%% Change these %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\discnumber{0}
+\title{}
+\date{Graphs, Trees, Hypercubes, Bijections, FLT, Modular Arithmetic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\rule{\textwidth}{0.15em}
+\fontsize{12}{15}\selectfont
+\thispagestyle{empty}
+
+
+%%% Include topics here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{General Comments - Week} 
+\begin{enumerate}
+	\item There will be a midterm on 9/18. You don't need to do anything to review, but just be aware there may be very stressed students in your section. 
+\end{enumerate}
+\section{General Comments - Graphs}
+\begin{enumerate}
+\item Make sure to take attendance!
+\item If you didn't get to the first section last time, be sure to go over it as a refresher.
+\item Emphasize that the worksheet this week is extremely long, it is not meant to be completely covered in 1.5 hours -- they should practice the problems that you didn’et to.
+\item Make sure that you are comfortable with the subtle differences between a walk and path or a tour and cycle. 
+\begin{enumerate}
+	\item The definitions on the worksheet correspond to definitions from the 70 notes. They might be confused between a path and a walk---say that in 70, when we refer to a path, we usually mean a simple path, which is a sequence of edges that don't repeat vertices. 
+\end{enumerate}
+\item Skip Eulerian Tour if short on time.
+\item Have students take special note of the 4 properties of trees we list. Some good general tree advice is to have those 4 written out exactly, which makes for a much easier time coming up with proofs.
+\item For Rooted Tree, a visual/intuitive explanation rather than a formal proof is fine. 
+\item If there is time, try and emphasize the Spanning Tree problem.
+\item Remember that there are two major definitions of a hypercube and go over those. It's especially important that they understand these. 
+ 
+\end{enumerate}
+
+\section{General Comments - Modular Arithmetic}
+\begin{enumerate}
+\item Make sure your students understand bijections---onto and one-to-one. It's helpful to draw out examples of onto, one-to-one, both (bijections),and neither. 
+\item FLT Proof is important to go through; make sure they understand every step of the way. It's also not necessary to go through both. Do so if you have time, but skip last one if low on time
+%\item CRT Proof is not necessary to go through, only if they really have trouble understanding it (proof is rather lengthy). The eggs question is pretty much just an application of the first question, which just uses numbers. Probably not necessary to go through both. Make sure that they understand how to go through these problems mechanicallyoving the equivilance of two sets.              % Include topics here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{General Comments - RSA}
+\begin{enumerate}
+\item Give a mini-lecture about RSA; Try and draw a picture to explain the different components of RSA to your students.
+\item Definitely try and go over question 3, as it provides a lot of intuition on RSA.
+\item If time, try and do question 1, but if not, encourage students to work on question 1 on their own time as it is a purely algebraic problem.
+\item Stress the inability to factor integers as one of the reasons why RSA works.
+\end{enumerate}
+
+
+\clearpage 
+
+%%% Include topics here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+>>>>>>> c19d7375ae674b9cbadd0ca69d7fdfee2ad203ed
+\section{Questions}
+\subsection{Graph Theory}
+\begin{enumerate}
+\subimport{../../topics/graphs/meta/}{3_cycle.tex}
+\subimport{../../topics/graphs/meta/}{build_up_error.tex}
+\end{enumerate}
+
+\subsection{Hypercubes}
+\begin{enumerate}
+\subimport{../../topics/hypercubes/meta/}{introduction.tex}
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{enumerate}
+
+\end{document}

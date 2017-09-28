@@ -1,0 +1,14 @@
+\question Find a bijection between N and the set of all integers 
+congruent to $1 \mod n$, for a fixed $n$.
+\begin{solution}
+The set of integers congruent to 1 mod $n$ is $A = \{1 + kn \mid k \in Z\}$. 
+Define $g : Z \to A$ by $g(x) = 1 + x \times n$; this is a bijection 
+because it is clearly one-to-one, and is onto by the definition of $A$. 
+We can combine this with the bijective mapping $f : N \to Z$ from the 
+notes, defined by
+$f(x) = \begin{cases}
+\frac{x}{2} & \text{if $x$ is even} \\ 
+\frac{-(x + 1)}{2} & \text{if $x$ is odd}
+\end{cases}$
+Then $f \circ g$ is a function from $N$ to $A$, which is a bijection.
+\end{solution}

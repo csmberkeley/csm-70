@@ -1,0 +1,12 @@
+\question $\sum\limits_{k = 0}^{n} k^2 = \binom{n + 1}{2} + 2\binom{n + 1}{3}$ \\
+
+\begin{solution}[4 cm]
+Number of ordered triplets of the form $(i, j, k)$ where $i$ and $j$ 
+are less than or equal to $k$ for every $k$ from 0 to $n$ \\
+LHS: For each $k$ there are $k$ options for $i$ and $k$ options for 
+$j$ so $k^2$ options for all. \\
+RHS: Consider the case where $i = j$. Then we must choose two numbers 
+from $\{0, \ldots, n\}$ which amounts to $\binom{n + 1}{2}$. 
+If $i \neq j$ then we choose 3 numbers from $n + 1$. But $i$ can be 
+less than $j$ or greater than $j$ so we must multiply by 2.
+\end{solution}

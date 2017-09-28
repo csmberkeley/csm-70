@@ -1,0 +1,13 @@
+\question Prove that every undirected finite graph where every vertex 
+has degree of at least $3$ has a cycle of even length.
+
+\begin{solution}
+Let $P$ be a maximal path and $v$ be an endpoint of $P$.
+$v$ has at least 3 neighbors that are on $P$ (why?)
+Let the path $P$ be: $(\dotsc x, y, z, v)$
+Now consider the following three paths: $v \rightarrow y$, $y 
+\rightarrow x \rightarrow v$, and $y \rightarrow z \rightarrow v$
+The union of two of these paths is a cycle.
+At least two of these paths must have lengths that are both even or 
+both odd. Adding either of those cases together creates an even length cycle.
+\end{solution}

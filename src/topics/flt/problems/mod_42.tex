@@ -1,0 +1,45 @@
+\question Show that $n^7 - n$ is divisible by $42$ for any integer $n$
+\begin{solution}[1 in]
+$42 = 7 * 3 * 2 \leftarrow$these factors are prime so let’s apply 
+FLT!! \newline
+\[n^7 \equiv n \mod 7\]
+\[n^3 \equiv n \mod 3\]
+\[n^2 \equiv n \mod 2\]
+We’re interested in $n^7$ so let’s modify the bottom two equations to 
+write $n^7$ in mod 3 and mod 2 \newline
+\[n^7 \equiv n^3 * n^3 * n \equiv n * n * n \equiv n^3 \equiv n \mod 3\]
+\[n^7 \equiv n \mod 3\]
+
+\[n^7 \equiv n^2 * n^2 * n^2 * n \equiv n * n * n * n \equiv n^2 * n^2 
+\equiv n * n \equiv n^2 \equiv n \mod 2\]
+\[n^7 \equiv n \mod 2\]
+
+\[n^7 \equiv n \mod 7\]
+\[n^7 \equiv n \mod 3\]
+\[n^7 \equiv n \mod 2\]
+
+Wouldn’t it be great if the above equations implied that $n7 \equiv n 
+\mod 7 * 3 * 2$? \newline
+Let’s try to prove that. \newline
+Claim: If  \newline
+	\[x \equiv y \mod a_1\]
+\[	x \equiv y \mod a_2\]
+	        \[\dotsc\]
+	\[x \equiv y \mod a_n\]
+are true  and $a_1, \dotsc, a_n$ are coprime then $x \equiv y \mod a_1 
+a_2 \dotsc a_n)$\newline
+$x \equiv y \mod a_i \rightarrow x = y + c_i*a_i \text{ for some constant } c_i$
+	\[ x = y + c_1*a_1 \]
+\[	 x = y + c_2*a_2 \]
+	\[  \dotsc \]
+\[	 x = y + c_n*a_n \]
+
+	But this implies that $x = c * lcm(a_1, \dotsc, a_n) + y$ \newline
+	Since $a_1, \dotsc, a_n$ are coprime, $lcm(a_1, \dotsc, a_n) = 
+	a_1*a_2*\dotsc* a_n$\newline
+	So we get $x = c *  a_1*a_2*\dotsc* a_n + y$\newline
+	Therefore $x \equiv y \mod a_1*a_2* \dotsc *a_n$\newline
+We can now say that $n^7 \equiv n \mod 7*3*2 \equiv n \mod 42$.
+
+
+\end{solution}

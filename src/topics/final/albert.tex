@@ -1,0 +1,19 @@
+\q{5}{High Expectations}
+
+Prove that $E[E[X|Y;Z] | Y] = E[X|Y]$.
+
+\vspace{8cm}
+
+% \solution{
+% \begin{align*}
+% E[E[X|Y;Z] | Y=y] &= \sum_z E[X | Y=y, Z=z]Pr(Z=z|Y=y) \\
+% 	&= \sum_z \sum_x xPr(X=x|Y=y, Z=z)Pr(Z=z | Y=y) \\
+% 	&= \sum_{z,x} x \frac{Pr(X=x, Y=y, Z=z)}{Pr(Y=y, Z=z)} \frac{Pr(Z=z, Y=y)}{Pr(Y=y)} \\
+% 	&= \sum_{z,x} x \frac{Pr(X=x, Y=y, Z=z)}{Pr(Y=y)} \\
+% 	&= \sum_x x \frac{Pr(X=x, Y=y)}{P(Y=y)} \\
+% 	&= \sum_x x Pr(X=x | Y=y) \\
+% 	&= E[X | Y=y]
+% \end{align*}
+% Note the equivalence holds for all $y$, so $E[E[X|Y;Z]|Y] = E[X | Y]$.
+
+% }

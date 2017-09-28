@@ -1,0 +1,21 @@
+\question Find $2^{20} + 3^{30} + 4^{40} + 5^{50} + 6^{60} \mod 7$
+\begin{solution} [1 in]
+By FLT:
+\[2^6 \equiv 1 \mod 7\]
+\[3^6 \equiv 1 \mod 7\]
+\[4^6 \equiv 1 \mod 7\]
+\[5^6 \equiv 1 \mod 7\]
+\[6^6 \equiv 1 \mod 7 \]
+Apply the above facts to simplify each portion of the equation:
+\[2^{20} = 2^2 * (2^6)^3  \rightarrow 	2^{20} \mod 7 \equiv 2^2 
+\mod 7 \equiv 4 \mod 7\]
+\[3^{30} = (3^6)^5 \rightarrow 	3^{30} \mod 7 \equiv 1 \mod 7\]
+\[4^{40} = 4^4 * (4^6)^6 	\rightarrow	4^{40} \mod 7 \equiv 4^4 
+\mod 7  \equiv 4 \mod 7\]
+\[5^{50} = 5^2 * (5^6)^8 	\rightarrow 	5^{50}  \mod 7 \equiv 5^2 
+\mod 7 \equiv 4 \mod 7\]
+\[6^{60} = (6^6)^{10}	\rightarrow 	6^{60} \mod 7 \equiv 1 \mod 7\]
+\[2^{20} + 3^{30} + 4^{40} + 5^{50} + 6^{60} \mod 7 \equiv 4 + 1 + 4 + 
+4 + 1 \mod 7\]
+				  \[\equiv 14 \mod 7 \equiv  0 \mod 7\]
+\end{solution}

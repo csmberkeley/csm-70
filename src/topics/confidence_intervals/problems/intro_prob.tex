@@ -1,0 +1,42 @@
+\question Define i. i. d. variables ${A_k}\sim \text{Bern}(p)$ where 
+$k \in [1, n]$. Assume we can declare that $\P[|\frac{1}{n}\sum_{k} 
+A_k - p| > 0.25] = 0.01$.
+\begin{enumerate}[label=(\alph*)]
+\item  Please give a 99\% confidence interval  for $p$ if given $A_k$.
+\begin{solution}[3cm]
+$[\frac{1}{n} \sum_{i} A_k - 0.25, \frac{1}{n} \sum_{i} A_k + 0.25]$
+\end{solution}
+
+\item We know that the variables $X_i$, for $i$ from 1 to $n$, are i.i.d. 
+random variables and have variance. We also have a value (an observation) 
+of $A_n = \frac{X_1 + \ldots + X_n}{n}$. We want to guess the mean, $\mu$, 
+of each $X_i$.
+
+Prove that we have 95\% confidence $\mu$ lies in the interval
+$\big[ A_n - 4.5\frac{\sigma}{\sqrt{n}}, A_n + 4.5\frac{\sigma}{\sqrt{n}} \big]$
+
+That is,
+$\P \big[ \mu \in \big[ A_n - 4.5\frac{\sigma}{\sqrt{n}}, A_n + 
+4.5\frac{\sigma}{\sqrt{n}} \big] \big] \ge 95\%$
+\begin{solution} [3cm]
+To do this, we use Chebyshev's. Because $\E[A_n] = \mu$ ($A_n$  is the 
+average of the $X_i$’s), we bound the probability that $|A_n - \mu|$ 
+is more than the interval size at 5\%:\newline
+\[\P\big[ |A_n - \mu| \ge 4.5\frac{\sigma}{\sqrt{n}} \big] \le 
+\frac{\text{Var}(A_n)}{(4.5 \frac{\sigma}{\sqrt{n}})^2} \approx 
+\frac{\frac{\sigma^2}{n}}{\frac{20\sigma^2}{n}} = \frac{1}{20} = 5\%\].
+
+Thus, the probability that $\mu$ is \textit{in} the interval is 95%.
+\end{solution}
+
+\item Give the 99\% confidence interval for $\mu$:
+\begin{solution}[3cm]
+Solution is similar to that of the 95\% confidence interval. 
+
+$\big[ A_n - 10\frac{\sigma}{\sqrt{n}}, A_n + 10\frac{\sigma}{\sqrt{n}} 
+\big]$, because
+$\P\big[ |A_n - \mu| \ge 10\frac{\sigma}{\sqrt{n}} \big] \le 
+\frac{\text{Var}(A_n)}{(10 \frac{\sigma}{\sqrt{n}})^2} \approx 
+\frac{\frac{\sigma^2}{n}}{\frac{100\sigma^2}{n}} = \frac{1}{100} = 1\%$.
+\end{solution}
+\end{enumerate}

@@ -1,0 +1,16 @@
+\question Prove that a chocolate bar of $n$ squares requires a 
+minimum of $n - 1$ cuts to separate into single squares.
+
+\begin{solution}
+\begin{proof} Induct on $n$. \newline
+Base Case: $N = 1$ implies no cuts. $N - 1 = 1 - 1 = 0$ \newline
+Inductive Hypothesis: Assume that for any $j$ between 1 and $N$ it 
+takes $j - 1$ breaks.\newline
+Inductive Step: Now consider a bar with $N + 1$ squares. Split 
+this bar into two parts each with $x$ and $y$ pieces. $x + y = N + 1$. 
+It takes $x-1$ cuts for the first and $y - 1$ cuts for the second. 
+Therefore the total number of cuts is $1 + x-1 + y-1 = x+y-1 = N $
+\end{proof}
+\end{solution}
+
+\clearpage

@@ -1,0 +1,18 @@
+\question Given a graph $G$ with $n$ vertices, where $n$ is even, 
+prove that if every vertex has degree $\frac{n}{2}+1$, then $G$ 
+must contain a 3-cycle. 
+
+\begin{solution}[2in]
+Let $G$ be a graph with $n$ vertices, where $n$ is even, and every 
+vertex has degree $\frac{n}{2} + 1$. Select any two vertices $u$ and 
+$v$, with an edge between them. There are $n - 2$ remaining vertices, 
+and both $u$ and $v$ are connected to $\frac{n}{2}$ of these (because 
+they have degree $\frac{n}{2} + 1$ and are connected to each other). 
+Therefore, there must be some vertex $w$ such that both $u$ and $v$ 
+are connected to $w$ (otherwise the set of $\frac{n}{2}$ vertices 
+connected to $u$ and the set of $\frac{n}{2}$ vertices connected to 
+$v$ would be disjoint, which contradicts the fact that there are only 
+$n - 2$ of these vertices). Thus we have edges $(u, v), (v, u)$ and 
+$(w, u)$, so the graph contains a 3-cycle.
+
+\end{solution}

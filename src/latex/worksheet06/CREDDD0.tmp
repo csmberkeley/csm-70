@@ -1,0 +1,51 @@
+\documentclass{exam}
+\usepackage{../../scripts/meta}
+
+%%% Change these %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\discnumber{4}
+\title{}
+\date{Berlekamp-Welsh, Countability, Self Reference, Counting}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\rule{\textwidth}{0.15em}
+\fontsize{12}{15}\selectfont
+\thispagestyle{empty}
+
+
+%%% General Notes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{General Comments}
+\begin{questions}
+\item Counting: 1.1
+\begin{itemize}
+\item Make sure to give a general intro on stars \& bars problems, so that students can gain intuition on how to convert problems they see into stars \& bars. 
+\item Ensure that students understand (in)distinguishable balls/(in)distinguishable bins. Like stars \& bars, students should be able to understand what problems correspond to balls \& bins/stars \& bars, etc.
+\item Only do extra problems if you have time
+\item Feel free to just skim over theorems
+\end{itemize}
+\item Combinatorial Proofs: \#1, 2, 3
+\item Discrete Probability: \#1 (very basic for later in the week people)
+\item For the Prius problem, draw all the parking spaces available in order to illustrate all the possibilities. Additionally, explain why the three Prius's must be grouped together as 1 Prius when solving the problem.
+\item Try to form discrete probability as an extension of counting. for example in the cards problem, everything is the same as in counting, except with denominator of (52c5)
+\item Make sure they understand everything on the diagram (although it may be more helpful for conditional)
+\item If you've covered counting a lot, don't worry if you can't spend too much time on this section
+\begin{itemize}
+\item Disjoint vs Independent. The easiest way to emphasize this difference is through the venn diagrams above (disjoint events are almost always DEPENDENT).
+\item Uniform probability space and how to calculate probabilities using set sizes in that space.
+\item Feel free to come up with your own probability space problems. If students are shaky on the concepts, I recommend the following problems (only the solutions are below, but you can guess what the questions were.. Walrand seems to llike these divide-up-your-outcome-space problems
+\item For problems on worksheet, just need to know that there are exactly 4 Kings in a deck of cards
+Also, for each add that you are drawing exactly 2 cards in the manner described
+\end{itemize}
+\item Monty Hall: Walk through the thing on the board so they see why the probability changes
+\begin{itemize}
+\item Explain how conditional probability works before letting students try to do this themselves (should cover in discrete probability section above)
+\item Important that students understand why grouping the doors together is essential to this problem
+\end{itemize}
+
+\end{questions}
+
+\section{Questions}
+
+
+\end{document}

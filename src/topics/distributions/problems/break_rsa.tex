@@ -1,0 +1,41 @@
+\question You are Eve, and as usual, you are trying to break RSA. 
+You are trying to guess the factorization of $N$, from Bob’s public 
+key. You know that $N$ is approximately 1,000,000,000,000. To find the 
+primes $p$ and $q$, you decide to try random numbers from 2 to 
+$1,000,000 \approx \sqrt{N}$, and see if they divide $N$.
+
+To do this, you roll a 999,999-sided die to choose the number, and see 
+if it divides $N$ using your calculator, which takes five seconds. Of 
+course, there will be one number in this range that does divide $N$—namely, 
+the smaller of $p$ and $q$.
+\begin{enumerate}[label=(\alph*)]
+\item What kind of distribution would you use to model this?
+\begin{solution}[1cm]
+Geometric — probability of success each time is $p = \frac{1}{999,999}$
+\end{solution}
+
+\item What is the expected amount of time until you guess the correct 
+answer, if it takes five seconds per guess (you only have a calculator)? 
+Answer in days.
+		\begin{solution}[2cm]
+\[\E(x) = \frac{1}{p} = 999,999 \text{ tries}\]
+		\[(999,999 * 5 \text{ sec}) * \frac{1 \text{ min}}{60 \text{ sec}} * \frac{1 \text{ hr}}{60 \text{ min}} * \frac{1 \text{ day}}{24 \text{ hr}} \approx 57.9 \text{ days}\]
+\end{solution}
+
+% \item What is the variance in the amount of time? (Answer in seconds, 
+% approximately.)
+% \begin{solution}[2cm]
+% \begin{equation}
+% \begin{split}
+% \var(x) = \frac{1-p}{p^2} \nonumber
+% &= \frac{1-\frac{1}{999,999}}{999,999^2}  \\
+% &= 999,999 * 999,998 \\
+% &\approx 1 \text{ trillion tries}
+% \end{split}
+% \end{equation}
+
+% When we scale a variable, we scale the variance by the square of that 
+% factor, so 
+% \[\var(x) = 25 \text{ trillion sec}^2\]
+% \end{solution}
+\end{enumerate}

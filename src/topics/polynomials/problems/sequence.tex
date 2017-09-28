@@ -1,0 +1,73 @@
+\question Define the sequence of polynomials by $P_0(x) = x + 12$, 
+$P_1(x) = x^2 - 5x + 5$ and $P_n(x) = xP_{n-2}(x) - P_{n-1}(x)$. 
+(For instance, $P_2(x) = 17x-5$ and $P_3(x) = x^3 -5x^2 -12x+5$.) 
+\begin{enumerate}[label=(\alph*)]
+\item Show that $P_n(7) \equiv 0 \pmod{19}$ for every $n \in N$. 
+\begin{solution}[1in]
+
+\begin{enumerate}
+\item Prove using strong induction.
+\begin{description}
+\item[Base Case] There are two base cases because each polynomial is 
+defined in terms of the two previous ones except for $P_0$ and $P_1$.
+\begin{equation}
+\begin{split}
+P_0(7) &\equiv 7 + 12 \equiv 19 \equiv 0 \pmod{19} \\ \nonumber
+P_1(7) &\equiv 7^2 - 5\cdot 7 + 5 \equiv 49 - 35 + 5 \equiv 19 \equiv 
+0 \pmod{19}
+\end{split}
+\end{equation}
+\item[Inductive Hypothesis] Assume $P_n(7) \equiv 0 \pmod{19}$ for 
+every $n \leq k$.
+\item [Inductive Step] Using the definition of $P_{k+1}$, we have that 
+\begin{equation}
+\begin{split}
+P_{k+1}(7) &\equiv xP_{k-1}(7) - P_k(7) \pmod{19} \\ \nonumber
+&\equiv x \cdot 0 - 0 \pmod{19} \\
+&\equiv 0 \pmod{19}
+\end{split}
+\end{equation}
+\end{description}
+\end{enumerate}
+Therefore, $P_n(7) \equiv 0 \pmod{19}$ for all natural numbers $n$.
+\end{solution}
+
+\item Show that, for every prime $q$, if $P_{2013}(x) \not\equiv 0 
+\pmod{q}$, then $P_{2013}(x)$ has at most $2013$ roots modulo $q$. 
+\begin{solution}[2.5 in]
+This question asks to prove that, for all prime numbers $q$, 
+if $P_{2013}(x)$ is a non-zero polynomial $\pmod{q}$ , then $P_{2013}(x)$ 
+has at most $2013$ roots $\pmod{q}$.
+
+The proof of Property 1 of polynomials (a polynomial of degree $d$ can 
+have at most $d$ roots) still works in the finite field $GF(q)$. 
+Therefore we need only show that $P_{2013}$ has degree at most $2013$. 
+We prove that $\operatorname{deg}(P_n) \leq n$ for $n>1$ by strong induction.
+\begin{description}
+\item[Base cases] There are 4:
+\begin{equation}
+\begin{split}
+\operatorname{deg}(P_0) &= \operatorname{deg}(x+12) = 1 \\ \nonumber
+\operatorname{deg}(P_1) &= \operatorname{deg}(x^2 - 5x + 5) = 2 \\
+\operatorname{deg}(P_2) &= \operatorname{deg}(xP_0(x) - P_1(x)) \leq 2 \\
+\operatorname{deg}(P_3) &= \operatorname{deg}(xP_1(x) - P_2(x)) \leq 3
+\end{split}
+\end{equation}
+\item[Inductive Hypothesis] Assume $\operatorname{deg}(P_n) \leq n$ 
+for all $2\leq n \leq k$.
+\item[Inductive Step] Then
+\begin{equation}
+\begin{split}
+\operatorname{deg} (P_{k+1}(x)) \\ \nonumber
+&\leq \operatorname{max} \{  \operatorname{deg}(xP_{k-1}(x)), 
+\operatorname{deg}(P_k(x)) \}  \\
+&= \operatorname{max} \{ 1 + \operatorname{deg}(P_{k-1}(x)), 
+\operatorname{deg}(P_k(x)) \} \\
+&\leq \operatorname{max} \{1+k - 1, k \} \\
+& \leq k \\
+& \leq k+1
+\end{split}
+\end{equation}
+\end{description}
+\end{solution}
+\end{enumerate}

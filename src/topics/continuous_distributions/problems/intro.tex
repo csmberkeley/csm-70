@@ -1,0 +1,30 @@
+\fbox{\begin{minipage}{16.3cm}
+\vspace{2 mm}
+\textbf{Uniform Distribution}: $U(a, b)$
+This is the distribution that represents an event that randomly happens at any time during an interval of time.
+\begin{itemize}
+\item $f(x) = \frac{1}{b-a}$ for $a \leq x \leq b$
+\item F(x) = 0 for $x < a$, $\frac{x-a}{b-a}$ for $a<x<b$, 1 for $x > b$
+\item $\E(x) = \frac{a+b}{2}$
+\item $\var(x) = \frac{1}{12}(b-a)^2$
+\end{itemize} 
+
+
+\textbf{Exponential Distribution}: $Expo(\lambda)$
+This is the continuous analogue of the geometric distribution, meaning that this is the distribution of how long it takes for something to happen if it has a rate of occurrence of $\lambda$. 
+\begin{itemize}
+\item memoryless
+\item $f(x) = \lambda*e^{-\lambda*x}$
+\item $F(x) = 1 - e^{\lambda x}$
+\item $\E(x) = \frac{1}{\lambda}$
+\end{itemize} 
+
+\textbf{Gaussian (Normal) Distribution}: $N(\mu, \sigma^2)$
+\begin{itemize}
+    \item The CLT states that any unspecified distribution of events will converge to the Gaussian as n increases
+    \item Mean: $\mu$
+    \item Variance: $\sigma^2$
+    \item $f(x | \mu, \sigma^2) = \frac{1}{\sigma\sqrt(2\pi)} e^{\frac{-(x-\mu)^2}{2\sigma^2}}$
+\end{itemize}
+
+\end{minipage}}

@@ -1,0 +1,49 @@
+\question Let $P(x, y)$ denote some proposition involving $x$ and $y$. 
+For each statement below, either prove that the statement is correct 
+or provide a counterexample if it is false.
+
+\begin{enumerate}[label=\alph*.]
+\item $\forall x \forall y P(x, y) \implies \forall y \forall x P(x, y)$.
+\begin{solution}[1in]
+True. The first statement “$\forall x\forall y$ $P(x, y)$” 
+means for all $x$ and $y$ in our universe, the proposition $P(x, y)$ 
+holds. The second statement “$\forall y \forall x $ $P(x, y)$” has 
+the same meaning, so they are in fact equivalent (the implication goes 
+both ways). In general, you can interchange the order of any consecutive 
+sequence of $\forall$.
+\end{solution}
+
+\item $\exists x \exists y P(x, y) \implies \exists y \exists x P(x, y)$.
+\begin{solution}[1in]
+True. Both statements mean there exist $x$ and $y$ in our universe 
+that make $P(x, y)$ true, so both statements are equivalent. In 
+general, you can interchange the order of any consecutive sequence 
+of $\exists$.
+\end{solution}
+
+\item $\forall x \exists y P(x, y) \implies \exists y \forall x P(x, y)$.
+\begin{solution}[1in]
+False. Take the universe to be $R$ (or any set with at least 2 
+elements), and take $P(x, y)$ to be the statement “$x = y$.” Then 
+the first statement “$\forall x \exists y$  $P(x, y)$” claims for all 
+$x \in R$ we can find $y \in R$ such that $x = y$, which is true because
+we can take $y$ to be $x$. However, the second statement 
+“$\exists y \forall x$  $P(x, y)$” claims there exists $y \in R$ such
+that $x = y$ for all $x \in R$, which is false because a real number 
+$y$ cannot simultaneously be equal to all other real numbers $x$. 
+Thus, the implication is false.
+\end{solution}
+
+\item $\exists x \forall y P(x, y) \rightarrow \forall y \exists x P(x, y)$.
+\begin{solution}
+True. Suppose the first statement “$\exists x \forall y$ $P(x, y)$” 
+is true, which means there is a special element $x^* \in R$ such that 
+$P(x^* , y)$ is true for all $y \in R$. The second statement claims 
+that for all $y \in R$ we can find an element $x \in R$ (which may 
+depend on $y$) such that $P(x, y)$ is true. But from our first 
+statement we know that we can choose the same value $x = x^*$ for all 
+$y$. We conclude that the implication holds. However, the 
+implication is only one way. In particular, note that part 4 is the 
+converse to part 3, which we have seen is false.
+\end{solution}
+\end{enumerate}

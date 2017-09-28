@@ -1,0 +1,5 @@
+\question \textbf{Balls and Bins}
+Given $n$ bins and $m$ balls find the largest value of $m$ such that the probability that there is no collision is above $\frac{1}{2}$? (Use the union bound to approximate)
+    \begin{solution} Let $A$ be the event that there are no collisions. We know we hve $\binom{m}{2} = k$ pairs of balls. Let $A_i$ be the probability that pair $i$ collides. $\Pr[A_i]$ is simply $\frac{1}{n}$, so by the union bound, we have 
+    \[\Pr[\overline{A}] \leq \sum_{i=1}^{k} \Pr[A_i] = k \left(\frac{1}{n}\right) = \frac{m(m-1)}{2n}\approx \frac{\m^2}{2n}\]
+\end{solution} 

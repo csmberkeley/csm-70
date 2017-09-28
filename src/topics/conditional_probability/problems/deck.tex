@@ -1,0 +1,50 @@
+\question You have a deck of 52 cards. What is the probability of:
+\begin{enumerate}[label=(\alph*)]
+
+\item Drawing 2 Kings with replacement?
+\begin{solution}[2 cm]
+Uniform Probability space enumerates the $52*52$ combinations of two 
+cards. There are $4*4$ that are 2 Kings, so the probability is 
+$\frac{1}{13^2}$
+ \end{solution}
+ 
+\item Drawing 2 Kings without replacement?
+\begin{solution}[2 cm]
+We need to change our uniform probability space to the ${52 \choose 2} = 
+52*51$ pairs of cards possible without replacement (with order 
+mattering, but this is not important in this case, as long as you keep 
+it consistent). Of these $4*3$ represent pairs of kings. Therefore the 
+probability is $\frac{4*3}{52*51}$.
+We can also use conditional probability (which we will have to use in 
+the next part):
+\[P(K \text{ on 2nd and } K \text{ on 1st}) = P(\text{K on 2nd} | 
+\text{K on 1st}) P(\text{K on 1st}) = \frac{3}{51}*\frac{4}{52}\]
+ \end{solution}
+ 
+\item The second card is a King without replacement?
+\vspace{2 cm}
+\begin{solution}
+\begin{equation}
+\begin{split}
+P(K on 2nd) &= P(K \text{ on 2nd }| K \text{ on 1st}) P(K \text{ on 1st}) \\
+& + P(K \text{ on 2nd }| \text{ no $K$ on 1st}) P(\text{no $K$ on 1st}) \\
+&= (3/51)(4/52) + (4/51)(48/52) \\
+&= (4/52)*((48+3)/51) = 4/52
+\end{split}
+\end{equation}
+
+Note that this is the same as the $P(K\text{ on 1st})$, because a $K$ 
+is equally likely to be anywhere in the deck.
+ \end{solution}
+ 
+\item \textbf{[EXTRA]} The nth card is a King without replacement ($n < 52$)?
+\vspace{2cm}
+\begin{solution}
+The last problem is a hint that we can argue this by symmetry. Since 
+we have no information about what any of the preceding cards were 
+before it, it is equally likely that the $n$th card is any of the 52 
+possible cards, so the probability that it is a King is 
+$\frac{4}{52}$.
+\end{solution}
+
+\end{enumerate}

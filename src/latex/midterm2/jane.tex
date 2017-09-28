@@ -1,0 +1,20 @@
+\question \textbf{Fun with Jane} \newline
+Plain Jane has 5 identical narrow rings that she likes to wear. She can wear them on any of her 8 fingers (but not her thumbs), and they are narrow enough that she can fit all 5 on one finger if she chooses to. 
+\begin{enumerate}[label=(\alph*)]
+\item  How many different ways can Jane wear her rings? (note that Jane’s rings may be plain, but she can tell her fingers apart). 
+\begin{solution}
+If she wears all 5 then there are ${12 \choose 7}$ ways for her to wear the rings. Think of this as stars and bars. Let the stars be the rings, and the bars be the partition between fingers. There are 5 stars (5 rings) and 7 bars (7 spaces between 8 fingers). So we get ${5+7 \choose 7}$.
+If she changes how many she wears (0 to 5), then there are ${7+0 \choose 7} + {7+1 \choose 7} + \dotsc + {7+5 \choose 7}$ ways.
+\end{solution}
+
+\item If she puts at most one ring on each finger, how many ways are there for her to wear her rings? 
+\begin{solution}
+f she wears all of her rings then the answer is $8 \choose 5$ (she is choosing 5 fingers to place each ring on)
+If she wears 0, 1, 2, 3, 4, or 5 rings, then there are ${8 \choose 0} + {8 \choose 1} + \dotsc + {8 \choose 5}$ ways.
+\end{solution}
+
+\item Suppose Jane is tired of being plain and paints her rings five different colors so she can tell them apart. How does this change your answers above? 
+\begin{solution}
+Multiply all previous answers by 5! (now we can differentiate between the rings).
+\end{solution}
+\end{enumerate}

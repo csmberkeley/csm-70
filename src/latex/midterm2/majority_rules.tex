@@ -1,0 +1,14 @@
+\question \textbf{Majority Rules} \newline
+Consider the following variant of the secret sharing problem. 
+\begin{enumerate}[label=(\alph*)]
+\item We wish to share a secret among twenty-one people, divided into three groups of seven.
+
+\item A subset of the twenty-one people can recover the secret if and only if it contains majorities (4 or more out of 7) of at least two of the groups. 
+\end{enumerate}
+
+How would you modify the standard secret sharing scheme to achieve this condition? 
+\begin{solution}
+First, we have the secret $S$ as the constant term in a degree-1 polynomial $f(x) = ax + S$ over $GF(p)$, where $p > 7$. We hand out $f(1), f(2),$ and $f(3)$ to each of the three groups. Any two of these points is enough to recover $S$. 
+Now we need to make $f(i)$ is only known to group $i$ a majority of group $i$ is present.
+We hand out each $f(i)$ as a new secret within each group. For each group $i$, we have a polynomial $g_i$ of degree 3 such that $g_i(0) = f(i)$ (the standard secret sharing scheme). Then, we hand out $g_i(1), g_i(2), \dotsc , g_i(7)$ to each of the seven group members. Now, if any four members of a group get together, they can pool their values of $g_i$  to obtain $g_i(0) = f(i)$, which is their group’s secret. They can then share with another group (who also must have at least four people) to recover the original secret
+\end{solution}

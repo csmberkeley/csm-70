@@ -1,0 +1,6 @@
+\question \textbf{Diagon Alley}\newline
+Show that the halting problem reduces to the contradiction found in Cantor's diagonal argument.
+\begin{solution}
+We know the set of computer programs to be countable (they are finite length bit strings stored in memory). This allows us to enumerate all possible arguments to the TestHalt function (remember that the cartesian product of two countable sets is also countable by the spiral argument). We write this as a table with values representing whether TestHalt halts with the given inputs. Our constructed program Turing, which halts whenever TestHalt of $P$ applied to itself does not, must be in this enumeration. However, by its definition, it must have the opposite behavior on $P$ as TestHalt on $(P, P)$, inverting the diagonal of the table. This shows us that Turing cannot be in the table, and so TestHalt is not a valid program.
+
+\end{solution}

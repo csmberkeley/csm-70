@@ -1,0 +1,97 @@
+\question Every non empty set of natural numbers contains a smallest 
+element. \newline
+In this question, we will go over how the well-ordering principle can 
+be derived from (strong) induction. Remember the well-ordering principle 
+states the following: For every non-empty subset $S$ of the set of natural 
+numbers $N$, there is a smallest element $x \in S$; i.e. $\exists x : 
+\forall y \in S : x \leq y $
+
+\begin{questions}
+\item What is the significance of $S$ being non-empty? Does WOP hold 
+without it? Assuming that $S$ is not empty is equivalent to saying that 
+there exists some number $z$ in it.
+\begin{solution}[0.5 in]
+If there are no elements in $S$, clearly there can be no minimal 
+element. The main point of the rest of the proof is to show that 
+having a minimal element does not only require that $S$ be non-empty, 
+it is equivalent. We will show that if there is no minimal element, 
+then $S$ must be empty.
+\end{solution}
+
+\item Induction is always stated in terms of a property that can only 
+be a natural number. What should the induction be based on?
+\begin{solution}[0.4 in]
+The number $x$, i.e. the least element in the set $S$ as defined in 
+the problem. If induction using this variable seems a bit circular, 
+note that we are not assuming $x$ exists (that \emph{would} be 
+circular logic). We're only saying that, if a least element did exist, 
+we could call it $x$. 
+\end{solution}
+
+\item Now that the induction variable is clear, formally state the 
+induction hypothesis.
+\begin{solution}[0.5 in]
+Let $A$ be a non-empty subset of $N$. Our inductive hypothesis is 
+the following predicate: 
+
+\textbf{P(n):} If $n \in A$, then A has a least element.
+
+Note that the hypothesis $P$ represents an implication, so it doesn't 
+actually say anything about whether $n$ is in $A$! It only states that, 
+\emph{if} $n$ happens to be in $A$, $A$ must have a least element. This 
+distinction is the key to why the proof is general for any set, since 
+we don't actually make any assumptions about which elements are in $A$.
+$P(n)$ : “If $n \in A$, then $A$ has a least element.”
+\end{solution}
+
+\item Verify the base case.
+\begin{solution}[.7 in]
+We can immediately state $P(0)$ is true. If $0$ is in an arbitrary set 
+of natural numbers $A$, $A$ must contain a least element, since $0 
+\leq n \forall n \in \mathbb{N}$, and will always be that least element.
+\end{solution}
+
+\item Now prove that the induction works, by writing the inductive step. 
+\begin{solution}[2in]
+We will use strong induction, so we want to show that $[P(0) \land P(1) 
+\land \ldots \land P(n)] \implies P(n+1)$. Intuitively what does this 
+implication mean? The left side means that $\forall k \leq n$, if any 
+one of them is in $A$, then $A$ has a least element. The right side 
+means that if $n+1$ is in $A$, then $A$ has a least element. The 
+implication should hold, because intuitively there should be no special 
+$n+1$ that suddenly breaks our hypothesis. In fact if any one of those 
+elements is in $A$, then we can default to the inductive hypothesis 
+(left side) without considering $n+1$ at all. However, if elements $0 
+\ldots n$ are not in $A$, then we have a separate case where we need 
+to explicitly show $P(n+1)$. Let's formalize this intuition:
+\begin{description}
+\item[Case 1: $A$ contains $n+1$ and at least one element less than $n+1$.]
+$$
+\exists k (k \in A \land k < n+1)
+$$
+By the inductive hypothesis, if $k \in A$ and $0 < k \leq n$, $A$ 
+contains a least element. Therefore $P(n+1)$ is true for this case as well.
+\item[Case 2: $A$ contains $n+1$ and possibly larger elements.] 
+$$
+\lnot \exists k (k \in A \land k < n+1)
+$$
+An immediate consequence of the above is that $\forall x \in A\quad n+1 
+\leq x$ (this can be shown using proof by contradiction). By definition 
+of least element, $n+1$ is the least element in $A$, so $P(n+1)$ is true 
+for this case as well.
+\end{description}
+We have covered every case in which $A$ contains $n+1$, and can now 
+state $P(n+1)$ is true in general.
+\end{solution}
+
+\item What should you change so that the proof works by simple 
+induction (as opposed to strong induction)?
+\begin{solution}
+We would use a contradiction to start off the proof: Suppose $S$ has 
+no minimal element. Then $n=1 \not \in S$, because otherwise $n$ would 
+be minimal. Similarly $n=2 \not \in S$, because then 2 would be minimal, 
+since $n=1$ is not in $S$. Suppose none of $1,2,...,n$ is in $S$. Then 
+$n+1\not \in S$, because otherwise it would be minimal. Then by induction 
+$S$ is empty, a contradiction.
+\end{solution}
+\end{questions}

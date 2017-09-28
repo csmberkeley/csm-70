@@ -1,0 +1,55 @@
+\question \textbf{Coin tosses over text messages} \newline
+You and one of your friends want to get your hands on the new gadget 
+that’s coming out. One of you has to wait in line overnight so that 
+you have a chance to get the gadgets while they last. In order to 
+decide who this person should be, you both agree to toss a coin. But 
+you won’t meet each other until the day of the actual sale and you 
+have to settle this coin toss over text messages (using your old gadgets). 
+Obviously neither of you trusts the other person to simply do the coin 
+toss and report the results.\newline
+					
+How can you use RSA to help fix the problem?	
+\begin{solution}
+If there was a way for me to make my choice (i.e. toss the coin) 
+without revealing to my friend what the result was before s/he makes 
+her/his decision, then we would be in good shape.
+RSA enables us to do just that. One can commit to a choice without 
+revealing what that choice really is. So here is how we proceed: 
+\begin{enumerate}
+
+\item One issue we need to consider is that if "heads" and "tails" are
+the only things we're encrypting and decrypting, then given some public key
+and an encrypted message it's easy to simply encrypt "heads" and encrypt
+"tails" and check which one matches the received encrypted message.
+\item  I select a public key (N,e) and a private key d. I toss a 
+coin. If I get "heads", I choose some random word that begins with an H.
+If I get "tails", I choose some random word that begins with a T. I do this
+so that my friend can't "reverse engineer" the encrypted message to figure out
+what my result was.
+Instead of sending the result to my friend, I first encrypt my word
+using the public key (N,e). Then I send my friend the public key 
+along with the encrypted message. 
+\item My friend is supposedly (read the next part for why the word 
+supposedly is used) unable to see what the result of the coin toss was 
+and therefore cannot cheat. So s/he makes her/his choice (what HEADS 
+and TAILS mean) and sends it to me, using the same technique (some word
+starting with H for heads and T for tails).
+\item Once I have successfully received the result, I reveal the 
+result of the coin toss by sending my friend my word in plain text 
+(i.e. with no encryption). My friend can now verify that I have not 
+cheated (i.e. I have not changed the result) by encrypting the result 
+using the public key I have given her/him and making sure it was the 
+same as the encrypted message I send her/him. Note that RSA encryption 
+and decryption are both bijections, therefore if I know the encrypted 
+version of two messages are the same, then those two messages must be 
+the same. 
+\end{enumerate}					
+Note that I cannot cheat here, because I commit to the result of the 
+coin toss before I know my friend’s choice. Commitment is a very useful 
+primitive (used in many places in cryptography) that enables a party 
+to convincingly commit to a choice without revealing it until they 
+choose to reveal it. The party should not be able to change their 
+mind after the commitment which is what the scheme guarantees. 
+\end{solution}
+
+\clearpage

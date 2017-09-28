@@ -1,0 +1,59 @@
+\q{5}{Potpourri}
+
+\begin{enumerate}
+\item Can we define an algorithm to enumerate the elements of the hypercube?
+
+
+\solution{
+No: think about the bitstring representations of the vertices, they have one bit per dimension, which we can prove to be unenumerable by Cantor’s diagonalization argument.
+}
+% \vspace{4cm}
+
+\item Find a bijection between two distinct sets of vertices of the hypercube.
+
+\solution{
+There are many solutions. A bijection uniquely pairs elements of the set. 
+For example $f(0x) = 1x$, $f(1x) = 0x$ where $0x$ is the vertex with a 
+bit string representation starting with 0 followed by a bitstring $x$.
+}
+% \vspace{4cm}
+
+\item Using the bitstring labels for vertices: how many of the vertices have
+ labels whose digits sum to 5?
+%  \begin{solution}{3cm}
+% \end{solution}
+% \vspace{4cm}
+
+\solution{
+If there were finite dimensions, this would be $\choose{n}{5}$ 
+(since we must pick 5 digits to be 1, the rest are 0). With infinite 
+dimensions, there are an infinite number of vertices. It is countable 
+since we can represent each choice as a subset of $\mathbb{R}^5$ 
+(the indices of the 5 1s) (we exclude vectors with repeated elements).
+}
+
+
+\item Define a bijection between one of $\mathrm{N}$ or $\mathrm{R}$ to 
+the \textit{vertices} of the hypercube.
+% \solutionimage{
+
+\solution{
+We define $\mathrm{R} \to E$ as the binary representation 
+of the elements of $\mathrm{R}$, which are the bitstring labels for $E$.
+% }
+% \vspace{4cm}
+}
+
+\item Define a bijection between one of $\mathrm{N}$ or $\mathrm{R}$ to 
+the \textit{edges} of the hypercube.
+% \solutionimage{
+
+\solution{
+We define the injection $\mathbb{R} \to \mathbb{R} \times 
+\mathbb{N} \leftrightarrow \mathbb{R}$. The edge $(x, n) \in 
+\mathbb{R} \times \mathbb{N}$. Represents the edge between the 
+vertex $x$ and the vertex which is bit-flipped on dimension $n$. 
+There are precisely 2 $(x, n)$ for each $e \in E$. Since the set is infinite, the two are bijective.
+}
+% }
+\end{enumerate}

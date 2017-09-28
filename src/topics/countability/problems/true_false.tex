@@ -1,0 +1,31 @@
+\question \textbf{True/False} 
+\begin{enumerate}[label=(\alph*)]
+\item Every infinite subset of a countable set is countable
+\begin{solution}
+True. Define $E$ as the subset. Define function $f$ where $f(1) = min(E)$, 
+$f(k) = k$th smallest element of $E$. We see a bijective mapping clearly 
+exists between $f$ and $E$. and since the $x$-values in $f$ are just the natural 
+numbers, there is a mapping between $E$ and $N$.
+\end{solution}
+
+\item If $A$ and $B$ are both countable, then $A \times B$ is countable
+\begin{solution}
+True. Can draw a bijection where first elem of $A$ maps to 1, first elem 
+of $B$ maps to 2, second elem of $A$ maps to 3, etc. This will include $A \times B$
+at the end, and because there is a bijection from $A$ to $N$ and $B$ to $N$, there is a bijection here from $A \times B$ to $N$. There is clearly mapping from 
+$A \times B$ to $N \times N$, and $N \times N$ to $N$, so there is a 
+bijective mapping from $A \times B$ to $N$
+\end{solution}
+
+\item Every infinite set that contains an uncountable set is uncountable. 
+\begin{solution}
+True
+Let $A$ be an uncountable subset of $B$.
+Assume that $B$ is countable.
+$f: N \rightarrow B$ is a bijection.
+There must be a subset of $N$ such that $f: M \rightarrow A$ is a bijection
+Then $A$ is countable.
+This is a contradiction.
+So $B$ must be uncountable.
+\end{solution}
+\end{enumerate}

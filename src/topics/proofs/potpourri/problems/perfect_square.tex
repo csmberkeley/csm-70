@@ -1,0 +1,30 @@
+\question Prove or disprove the following statement: If $n$ is a 
+positive integer such that $\frac{n}{3}$ leaves a remainder of 2, 
+then $n$ is not a perfect square.
+
+\begin{solution}[3in]
+This is easiest done by looking at the contrapositive of the statement.
+We shall prove that if n is a perfect square, then $\frac{n}{3}$ does 
+not leave a remainder of 2.\newline
+
+ Any number divided by 3 can only have a remainder of 0, 1, or 2. 
+ Let's examine every case.\newline
+
+ Case 1: Let's say $n = (3m)^2$, where $m$ is some integer, then 
+ $n = 9m^2$, which is divisible by 3 and leaves no remainder.\newline
+
+ Case 2: Let's say $n = (3m + 1)^2$, then $n = 9m^2 + 6m + 1$, 
+ which is equal to $3(3m^2 + 2m)+1$, which is a number divisible by 
+ 3 plus one. Hence, when we take n to be this number and divide it by 
+ 3, we will have a remainder of 1.\newline
+
+ Case 3: Let's say $n = (3m + 2)^2$, then $n = 9m^2 + 12m + 4$, which 
+ is equal to $3(3m^2 + 4m + 1) + 1$, which is a number divisible by 3 
+ plus 1. When we set n to be this number and divide it by 3, we obtain 
+ a remainder of 1.\newline
+
+Hence, in every case, we either obtain a remainder of 0 or a remainder 
+of 1, but never a remainder of 2. We have proved the contrapositive to 
+be true and hence, the original statement is True.\newline
+
+\end{solution}

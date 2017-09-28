@@ -1,0 +1,101 @@
+\documentclass{exam}
+\usepackage{../../scripts/commonheader}
+
+%%% Change these %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\discnumber{2}
+\title{\textsc{Graphs, Bijections, FLT, Modular Arithmetic}}
+\date{September 11 to September 15, 2017}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\rule{\textwidth}{0.15em}
+\fontsize{12}{15}\selectfont
+\thispagestyle{empty}
+
+%%% Include topics here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Graph Theory}
+\subsection{Introduction}
+\begin{questions}
+\subimport{../../topics/graphs/problems/}{definitions.tex}
+\end{questions}
+
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/graphs/problems/}{3_cycle.tex}
+\subimport{../../topics/graphs/problems/}{ham_path.tex}
+\end{questions}
+
+\section{Eulerian Tour}
+\subsection{Introduction}
+\subimport{../../topics/graphs/problems/}{euler_definitions.tex}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/graphs/problems/}{find_tour.tex}
+\subimport{../../topics/graphs/problems/}{even_degree.tex}
+\end{questions}
+\newpage
+\section{Trees}
+\subsection{Introduction}
+\subimport{../../topics/trees/problems/}{introduction.tex}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/trees/problems/}{other_def.tex}
+\subimport{../../topics/trees/problems/}{rooted_tree.tex}
+\subimport{../../topics/trees/problems/}{spanning_connected.tex}
+\subimport{../../topics/trees/problems/}{spanning_trees.tex}
+\end{questions}
+
+\section{Hypercubes}
+\subsection{Introduction}
+\subimport{../../topics/hypercubes/problems/}{introduction.tex}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/hypercubes/problems/}{basics.tex}
+\subimport{../../topics/hypercubes/problems/}{even_cycle.tex}
+\subimport{../../topics/hypercubes/problems/}{coloring_hypercubes.tex}
+\end{questions}
+
+\section{Extra Practice}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/graphs/problems/}{has_cycle.tex}
+\subimport{../../topics/graphs/problems/}{even_cycle.tex}
+\end{questions}
+
+\section{Bijections}
+\begin{questions}
+	\subimport{../../topics/bijections/problems/}{draw.tex}
+	\subimport{../../topics/bijections/problems/}{injections.tex}
+	\subimport{../../topics/bijections/problems/}{surjections.tex}
+	\subimport{../../topics/bijections/problems/}{bijections.tex}
+\end{questions}
+
+\section{Fermat's Little Theorem}
+\subsection{Introduction}
+\subimport{../../topics/flt/problems/}{theorem.tex}
+\begin{questions}
+\subimport{../../topics/flt/problems/}{proof.tex}
+\end{questions}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/flt/problems/}{mod_math.tex}
+\subimport{../../topics/flt/problems/}{mod_42.tex}
+\end{questions}
+
+%\section{Chinese Remainder Theorem}
+%\subsection{Questions}
+%\begin{questions}
+%\subimport{../../topics/crt/problems/}{crt_1.tex}
+%\subimport{../../topics/crt/problems/}{crt_eggs.tex}
+%\end{questions}
+
+
+
+%\section{RSA}
+%\subsection{Questions}
+%\begin{questions}
+%\subimport{../../topics/rsa/problems/}{rsa_math.tex}
+%\subimport{../../topics/rsa/problems/}{break_rsa.tex}
+%\end{questions}
+\end{document}

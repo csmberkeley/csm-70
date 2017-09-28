@@ -1,0 +1,54 @@
+\documentclass{exam}
+\usepackage{../../scripts/commonheader}
+
+%%% Change these %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\discnumber{0}
+\title{\textsc{Quantifiers, Methods of Proof}}
+\date{Independent review}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\rule{\textwidth}{0.15em}
+\fontsize{12}{15}\selectfont
+\thispagestyle{empty}
+
+%%% Include topics here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Quantifiers}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/quantifiers/problems/}{implications.tex}
+\end{questions}
+
+%%% Include topics here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Contrapositive and Contradiction}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/proofs/contradiction_contraposition/problems/}{contrapositive_basics.tex}
+\subimport{../../topics/proofs/contradiction_contraposition/problems/}{implication.tex}
+\end{questions}
+
+\section{Proof by Cases}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/proofs/cases/problems/}{square_mod_3.tex}
+\end{questions}
+
+\section{Induction}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/proofs/induction/problems/}{intro.tex}
+\subimport{../../topics/proofs/induction/problems/}{formula.tex}
+\end{questions}
+
+\section{More Practice}
+Use any method of proof to answer the following questions.
+\begin{questions}
+\subimport{../../topics/proofs/potpourri/problems/}{irrational.tex}
+\subimport{../../topics/proofs/potpourri/problems/}{mcdonalds.tex}
+\subimport{../../topics/proofs/potpourri/problems/}{perfect_square.tex}
+\subimport{../../topics/proofs/potpourri/problems/}{water_pistol.tex}
+\end{questions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

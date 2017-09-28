@@ -1,0 +1,23 @@
+\question Say that we have a program $M$ that decides whether any input 
+program halts as long as it prints out the string “ABC” as the first 
+operation that it carries out. Can such a program exist? 
+
+ 
+ 
+
+ 
+ 
+\begin{solution} [1 in]
+No. Such a program $M$ can not exist. We proceed as follows: we show 
+that if such a program existed, the halting problem would be computable.
+
+Consider any program $P$. If we wanted to decide if $P$ halted, we 
+could simply create a new program $P'$ where $P'$ first prints out “ABC”, 
+then proceed to do exactly what $P$ would. However, if $M$ existed, we 
+could determine whether any program $P$ halted by converting it to a $P'$ 
+and feeding it into $M$. This would solve the halting problem- but this 
+is a contradiction, since by diagonalization we can prove that the 
+halting problem is not solvable.
+
+Therefore, $M$ can not exist!  
+\end{solution}

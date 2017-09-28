@@ -1,0 +1,35 @@
+\question \textbf{How does RSA work?}
+\begin{enumerate}[label=\alph*.]
+\item Alice wants to send Bob a message $m = 5$ using his public 
+key ($n = 26$, $e = 11$). What cipher text E(m) will Alice send?
+
+\begin{solution}[1 in]
+\begin{align*}
+5^1 &= 5 \mod 26 \\ 
+5^2 &= 5 \mod 26 \\
+&= -1 \mod 26\\
+5^4 &= (-1)^2 \mod 26 \\
+&= 1 \mod 26\\
+5^8 &= 1 \mod 26 \\
+5^{11} &= 5^8  * 5^2 * 5^1 \mod 26 \\
+&= 1 * -1 * 5 \mod 26 \\
+&= -5 \mod 26\\
+&= 21 \mod 26
+\end{align*}
+\end{solution}
+
+\item What is the value of $d$ (Bob’s private key) in this scheme? 
+Note that traditional RSA schemes use much larger prime numbers, 
+so its harder to break $n$ down into its prime factors than it is in 
+this problem.
+
+\begin{solution}
+$n=26  \rightarrow$ because $26 = pq$ and $p\neq a*q$ for all $a$ 
+within integers, $p=13$, $q=2$
+\[d = e^{-1} \mod (13-1)(2-1)\]
+\[d = 11^{-1} \mod 12\]
+\[d = 11\]
+\end{solution}
+\end{enumerate}
+
+\clearpage

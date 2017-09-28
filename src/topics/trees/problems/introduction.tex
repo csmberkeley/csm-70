@@ -1,0 +1,47 @@
+\noindent\fbox{\begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+\vspace{3 mm}
+If complete graphs are “maximally connected,” then trees are the opposite: 
+Removing just a single edge disconnects the graph! Formally, there are a 
+number of equivalent definitions for identifying a graph $G = (V,E)$ as 
+a tree. 
+\vspace{1 mm}
+\end{minipage}}
+
+\vspace{1 mm}
+
+Assume $G$ is connected. There are 3 other properties we can use to 
+define it as a tree.
+
+\vspace{2 mm}
+
+\begin{enumerate}[itemsep=5mm]
+\item $G$ contains \line(1,0){50} cycles.
+\item $G$ has \line(1,0){50}  edges.
+\item Removing any additional edge will \line(1,0){90} 
+\end{enumerate}
+
+\begin{solution}
+no, $n-1$, disconnect $G$
+\end{solution}
+
+\vspace{4 mm}
+
+One additional definition: \newline
+
+\begin{enumerate}[itemsep=5mm]
+\setcounter{enumi}{3}
+\item $G$ is a tree if it has no cycles and \line(1,0){150}
+\end{enumerate}
+
+\begin{solution}
+adding any edge creates a cycle
+\end{solution}
+
+\vspace{1mm}
+
+\noindent\fbox{\begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+\vspace{3 mm}
+\textbf{Theorem}: $G$ is connected and contains no cycles if and only 
+if $G$ is connected and has $n - 1$ edges.
+\vspace{1 mm}
+\end{minipage}}

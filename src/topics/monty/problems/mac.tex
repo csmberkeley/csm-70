@@ -1,0 +1,38 @@
+\question \textbf{Macs and Monty} \newline
+Suppose instead of the normal Monty Hall scenario in which we have two 
+empty doors and a car residing behind the third we have a car behind 
+one door, a Mac behind another, and nothing behind the third. \newline
+Let us assume that the contestant makes an initial pick at his/her 
+discretion (random) and the host proceeds to ALWAYS open the empty door. 
+When the contestant's initial choice corresponds to the empty door, 
+the host will say so and the contestant must switch. \newline
+Does the typical Monty Hall paradox of $\frac{2}{3}$ chance of obtaining 
+the car by switching versus a $\frac{1}{3}$ chance of obtaining the car 
+by staying apply in this particular case?
+
+\begin{solution}[7 cm]
+No. The normal Monty Hall paradox holds because when another door is 
+opened, you learn nothing about your door, so the chance that you 
+picked the right door from the beginning remains $\frac{1}{n}$ (which 
+means the chance of the other door must be $\frac{n-1}{n}$). However, 
+in this case, you may learn something about your door--you may be told 
+that it must be wrong for example--thus shattering the paradox. 
+These are all of the possible scenarios: \newline
+
+\begin{center}
+\begin{tabular}{l | c || r}
+\hline
+Initial Pick & Switch? & Win? \\
+\hline
+Car & Yes & Lose \\
+Car & No & Win \\
+Mac & Yes & Win \\
+Mac & No & Lose \\
+Empty & Yes (to car) & Win \\
+Empty & Yes (to car) & Lose \\
+\hline
+\end{tabular}
+\end{center}
+Switching results in a win 50\% of the time, so there is a 50\% chance 
+of winning regardless of strategy.
+ \end{solution}

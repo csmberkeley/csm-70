@@ -1,0 +1,44 @@
+\question You are at a party with $n$ people where you have prepared a 
+red solo cup labeled with their name. Before handing red cups to your 
+friends, you pick up each cup and put a sticker on it with probability 
+$\frac{1}{2}$ (independently of the other cups). Then you hand back the 
+cups according to a uniformly random permutation. Let $X$ be the number 
+of people who get their own cup back AND it has a sticker on it.
+\begin{enumerate}[label=(\alph*)]
+\item Compute the expectation $\E(X)$.
+%\vspace{3cm}
+        \begin{solution}[3cm]
+Define $X_i =     1$ if the i-th person gets their own cup back and it 
+has a sticker on it 0 otherwise 
+Hence $\E(X) = \E(\sum{i=1^n}(X_i) = \sum{i=1^n} \E(X_i) $
+$\E(X_i) = \P[X_i = 1] = \frac{1}{2n}$ since the i-th student will get 
+his/her cup with probability $\frac{1}{n}$ and has a sticker on it with 
+probability $\frac{1}{2}$ and stickers are put independently. 
+Hence $\E(X) = n \cdot \frac{1}{2n} = \frac{1}{2}$.
+\end{solution}
+
+\item Compute the variance $\var(X)$
+%\vspace{3cm}
+    \begin{solution}[6cm]
+To calculate $\var(X)$, we need to know $\E(X^2)$
+\begin{equation*}
+\E(X^2) = \E (X_1 + X_2 + \dotsc + X_n)^2  = \E(\sum_{i, j}(X_i * X_j) ) = 
+\sum_{i,j} (\E(X_i * X_j )
+\end{equation*} (by linearity of expectation) 
+
+Then we consider two cases, either $i = j$ or $i \neq j.$ 
+Hence 
+\begin{equation*}
+\sum_{i,j} \E(X_i * X_j) = \sum_{i} \E(X_i^2) + \sum_ {i \neq j} \E(X_i * X_j ) 
+\end{equation*}
+$E(X_i^2) = \frac{1}{2n}$ for all i. 
+To find $\E(X_i * X_j  )$, we need to calculate $\P[X_iX_j = 1]$. 
+$\P[X_i * X_j  = 1] = \P[X_i = 1] \P[X_j = 1 | X_i = 1] = \frac{1}{2n} * \frac{1}{2 * (n-1)}$ since if student $i$ has received his/her own cup, student $j$ has $n - 1$ choices left. 
+Hence 
+\begin{equation*}
+\E(X^2 ) = n * \frac{1}{2n} + n * (n - 1) * \frac{1}{2n} * \frac{1}{2 * (n-1)}= 
+\frac{3}{4}
+\end{equation*}
+$\var(X) = \E(X^2 ) - \E(X)^2 = \frac{3}{4} - \frac{1}{4} = \frac{1}{2} $.
+\end{solution}
+\end{enumerate}

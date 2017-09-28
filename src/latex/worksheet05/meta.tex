@@ -1,0 +1,87 @@
+\documentclass{exam}
+\usepackage{../../scripts/meta}
+
+%%% Change these %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\discnumber{4}
+\title{}
+\date{Berlekamp-Welsh, Countability, Self Reference, Counting}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\rule{\textwidth}{0.15em}
+\fontsize{12}{15}\selectfont
+\thispagestyle{empty}
+
+
+%%% General Notes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{General Comments}
+\begin{questions}
+\item General Errors
+\begin{itemize}
+	\item Solomon-Reed just talks about how to encode the message.
+	\item Basically just go over solomon reed on the board and then ask the questions in that section. Again, this is part of the lesson plan so go over these together
+	\item Matrix view is something he talked about in lecture, it seemed random there though. Skip it.
+	\item Berlekamp Welsh section is meant to walk through the intuition behind it. You can go over it together on the board and then ask students these questions to make sure they understand it. Again, Group 2 will probably be proficient in this so they can go to the exercises directly.
+	\item First question is algebra (Group 2 skip): Give your students this solution to the linear system: b = 3, note that this is the index of the error, $a_3 = 1, a_2 = 3, a_1 = 3, a_0 = 2$
+\end{itemize}
+\item Berlekamp-Welsh: 
+\begin{itemize}
+\item Make sure students understand why the algorithm works
+\item Suggestion is to have a quick walkthrough/review of Berlekamp-Welsh, and give the proof of why this algorithm works.
+\end{itemize}
+\item Countability: 
+\begin{itemize}
+\item \#1-3 
+\item The set question
+\item If A and B are both countable, then AxB is countable. (True/False)
+\end{itemize}
+\item Self Reference: 
+\begin{itemize}
+  \item Take time to be very clear about the programs we are talking about: TestHalt/Turing.
+  \item It might be helpful to draw out a flow chart to show how Turing(Turing) fails.
+  \item The key idea is that the existence of TestHalt is not possible (proof by contradiction), Turing generates this contradiction.
+  \item The equivalence between this and Cantor's diagonalization argument is again a bit tricky, try drawing it out in a table of (L)oop/(H)alt.
+  \item This relatively simple (if confusing) proof has huge implications. You might want to take some time to discuss what these are. It (like the related incompleteness theorems by G\"odel) but a limit on what we can know. We cannot generate arbitrary programs, and this gives a powerful tool (through the idea of reduction) to prove which programs are impossible.
+\end{itemize}
+\item Intro to Counting: 
+\begin{itemize}
+\item Mon-Wed people will probably not get to this
+\item Poker
+\item Solving Equations
+\end{itemize}
+\item Uncountability
+\begin{itemize}
+\item Make sure that students are familiar with the common sets (integers, rationals, etc.)
+\item The Hotel Argument 
+\item If students are confused about whether a set is countable or uncountable, ask them if the set can be enumerated in such a way that every element is covered.
+\item Consider using proof by diagonalization (draw out the diagonalization) to explain uncountability for sets such as Infinite Bit String.
+\item 
+\begin{itemize}
+\item \href{https://www.youtube.com/watch?v=6NlwpEArfwk&list=PL-XXv-cvA_iD8wQm8U0gG_Z1uHjImKXFy&index=13}{Video}
+\item this provides a good mechanism for explaining the intuition behind finding a bijection
+depending on the level of preparedness of your students you may or may not have to draw out the “hotels” on the board
+\end{itemize}
+\end{itemize}
+\item Self Reference
+\begin{itemize}
+\item Turing program question is typically included in notes, but can be confusing. Definitely want to make sure students understand why this proof makes sense. Second part of that first question is good to understand but not central to the concepts of self-reference/computability. For question 2, suggest that students try to use the program to solve the halting problem (which if it can proves that the program cannot exist.
+\end{itemize}
+\item Counting
+\begin{itemize}
+\item Definitely make sure to lecture on the rules of counting. Rather than just stating them, it will probably be better to do the examples with them in mind – it’s a lot easier to understand them when you get why they’re used
+\item Make sure to do the first one, as it emphasizes intuition of permutations vs. combinations, etc., and shouldn’t take too long
+\item Do the easier Starbucks counting ones to give them practice
+\item Solving equations-like stuff comes up decently often, so I definitely recommend going through that
+\end{itemize}
+\end{questions}
+
+\section{Questions}
+\subsection{Uncountability}
+\begin{enumerate}
+\subimport{../../topics/countability/meta/}{intro.tex}
+\end{enumerate}
+
+\end{document}
+
+

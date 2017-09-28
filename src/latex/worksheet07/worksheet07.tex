@@ -1,0 +1,75 @@
+\documentclass{exam}
+\usepackage{../../scripts/commonheader}
+
+%%% Change these %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\discnumber{7}
+\title{\textsc{Random Variables, Conditional Probability, Distributions}}
+\date{March 13 to March 17, 2017}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\rule{\textwidth}{0.15em}
+\fontsize{12}{15}\selectfont
+\thispagestyle{empty}
+
+%%% Include topics here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conditional Probability}
+\subsection{Introduction}
+%%% TODO: Make intro.tex here into intro_question.tex
+\subimport{../topics/conditional_probability/problems/}{intro.tex}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/conditional_probability/problems/}{lie_detector.tex}
+\subimport{../../topics/conditional_probability/problems/}{startup.tex}
+\subimport{../../topics/conditional_probability/problems/}{oski.tex}
+\end{questions}
+
+\section{Monty Hall}
+\subsection{Introduction}
+\subimport{../../topics/monty/problems/}{intro.tex}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/monty/problems/}{grouping_doors.tex}
+\subimport{../../topics/monty/problems/}{mac.tex}
+\end{questions}
+
+\section{Balls and Bins}
+\begin{questions}
+\subsection{Questions}
+\subimport{../../topics/balls_and_bins/problems/}{balls_bins_1}
+\end{questions}
+
+\section{Expectation and Random Variables}
+\subsection{Introduction}
+\subimport{../../topics/expectation_rv/problems/}{intro.tex}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/expectation_rv/problems/}{value.tex}
+\subimport{../../topics/expectation_rv/problems/}{make_rv.tex}
+\subimport{../../topics/expectation_rv/problems/}{calculate_exp.tex}
+\end{questions}
+
+% \section{Variance}
+% \subsection{Introduction}
+% \subimport{../../topics/variance/problems/}{intro.tex}
+% \subsection{Questions}
+% \begin{questions}
+% \subimport{../../topics/variance/problems/}{coins_dice.tex}
+% \subimport{../../topics/variance/problems/}{coins_mul_dice.tex}
+% \subimport{../../topics/variance/problems/}{solo_cup.tex}
+% \subimport{../../topics/variance/problems/}{tf.tex}
+% \end{questions}
+
+\section{Distributions}
+\subsection{Introduction}
+\subimport{../../topics/distributions/problems/}{intro_geometric.tex}
+\subimport{../../topics/distributions/problems/}{intro_binomial.tex}
+\subimport{../../topics/distributions/problems/}{intro_poisson.tex}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/distributions/problems/}{break_rsa.tex}
+\subimport{../../topics/distributions/problems/}{digit_fact.tex}
+\subimport{../../topics/distributions/problems/}{security_breaches.tex}
+\end{questions}
+\end{document}

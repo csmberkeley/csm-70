@@ -1,0 +1,19 @@
+\question A \textbf{spanning tree} of a graph $G$ is a subgraph of 
+$G$ that contains all the vertices of $G$ and is a tree. \newline 
+Prove that a graph $G = (V, E)$ if connected if and only if it contains 
+a spanning tree.
+
+\begin{solution}
+First the “if” direction. If a graph contains a spanning tree, which 
+is a connected graph that contains all the vertices, there is a path 
+between any two vertices, so the graph is connected.\newline
+
+Now the “only if.” Let $G$ be a connected graph. Either $G$ is already 
+a tree, in which case it is its own spanning tree, or else there is an 
+edge that can be removed from $G$ while it remains connected. Because 
+there are only a finite number of edges, we can continue this process 
+until no more edges can be removed, at which point we have found our 
+spanning tree.
+\end{solution}
+
+\clearpage

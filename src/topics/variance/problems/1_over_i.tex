@@ -1,0 +1,75 @@
+\question Consider the random variable $X = X_1 + \dotsc + X_n$, 
+where $X_i$ equals $i$ with probability $\frac{1}{i}$ and 0 otherwise. 
+\begin{enumerate}[label=(\alph*)]
+\item What is the variance of $X$? (Assume that $X_i$ and $X_j$ are 
+independent for $i \neq j$)
+\begin{solution}[4cm]
+\begin{equation}
+\begin{split}
+\var(X) &= \var(X_1) + \dotsc + \var(X_n) \\ \nonumber
+\E(X_i^2) &= \P[X_i = i]*i^2 +\P[X_i = 0]*0^2 = \frac{1}{i}*i^2 + 0 = i \\
+(\E(X_i))^2 &= (\P[X_i = i]*i + \P[X_i = 0]*0 = \frac{1}{i}*i + 0 = 1 \\
+\var(X_i) &= \E(X_i^2) - (\E(X_i))^2 = i - 1
+\end{split}
+\end{equation}
+Recall, 
+\[\sum_{k = 1}^{n} = \frac{n*(n + 1)}{2}\]
+
+\begin{equation}
+\begin{split}
+\var(X) &= \sum_i \var(X_i) \\ \nonumber
+&= \sum_i i - 1 \\
+&= -n + \sum_i i \\
+&= -n + \frac{n * (n + 1)}{2} \\
+&= \frac{n*(n + 1) - 2n}{2} \\
+&= \frac{n^2 + n - 2n}{2} \\
+&= \frac{n^2 - n}{2} \\
+&= \frac{n*(n - 1)}{2}
+\end{split}
+\end{equation}
+\end{solution}
+
+\item For what value of $n$ does $\E(X) = \var(X)$?
+\begin{solution}[3cm]
+\begin{equation}
+\begin{split}
+\E(X_i) &= \P[X_i = i]*i + 0 \\ \nonumber
+&= \frac{1}{i}*i = 1
+\end{split}
+\end{equation}
+
+
+\begin{equation}
+\begin{split}
+\E(X) &= \E(X_1 + \dotsc + X_n) \\ \nonumber
+&= \E(X_1) + \dotsc + \E(X_n) \\
+&= n
+\end{split}
+\end{equation}
+
+
+\begin{equation}
+\begin{split}
+n = \frac{n*(n-1)}{2} &\rightarrow 1 = \frac{n-1}{2} \\ \nonumber
+&\rightarrow 2 = n - 1 \\
+&\rightarrow 3 = n
+\end{split}
+\end{equation}
+\end{solution}
+
+\item For what value of $n$ does $E(X) = SD(X)*\sqrt{2} + 100$?
+\begin{solution}[2 cm]
+$\E(X) = n, SD(X) = \sqrt{\var(X)}$
+\begin{equation}
+\begin{split}
+n &= \sqrt{\frac{n*(n-1)}{2}}*\sqrt{2} + 100 \\ \nonumber
+n &= \sqrt{n*(n-1)} + 100 \\
+(n - 100)^2 &= n*(n-1) \\
+n^2 - 200n + 10000 &= n^2 - n \\
+10000 &= 199n \\
+n &= \frac{10000}{199}
+\end{split}
+\end{equation}
+\end{solution}
+
+\end{enumerate}

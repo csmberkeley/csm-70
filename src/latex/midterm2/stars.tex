@@ -1,0 +1,40 @@
+\question \textbf{Teach for the Stars}\newline
+ You want to teach 61A! You will apply for some position every semester after taking the class. Once you have first finished the class, you have an 80\% chance to be hired as a Lab Assistant, a 10\% chance of being hired as a Tutor, and a 10\% chance of being hired as a TA. 
+
+Once you have been a Lab Assistant, you have a 30\% chance of being rehired as a Lab Assistant, a 50\% chance of being hired as a Tutor, and a 20\% chance of being hired as a TA. 
+
+Once you have been a Tutor, you have a 60\% chance of being rehired as a Tutor, and a 40\% chance of being hired as a TA. TAs are guaranteed to stay TAs forever when they are hired.
+
+\begin{enumerate}
+\item  What is the chance of being a Tutor on your second semester after finishing the class? (So you were either a Lab Assistant or a Tutor for one semester already)
+\begin{solution}
+\[0.8 * 0.5 + 0.1 * 0.6 = 0.46  \]
+	Chance of being a Tutor given you have been a Lab Assistant + chance of being a Tutor given you were hired as a Tutor on the first semester.
+\end{solution}
+
+\item What is the chance that you stay a Lab Assistant for all 7 semesters after taking the class? (don’t need to get the exact number)
+\begin{solution}
+\[0.8 * 0.3^6 = \text{about 4 in a million}\]
+		Student hired as LA after taking the class then keeps getting rehired as an LA
+\end{solution}
+
+\item Given you were hired as a Lab Assistant the first semester after taking the class, what is the chance that you stay a Tutor for all 6 remaining semesters?
+\begin{solution}
+\[\frac{0.8 * 0.5 * 0.6^5}{0.8} \]
+		Lab Assistant for the first semester and Tutor for the rest / Lab Assistant for the first semester
+\end{solution}
+
+\item What is the chance that you are hired as a Tutor exactly 3 times in 5 semesters?
+\begin{solution}
+\[0.8 * 0.3 * 0.5 * 0.6 * 0.6 +\]
+\[0.8 * 0.5 * 0.6 * 0.6 * 0.4 +\]
+\[0.5 * 0.6 * 0.6 * 0.4\]
+Since you cannot be demoted, there are only 3 ways to be a Tutor exactly 3 times: LLTTT, LTTT TA, and TTT TA TA
+\end{solution}
+
+\item What is your chance of being a TA at least once in your first 3 semesters?
+\begin{solution}
+We have 1 - the chance that you aren’t a TA given that you weren’t a TA in the second semester, which is the probability of being a lab assistant twice + lab assistant + tutor, or a tutor twice, which is 
+\[1- (0.8*0.3*0.8) + 1 - (0.8*0.5*0.6) + 1 - (0.1*0.6*0.6) = 0.532\]
+\end{solution}
+\end{enumerate}

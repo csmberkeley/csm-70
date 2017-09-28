@@ -1,0 +1,19 @@
+\question \textbf{Equality for Every Fun}\newline
+Two functions $f, g$ are equal by the following definition:
+\[f, g: X \rightarrow Y \text{ and } f = g \iff \forall x \in X f(x) = g(x) \]
+\begin{enumerate}[label=(\alph*)]
+\item I want to define equality on the set of real, finite length, polynomial functions. Can I do this? Justify your answer.
+\begin{solution}
+This is possible. Since the polynomial representation of a function is unique and there are a finite number of coefficients, we can simply check the equality of the coefficients.
+\end{solution}
+
+\item I want to define equality on the set of single argument Python functions. Can I do this? Justify your answer.
+\begin{solution}
+This is not possible. Functions in Python represent general programs. Consider one function that immediately outputs 0 for all inputs, and another that outputs 0 if another program terminates on the input, and 1 if it does not terminate on the input. By the halting problem, we cannot know what the second program outputs, and so we cannot know if the two are equal on all inputs.
+\end{solution}
+
+\item What is, if anything, the difference between these two problems?
+\begin{solution}
+Python programs allow self reference, polynomials do not.
+\end{solution}
+\end{enumerate}

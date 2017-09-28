@@ -1,0 +1,36 @@
+\question Now show that if a graph satisfies either of these two 
+properties then it must be a tree:
+\begin{enumerate}[label=\alph*]
+\item If for every pair of vertices in a graph they are connected by 
+exactly one simple path, then the graph must be a tree.
+\begin{solution}[1.6 in]
+Assume we have a graph with the property that there is a unique simple 
+path between every pair of vertices. We will show that the graph is a 
+tree, namely, it is connected and acyclic. First, the graph is connected 
+because every pair of vertices is connected by a path. Moreover, the 
+graph is acyclic because there is a unique path between every pair of 
+vertices. More explicitly, if the graph has a cycle, then for any two 
+vertices $x$, $y$ in the cycle there are at least two simple paths 
+between them (obtained by going from $x$ to $y$ through the right or 
+left half of the cycle), contradicting the uniqueness of the path. 
+Therefore, we conclude the graph is a tree.
+\end{solution}
+
+\item If the graph has no simple cycles but has the property that the 
+addition of any single edge (not already in the graph) will create a 
+simple cycle, then the graph is a tree.
+\begin{solution}
+Assume we have a graph with no simple cycles, but adding any edge will 
+create a simple cycle. We will show that the graph is a tree. We know 
+the graph is acyclic because it has no simple cycles. To show the graph 
+is connected, we prove that any pair of vertices $x$, $y$ are connected 
+by a path. We consider two cases: If $(x, y)$ is an edge, then clearly 
+there is a path from $x$ to $y$. Otherwise, if $(x,y)$ is not an edge, 
+then by assumption, adding the edge $(x,y)$ will create a simple cycle. 
+This means there is a simple path from $x$ to $y$ obtained by removing 
+the edge $(x, y)$ from this cycle. Therefore, we conclude the graph is 
+a tree.
+\end{solution}
+\end{enumerate}
+
+\clearpage

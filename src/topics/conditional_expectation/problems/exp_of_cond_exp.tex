@@ -1,0 +1,10 @@
+\question Prove $\E(\E(Y|X)) = \E(Y)$
+\begin{solution}[2 cm]
+\begin{align*}
+\E(\E(Y|X)) &= \sum_x \E(Y | X = x) \cdot \P[X = x] \\
+&= \sum_x (\sum_y y \cdot \P[Y=y|X=x]) \cdot \P[X = x] \\
+&= \sum_y y \cdot  \sum_x y \cdot \P[X=x|Y=y]) \cdot \P[Y=y] \\
+&= \sum_y y \cdot \P[Y=y] \cdot \sum_x \P[X=x|Y=y]) \\
+&= \sum_y y \cdot \P[Y=y] = E[Y]
+\end{align*}
+\end{solution}

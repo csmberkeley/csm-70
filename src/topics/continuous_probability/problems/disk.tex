@@ -1,0 +1,29 @@
+\question Define a continuous random variable $R$ as follows: we pick 
+a random point on a disk of radius 1; the value of $R$ is distance of 
+this point from the center of the disk. We will find the probability 
+density function of this random variable.
+
+\begin{enumerate}[label=(\alph*)]
+\item What is (should be) the probability that $R$ is between 0 and 
+$\frac{1}{2}$? Why?
+\begin{solution}[4cm]
+$\frac{1}{4}$, because the area of the circle with distance between 
+0 and $\frac{1}{2}$ is ($\pi(\frac{1}{2})^2 = \frac{\pi}{4}$), and 
+the area of the entire circle is $\pi$.
+\end{solution}
+
+\item What is (should be) the probability that $R$ is between $a$ 
+and $b$, for any $0 \le a \le b \le 1$?
+\begin{solution}[4cm]
+The area of the region containing these points is the area of the 
+outer circle minus the area of the inner circle, or $\pi b^2 - \pi a^2 
+= \pi(b^2 - a^2)$. The probability that a point is within this region, 
+rather than the entire circle, is $\frac{\pi(b^2 - a^2)}{\pi} = b^2 - a^2$.
+\end{solution}
+
+\item What is a function $f(x)$, for which $\int_{a}^{b} f(x)dx$ 
+satisfies these same probabilities?
+\begin{solution}[4cm] $f(x) = 2x$ because $\int_{a}^{b} f(x)dx = 
+[x^2]_{a}^{b} = b^2 - a^2$. \end{solution}
+
+\end{enumerate}

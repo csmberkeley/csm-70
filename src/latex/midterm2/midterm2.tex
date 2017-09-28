@@ -1,0 +1,82 @@
+
+
+\documentclass{exam}
+\usepackage{../../../scripts/commonheader}
+\usepackage{enumitem}
+\usepackage{changepage}
+\usepackage{amsmath,amssymb,amsthm}
+\renewcommand{\HRule}[1][\medskipamount]{\par
+  \vspace*{\dimexpr-\parskip-\baselineskip+#1}
+  \noindent\rule{\linewidth}{0.2mm}\par}
+   \renewcommand\tab[1][1cm]{\hspace*{#1}}
+\renewcommand{\qedsymbol}{\rule{0.7em}{0.7em}}
+%%% Change these %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\discnumber{}
+\title{\textsc{Midterm 2 Review}}
+\date{October 23, 2016}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+\rule{\textwidth}{0.15em}
+\fontsize{12}{15}\selectfont
+\thispagestyle{empty}
+
+\section{FLT and RSA}
+\begin{questions}
+\subimport{.}{becoming_alice.tex}
+\subimport{.}{cracking_rsa.tex}
+\end{questions}
+
+\section{Polynomials}
+\begin{questions}
+\subimport{.}{polynomial_practice.tex}
+\subimport{.}{spot_the_error.tex}
+\subimport{.}{majority_rules.tex}
+\subimport{.}{all_right.tex}
+\end{questions}
+
+\section{Counting/Combinatorics}
+\begin{questions}
+\subimport{.}{midterm_madness.tex}
+\subimport{.}{counting_cards.tex}
+\subimport{.}{looking_at_letters.tex}
+\subimport{.}{total_triangles.tex}
+\subimport{.}{integers.tex}
+\subimport{.}{jane.tex}
+\subimport{.}{combinatorics.tex}
+\end{questions}
+
+\section{Self Reference}
+\begin{questions}
+\subimport{.}{equality.tex}
+\subimport{.}{diagon_alley.tex}
+\subimport{.}{floating.tex}
+\end{questions}
+
+\section{Probability}
+\begin{questions}
+\subimport{.}{chances.tex}
+\subimport{.}{marbles.tex}
+\subimport{.}{rook.tex}
+\end{questions}
+
+\section{Conditional}
+\begin{questions}
+\subimport{.}{passing.tex}
+\subimport{.}{stars.tex}
+\end{questions}
+
+
+\section{Infinity and Countability}
+\begin{questions}
+\subimport{.}{warmup.tex}
+\subimport{.}{cooldown.tex}
+\end{questions}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

@@ -1,0 +1,41 @@
+\question \textbf{Coloring Hypercubes} \newline Let $G = (V, E)$ be 
+an undirected graph. $G$ is said to be $k$-vertex-colorable if it is 
+possible to assign one of $k$ colors to each vertex of $G$ so that no 
+two adjacent vertices receive the same color. $G$ is $k$-edge-colorable 
+if it is possible to assign one of $k$ colors to each edge of $G$ so 
+that no two edges incident on the same vertex receive the same color. \newline
+Show that the $n$-dimensional hypercube is 2-vertex-colorable for 
+every $n$.
+\begin{solution}[3in]
+Base case: For $n = 1$, the hypercube is a single edge. If we color 
+one vertex red and the other blue we have a 2-vertex coloring, since 
+the adjacent vertices are colored differently. 
+
+Inductive Step: Assume we’ve shown this to hold for $n$-dimensional 
+hypercubes, we will show this holds for $n + 1$-dimensional hypercubes. 
+Recall that we can define an $n + 1$ dimensional hypercube as two 
+$n$-dimensional hypercubes where every vertex $i$ in the first 
+hypercube is connected to vertex $i$ in the second hypercube. 
+Considering this definition, for a given $n + 1$ dimensional 
+hypercube, let $H_0$, $H_1$ denote the first and second n-dimensional 
+hypercubes, respectively. By the inductive hypothesis, we assume that 
+$H_0$ is 2-vertex colorable, and therefore there exists some coloring 
+scheme which is a legal 2-vertex coloring of $H_0$. Given this coloring, 
+we will color $H_1$ in the opposite coloring scheme which, given a color 
+of vertex $ i$ in $H_0$ assigns the opposite color to the vertex $i$ in 
+$H_1$. Since we colored the vertices in both $H_0$ and $H_1$, we have 
+colored all the vertices in the hypercube. It remains to show that this coloring scheme is legal. Assume, for purpose of contradiction that there is a given 
+vertex $i$ in $H_1$ which has an adjacent neighbor colored with the 
+same color. If that neighbor is in $H_1$, then this means that the 
+coloring of $H_1$ is not legal. Observe that if a coloring scheme is 
+a legal 2-vertex coloring on some graph $G$, then the opposite 
+coloring scheme is also a legal 2-vertex coloring on $G$. Since we 
+colored $H_1$ with the opposite scheme of $H_0$, and $H_0$ is identical 
+to $H_1$, this implies that the coloring of $H_1$ is a legal 2-vertex 
+coloring, which contradicts having two adjacent vertices in $H_1$ 
+sharing the same color. If the neighbor is in $H_0$, then we know, 
+by definition of the $n + 1$-dimensional hypercube, that the neighbor 
+must be $i$ in $H_0$. In our coloring however, we colored$ i$ in $H_0$ 
+and $i$ in $H_1$ in opposite colors, which again contradicts our 
+assumption. Similarly, we can show for the case where $i$ is in $H_0$
+\end{solution}

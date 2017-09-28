@@ -1,0 +1,65 @@
+\question Oski the bear has lost his dog in either forest $A$ (with a 
+priori probability 0.4) or in forest $B$ (with a priori probability 0.6). \\*                   
+On any given day, if the dog is in $A$ and Oski spends a day searching 
+for it in $A$, the conditional probability that he will find the dog 
+that day is 0.25. Similarly, if the dog is in $B$ and Oski spends a day 
+looking for it there, the conditional probability that he will find the 
+dog that day is 0.15. \\*               
+The dog cannot go from one forest to the other. Oski can search only in 
+the daytime, and he can travel from one forest to the other only at night.
+
+\begin{enumerate}[label=(\alph*)]
+\item  In which forest should Oski look to maximize the probability he 
+finds his dog on the first day of the search?     
+%\vspace{2.5cm}
+\begin{solution}[3cm]
+\begin{align*}
+P(\text{Finding In A}) = P(\text{Dog In A}) * P(\text{Search Successful}) 
+= \frac{4}{10} *  \frac{2}{8} = \frac{1}{10} \\
+    P(\text{Finding In B}) = P(\text{Dog In B}) * 
+    P(\text{Search Successful}) = \frac{6}{10} 
+    * \frac{3}{20} = \frac{9}{100}\\
+    \frac{1}{10} > \frac{9}{100}
+\end{align*} so Oski should search in \textbf{Forest A}
+\end{solution}
+
+\item  Given that Oski looked in $A$ on the first day but didn’t find 
+his dog, what is the probability that the dog is in $A$?
+%\vspace{2.5cm}
+\begin{solution}[2cm]
+\begin{align*}
+P(\text{Dog In A } &\mid \text{ Searched A and Failed}) 
+\\ &=  \dfrac{P(\text{Dog In A } \cap \text{ Searched
+A and Failed})}{P(\text{Dog In A } \cap \text{ Searched A and Failed}) + 
+P(\text{Dog Not In A})} \\ 
+&= \dfrac{\dfrac{4}{10} * \dfrac{3}{4} }{\dfrac{4}{10} * \dfrac{3}{4} + 
+\dfrac{6}{10}}
+                    = \frac{1}{3}    
+\end{align*}
+\end{solution}
+
+\item If Oski flips a fair coin to determine where to look on the first 
+day and finds the dog on the first day, what is the probability that he 
+looked in $A$?
+%\vspace{5cm}
+\begin{solution}[3cm]
+$\frac{P(\text{Looks In A}) \cap P(\text{Dog In A}) \cap 
+P(\text{Finds Dog})}{P(\text{Finds Dog})} 
+= \frac{\frac{1}{2} * \frac{4}{10} * \frac{1}{4}}{\frac{1}{2} * 
+\frac{4}{10} * \frac{1}{4} + \frac{1}{2} * \frac{6}{10} * \frac{3}{20}}$
+\end{solution}
+                        
+\item  If the dog is alive and not found by the $N$th day of the search, 
+it will die that evening with probability $\frac{N}{N+2}$. Oski has 
+decided to look in $A$ for the first two days. What is the probability 
+that he will find a live dog for the first time on the second day? 
+%\vspace{5cm}
+\begin{solution}[2cm]
+\begin{multline}
+P(\text{Dog In A}) \cap P(\text{Find Dog First Day})^{C} \cap \nonumber
+P(\text{Dog Dies})^{C} \cap 
+P(\text{Finds Dog Second Day}) \\
+= \frac{4}{10} * \frac{3}{4} * \frac{2}{3} * \frac{1}{4}
+\end{multline}
+\end{solution}
+\end{enumerate}

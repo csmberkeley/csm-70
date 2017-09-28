@@ -1,0 +1,17 @@
+\question In a large field, $n$ people are standing so that for each 
+person, the distances to every other person is different. At a given 
+signal, each person fires a water pistol and hits the person who is 
+closest to them. When $n$ is odd, prove that there is at least one 
+person who is left dry.
+
+\begin{solution}
+Do this by induction: \newline
+Base case : 1 person is trivial\newline
+Inductive Hypothesis: Assume that for $k$ odd, there is one person 
+left dry.\newline
+Inductive Step: For $(k+2)$ people, consider the two people closest 
+to each other. This is unique (given by the problem), and these two 
+people necessarily shoot each other. Therefore, the problem reduces 
+to $k$ people, which we know must have one person left dry by 
+hypothesis.
+\end{solution}

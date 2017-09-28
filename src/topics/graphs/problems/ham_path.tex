@@ -1,0 +1,41 @@
+\question Every tournament has a Hamiltonian path. 
+(Recall that a Hamiltonian path is a path that visits each vertex 
+exactly once)
+
+\begin{solution}
+\textit{Base Case}: For $n = 1$ nodes, there is a trivial 
+Hamiltonian path. \newline
+\textit{Inductive Hypothesis}: Assume that for a tournament 
+with $n$ nodes, there is a Hamiltonian path.\newline
+\textit{Inductive Step}: Consider a tournament $T$ with $n + 1$ nodes. 
+Take an arbitrary node $x$, and remove it along with its incident 
+edges. The resulting subgraph $T$\ensuremath{'} is also a tournament 
+(each node in $T$\ensuremath{'} still shares some edge with every 
+other node in $T$\ensuremath{'}). By the Inductive Hypothesis, 
+there is some Hamiltonian path in $T$\ensuremath{'}. Let this 
+Hamiltonian Path be $v_1, v_2, v_3, \dotsc , v_n$. Now we consider 
+$T$. Note that since $T$ is a tournament, $x$ shares an edge with 
+every other node in $T$. There are three possible cases:
+\begin{enumerate}[label= ]
+	\item \textit{Case 1}: Everybody beat $x$ (there is no edge 
+	from $x$ to any node in $T$\ensuremath{'}). Then there is an 
+	edge $(v_n, x)$. Thus, there is a Hamiltonian Path in $T$, 
+	namely $v_1, v_2, v_3, \dotsc, v_n, x$.
+	\item \textit{Case 2}: $x$ beat everybody (there is no edge 
+	from any node in $T$\ensuremath{'} to $x$). Then there is an 
+	edge $(x, v_1)$. Thus, there is a Hamiltonian Path in $T$, 
+	namely $x, v_1, v_2, v_3, \dotsc , v_n$.
+	 \item \textit{Case 3}: There is some $v_i$ that is the last 
+	 person who beat $x$, in the ordering $v_1, \dotsc , v_n$. 
+	 Note that $v_i$ must exist because we are not in Case 2, and 
+	 $i \neq n$ because we are not in Case 1. Then since $v_i$ is 
+	 the last person who beat $x$, there is an edge $(v_i, x)$, and 
+	 an edge $(x, v_{i+1})$. Thus, there is a Hamiltonian path in $T$, 
+	 namely $v_1, v_2, v_3, \dotsc , v_i, x, v_{i+1}, \dotsc , v_n$.
+These are the only possible cases, so it must be that $T$ has a Hamiltonian Path.
+\end{enumerate}
+Therefore by induction, any tournament has a Hamiltonian Path. \newline
+
+\end{solution}
+
+\clearpage

@@ -1,0 +1,40 @@
+{\tabulinesep=1mm
+\begin{tabu}{|p{16cm} |}
+\hline
+We want to send $n$ packets and we know that $k$ packets could get lost. \newline
+\begin{center}
+\includegraphics[width=8cm, height=0.7cm]{erasure_intro.jpg}
+\end{center}
+
+How many more points does Alice need to send to account for $k$ possible errors?
+\line(1,0){10}
+\begin{solution}
+$k$
+\end{solution}
+
+What degree will the resulting polynomial be? \line(1,0){15}
+\begin{solution}
+$n - 1$
+\end{solution}
+
+How large should $q$ be if Alice is sending n packets with k erasure errors, 
+where each packet has $b$ bits?
+\newline
+\vspace{2cm}
+\begin{solution}
+Modulus should be larger than $n+k$ and larger than $2^b$ and be prime
+\end{solution}
+
+What would happen if Alice instead send $n + k - 1$? Why will Bob be 
+unable to recover the message?
+\vspace{2cm}
+\begin{solution}
+Bob will receive $n - 1$ distinct points and needs to reconstruct a 
+polynomial of degree $n - 1$. By Fact \#3 this is impossible. There are 
+$q$ polynomials of at most degree $n - 1$ in $GF(q)$ that go through the 
+$n - 1$ points that Alice sent. 
+\end{solution}
+\\
+\hline
+\end{tabu}
+}

@@ -1,0 +1,65 @@
+\question Show that the edges of a complete graph on $n$ vertices 
+for even $n$ can be partitioned into $\frac{n}{2}$ edge disjoint 
+spanning trees. \newline
+\textit{Hint}: Recall that a complete graph is an undirected graph 
+with an edge between every pair of vertices. The complete graph has 
+$\frac{n * (n-1)}{2}$ edges. A spanning tree is a tree on all $n$ 
+vertices -- so it has $n-1$ edges. So the complete graph has enough 
+edges (for even $n$) to create exactly $\frac{n}{2}$ edge disjoint 
+spanning trees (i.e. each edge participates in exactly one spanning 
+tree). You have to show that this is always possible.
+
+\begin{solution}[5in]
+We proceed by induction.\newline
+\textit{Base Case}: Consider a complete graph on 2 vertices. This 
+can clearly be partitioned into 2/2 = 1 edge disjoint spanning tree, 
+because the graph is already a tree.\newline
+\textit{Inductive Hypothesis}: Assume that the edges of a complete 
+graph on $k$ vertices (for $k$ even) can be partitioned into 
+$\frac{k}{2}$ edge disjoint spanning trees.\newline
+\textit{Inductive Step}: We need to partition the edges of a 
+complete graph $G_{k+2}$ on $k+2$ vertices into $\frac{k}{2} +1$ 
+edge disjoint spanning trees.\newline
+To do this, label the vertices of $G_{k+2}$ as $v_1, v_2, \dotsc ,v_{k+2}$. 
+Remove the vertices $v_k+1$ and $v_{k+2}$ (and associated edges) to 
+form a complete graph $G_k$ with $k$ vertices $v_1, \dotsc, v_k$. 
+By the inductive hypothesis, $G_k$ has $\frac{k}{2}$ edge disjoint 
+spanning trees; call these trees $T_1, \dotsc ,T_k=2$.
+Add the vertices $v_{k+1}$ and $v_{k+2}$ back into $G_k$ to once 
+again form the graph $G_{k+2}$. These vertices come with $2k+1$ 
+extra edges, connecting $(v_i,v_{k+1})$ and $(v_i,v_{k+2})$ for 
+each $i = 1,2,\dotsc,k,$ and also
+$(v_{k+1}, v_{k+2})$. These edges must be included into spanning trees.
+We wish to extend the trees $T_1,\dotsc,T_{k+2}$ to include the new 
+vertices $v_{k+1}$ and $v_{k+2}$. To do this, for each tree $T_i$, 
+attach two new edges $(v_i,v_{k+1})$ and $(v_{i+\frac{k}{2}}, v_{k+2})$. 
+This extends each tree $T_i$ to be a spanning tree.
+The remaining edges form one additional spanning tree. These edges 
+are $(v_{i+\frac{k}{2}}, v_{k+1})$ and $(v_i,v_{k+2})$ for $i =1 to 
+\frac{k}{2}$, along with the connecting edge $(v_{k+1}, v_{k+2})$. 
+These edges connect each of the vertices $v_{k+1}$ and $v_{k+2}$ to 
+half the remaining vertices, and together with the edge between 
+$v_{k+1}$ and $v_{k+2}$ this gives the desired spanning tree.
+Therefore, we have covered the graph in $\frac{k}{2} +1$ edge disjoint 
+spanning trees. This completes the induction.\newline
+
+Remark: The key idea here is the following:\newline
+Take a graph with $k$ vertices that is partitioned into $\frac{k}{2}$ 
+spanning trees. In the inductive step, we want to add two vertices 
+(with associated edges). To maintain a partitioning into spanning trees, 
+we must expand the preexisting $\frac{k}{2}$ trees to the new vertices, 
+but this is a bit subtle!
+We need to add the two new vertices to each of the preexisting 
+$\frac{k}{2}$ trees, which takes 2  $\frac{k}{2}= k$ edges connecting 
+the preexisting $k$ vertices to the two new vertices. It’s really 
+important that we use only one edge out of each of the original vertices! 
+This is because otherwise, we would use up both new edges out of one 
+of the vertices $v_j$, but then our final new spanning tree wouldn’t 
+be able to reach $v_j$, so the remaining $k+1$ edges wouldn’t be able 
+to form a spanning tree!\newline
+So to do this, we need to split the original $k$ vertices into two 
+equal subsets of  $\frac{k}{2}$ vertices each, and connect each half 
+to one of the two new vertices. Once we do that, we can then justify 
+forming a new spanning tree from the remaining edges, which allows us 
+to complete the argument.	
+\end{solution}

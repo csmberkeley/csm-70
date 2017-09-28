@@ -1,0 +1,50 @@
+\q{5}{Continuously Raising Expectations}
+
+\begin{enumerate}
+\item A target is made of 3 concentric circles of radii 
+$\frac{1}{\sqrt{3}}, 1$ and $\sqrt{3}$ feet. Shots within the 
+inner circle are given 4 points, shots within the next ring are 
+given 3 points, and shots within the third ring are given 2 points. 
+Shots outside the target are given 0 points.Let X be the distance 
+of the hit from the center (in feet), and let the probability 
+density function of X be
+$f(x) =\frac{2}{\pi(1+x^2)},  x > 0, 0 $ otherwise.
+What is the expected value of the score of a single shot? 
+Don’t solve; just set it up. 
+
+% \solution{
+% The expected value is $$\int_{0}^{\frac{1}{\sqrt[]{3}}} 
+% 4\frac{2}{\pi(1+x^2)} + \int_{\frac{1}{\sqrt[]{3}}}^{1} 
+% 3\frac{2}{\pi(1+x^2)} + \int_{1}^{\sqrt[]{3}} 2\frac{2}{\pi(1+x^2)}$$
+% }
+
+\vspace{8cm}
+
+\item Consider the following game. Spin a wheel and wait until 
+it comes to rest at some $x$ between 0 and 359. The amount of 
+money won is $\frac{x}{36}-6$ dollars. Let $Y$ be a random 
+variable for your winnings. First, define a probability density 
+function. From there, calculate the expectation and variance. 
+
+
+
+% \solution{
+% For the probability density function, we know that the area 
+% under the curve must be 1. We know that we can either lose a 
+% maximum of -6 dollars or win a maximum of ~4 dollars, so our 
+% random variable Y can only range in between there. What will 
+% be the value at those points? We have 10 values and we need 
+% the area of this rectangle to be 1, so $f(y)$ is $\frac{1}{10}$ 
+% in this area between $-6 \leq y \leq 4$, and 0 elsewhere. 
+
+% Expectation: $\int_{-\infty}^{\infty} yf(y)dy$ which is actually 
+% $\int_{-6}^{4} \frac{ y}{10}dy$ which evaluates to $\frac{1}{20} * (16-36) = -1$. 
+
+% Variance: $\int_{-\infty}^{\infty}(y-E[Y])^2f(y)dy$ which is actually 
+% $\int_{-6}^{4} \frac{(y+1)^2}{10} dy$ which evaluates to 
+% $\frac{1}{30} * (125+125) = \frac{25}{3}$.
+% }
+
+
+
+\end{enumerate}

@@ -1,0 +1,9 @@
+\question \textbf{Counting Cards}\newline
+How many five card hands have at least one card from each suit?
+\begin{solution}
+Hand will be of this form: A B C D A where A, B, C, D are the suits.
+First decide which suit will be repeated: ${4 \choose 1}$
+Then get two cards from that suit: ${13 \choose 2}$
+Finally select a card from each of the other suits: ${13 \choose 1}$
+\[{4 \choose 1} {13 \choose 2} {13 \choose 1} {13 \choose 1}  {13 \choose 1} \]
+\end{solution}

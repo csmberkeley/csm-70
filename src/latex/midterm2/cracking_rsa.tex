@@ -1,0 +1,17 @@
+\question \textbf{Cracking RSA}\newline
+Suppose Bob's RSA public key is $(e, n)$, where $e$ is the encryption key, and $n = pq$ is the product of two primes. Alice has just sent a secret message $c = m^e \mod n$ to Bob using Bob’s public key.
+\begin{enumerate}[label=(\alph*)]
+
+\item Explain how Bob can decrypt the message he has received.
+\begin{solution}
+$c^d \mod n = m^{ed} \mod n = m$
+\end{solution}
+
+\item Now suppose that by eavesdropping on their conversation you managed to overhear the ciphertext $c$. Moreover, when crafting his public key Bob foolishly chose primes that were too small, so that by continuously running a fast factoring algorithm on one of Berkeley’s supercomputing clusters for two weeks, you eventually manage to factor $n$, and recover $p$ and $q$. Given $e, p, q,$ and $c,$ explain how you can now efficiently recover plaintext $m$ of Alice's message to Bob.
+\begin{solution}
+Compute $d' = e-1 \mod (p-1)(q-1)$
+Now you can compute $c^{d'} = m^{ed'} = m$
+Note that all operations can be computed by the extended GCD algorithm which is polynomial time, and the exponentiation, also polynomial time.
+\end{solution}
+
+\end{enumerate}

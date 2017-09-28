@@ -1,0 +1,23 @@
+\question Prove that any cycle in an $n$-dimensional hypercube must 
+have even length.
+\begin{solution}[3in]
+Answer: Here are three ways to solve this problem: here we will argue 
+via bit flips, but there also exist arguments using the parity of 
+Hamming distance, or induction on $n$. Note that induction on $n$ 
+is more difficult and prone to build-up error.
+					
+Answer 1: Bit flips
+					
+Main idea: moving through an edge in a hypercube flips exactly one 
+bit, and moreover each bit must be flipped an even number of times 
+to end up at the starting vertex of the cycle.
+					
+Proof: Each edge of the hypercube flips exactly one bit position. 
+Let $E_i$ be the set of edges in the cycle that flip bit $i$. Then 
+$|E_i|$ must be even. This is because bit $i$ must be restored to 
+its original value as we traverse the cycle, which means that bit 
+$i$ must be flipped an even number of times. Since each edge of the 
+cycle must be in exactly one set $E_j$, the total number of edges in 
+the cycle = $\sum_j |E_j|$ is a sum of even numbers and therefore even. 
+				
+\end{solution}

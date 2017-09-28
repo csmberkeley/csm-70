@@ -1,0 +1,13 @@
+\question Prove that $\cov(X + Y, Z) = \cov(X, Z) + \cov(Y, Z)$:
+\begin{solution}
+\begin{equation}
+\begin{split}
+\cov(X + Y, Z) &= \E((X + Y) \cdot Z) - \E(X + Y) \cdot \E(Z) \\ \nonumber
+	          &= \E(X \cdot Z) + \E(Y \cdot Z) - (\E(X) \cdot \E(Z) + 
+	          \E(Y) \cdot \E(Z)) \\
+           &= \E(X \cdot Z) - \E(X) \cdot \E(Z) + \E(Y \cdot Z) - 
+           \E(Y) \cdot \E(Z) \\
+           &= \cov(X, Z) + \cov(Y, Z) 
+\end{split}
+\end{equation}
+\end{solution}

@@ -1,0 +1,60 @@
+\documentclass{exam}
+\usepackage{../../scripts/meta}
+
+%%% Change these %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\discnumber{7}
+\title{}
+\date{Random Variables, Conditional Probability, Distributions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\rule{\textwidth}{0.15em}
+\fontsize{12}{15}\selectfont
+\thispagestyle{empty}
+
+
+%%% General Notes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{General Comments}
+\begin{questions}
+\item There is only one conditional probability question with four parts, the first three parts are mandatory, but the last one is optional. It will still take a good chunk of time though, be ready for that.
+\item For expectation and variance, all of the first problem in 3.1 are mandatory. Beyond that, for 2, 3, and 4, go through those in order finishing as many as you can.
+\item Try drawing the doors/providing visuals for Monty Hall in order to help students understand it.
+\item Conditional Probability
+\begin{itemize}
+\item Make sure that your students are definitely confident with Bayes Rule and the Product Rule before continuing. 
+\item The Oski question is very involved and will likely take you a while if you try to get through all of it (maybe 20-30min). I think it tests conditional probability very well; if you feel that your students had a strong grasp on it, then maybe just go over (a) and (b) on the board and have them do the rest individually. If not, I'd suggest spending a lot of time on it, because conditional probability is quite foundational
+\item Give an example for independence if you didn't last week
+\item Draw out diagrams for Bayes' Rule with all the event probabilities listed out.
+\item Emphasize that conditioning is really just changing the probability space that events are drawn from
+\item Can connect to normalization, i.e. want probability of all still relevant events to sum to 1, so divide by the total probability of the conditioned events 
+\item Show how independence decouples conditional probabilities 
+i.e. $P(X|Y) ^ X \perp Y \rightarrow P(X|Y) = P(X)$
+\item Basically this is saying that having Y gives no information about X, which is exactly what the above equation says.
+\item Hashing and Union Bound Applications
+\begin{itemize}
+\item Go over how Balls and Bins applies to these topics.
+\item Skip if there is not as much time.
+\end{itemize}
+\end{itemize}
+\item Expectation/Random Variables
+\begin{itemize}
+\item Talk about how RVs are functions of events to real numbers
+\item \href{http://mathoverflow.net/questions/250500/why-do-we-need-random-variables}{Why do we need random variables?}
+\item Describe how functions of RVs are also RVs (e.g. $X + Y = Z$)
+\item Make sure that you write out the formal definition of expectation, it makes defining $\E[X^2]$ much easier to show.
+\item Show how to do $\E[f(X)]$ for a function $f$
+\item Do the proof for linearity of expectation
+\item Definitely do the True/False question
+\end{itemize}
+\item Discrete Distributions
+\begin{itemize}
+\item Try and provide different scenarios where each of the distributions apply.
+\item Focus more on the conceptual understanding of each distribution.
+\item More applications questions will be on the next worksheet.
+\end{itemize}
+\end{questions}
+
+\end{document}
+	
+

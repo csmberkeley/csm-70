@@ -1,0 +1,56 @@
+\question Let $X$ be the sum of 20 i.i.d. Poisson random variables $X_1, 
+\dotsc, X_{20}$ with $\E(X_i) = 1$. Find an upper bound of $\P[X \geq 26]$ 
+using,
+\begin{enumerate}[label=(\alph*)]
+\item Markov's inequality:
+\begin{solution}[3cm]
+\begin{equation}
+\begin{split}
+\P[X \geq a] &\leq \frac{\E(X)}{a} \text{ for all }a > 0 \nonumber \\ \nonumber
+\P[X \geq 26] &\leq \frac{20}{26}\\
+&\approx 0.769
+\end{split}
+\end{equation}
+\end{solution}
+
+\item Chebyshev's inequality:
+\begin{solution}[3cm]
+\begin{equation}
+\begin{split}
+\P[|X - \E(X) \geq c] &\leq \frac{\sigma_X^2}{c^2} \\ \nonumber
+\P[|X - 20| \geq 6] &\leq \frac{20}{36} \\
+&\approx 0.5556
+\end{split}
+\end{equation}
+\end{solution}
+
+% \item Chernoff Bound:
+% \begin{solution}[3 cm]
+% \begin{equation}
+% \begin{split}
+% \P[X \geq 26] &\leq \min_{s\geq 0} [e^{-26s}e^{20(e^s - 1)}] \\ \nonumber
+% &= \min_{s\geq 0} [e^{-26s + 20e^s} e^{-20}]
+% \end{split}
+% \end{equation}
+% To minimize this function we only have to minimize $(-26s + 20e^s)$. 
+% Taking the derivative and setting it equal to zero, we have:
+% \begin{equation}
+% \begin{split}
+% -26 + 20e^s = 0 \\ \nonumber
+% e^s &= \frac{26}{20} \\
+% s &= ln \frac{26}{20} \\
+% &\approx 0.26236
+% \end{split}
+% \end{equation}
+
+% Plugging in s to the above equation, we have
+% \begin{equation}
+% \begin{split}
+% \P[X \geq 26] &\leq [e^{-26s + 20e^s} e^{-20}] \rvert_{s = ln 
+% \frac{26}{20}}\nonumber \\
+% &\approx 0.4398
+% \end{split}
+% \end{equation}
+% \end{solution}
+
+\end{enumerate}

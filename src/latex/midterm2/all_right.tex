@@ -1,0 +1,15 @@
+\question \textbf{The Polynomials Are Alright}\newline
+Prove the following theorem in two different ways: \newline
+For every prime $p$, every polynomial over $GF(p)$, even polynomials with degree $\geq p$, is equivalent to a polynomial of degree at most $p - 1$. (Two polynomials $f,g$ over $GF(p)$ are said to be equivalent iff $f(x) = g(x) \forall x \in GF(p)$.) 
+\begin{enumerate}[label=(\alph*)]
+\item Show how the theorem follows from Fermat's Little Theorem
+\begin{solution}
+From FLT, we know that for all $x$, $x^p = x \mod p$. Therefore, any $x^a$ where $a \geq p$ will be equivalent to $x^n$ for some $n \in {0, 1, \dotsc, p -1}$, and will have a degree at most $p-1$.
+\end{solution}
+
+\item Now prove the theorem using properties of polynomials.
+\begin{solution}
+Since a polynomial of degree $d$ is described completely by $d+1$ points, we cannot specify a polynomial of degree $\geq p$, because $p = 0$ over $GF(p)$, so $F(p) = F(0)$ for any polynomial $F$. So we can only specify at most $p$ unique points. As a result, every polynomial is equivalent to a polynomial of degree at most $p -1$.
+\end{solution}
+
+\end{enumerate}

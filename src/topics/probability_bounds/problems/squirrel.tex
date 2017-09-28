@@ -1,0 +1,15 @@
+\question \textbf{Squirrel Standard Deviation}\newline
+As we all know, Berkeley squirrels are extremely fat and cute. 
+The average squirrel is 40\% body fat. The standard deviation of body 
+fat is 5\%. Provide an upper bound on the probability that a randomly 
+trapped squirrel is either too skinny or too fat? A skinny squirrel 
+has less than 27.5\% body fat, and a fat squirrel has more than 52.5\% 
+body fat?
+%\vspace{2.5cm}
+\begin{solution}[3cm]
+We use Chebyshev's inequality. We are looking for the probability we 
+fall within 2.5 standard deviations of the mean. By Chebyshev's 
+inequality, the probability we are within this range is $\frac{1}{2.5^2}, or \frac{4}{25} = 0.16$
+If we were to use Markov's inequality, we would probabilities over 1, 
+which yields a non-helpful value.
+\end{solution}   

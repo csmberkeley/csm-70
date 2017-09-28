@@ -1,0 +1,41 @@
+\question Are these sets countably infinite/ uncountable infinite/ 
+finite? If finite, what is the order of the set?
+\begin{enumerate}[label=(\alph*)]
+\item
+Finite bit strings of length n.
+\begin{solution}
+Finite. There are 2 choices (0 or 1) for each bit, and n bits, so 
+there are $2 \times 2 \times \ldots \times 2 = 2^n$ such bit strings.
+\end{solution}
+\item
+All finite bit strings of length 1 to n.
+\begin{solution}
+Finite. By part (1), there are $2^1$ bit strings of length 1, $2^2$ of 
+length 2, etc. Thus, there are $2^1 + 2^2 + \ldots + 2^n = 2^{n + 1}- 2$.
+\end{solution}
+\item
+All finite bit strings
+\begin{solution}
+Countably infinite. We can list these strings as follows: \\*
+$\{0, 1, 00, 01, 10, 11, 000, 001, 010, 011, 100, 101, 110, 111, 0000, \ldots\}$. 
+This gives us a bijection between the (countable) natural numbers, so 
+these are countably infinite.
+\end{solution}
+\item
+All infinite bit strings
+\begin{solution}
+Uncountably infinite. We can construct a bijection between this set 
+and the set of real numbers between 0 and 1. We can represent these 
+real numbers using binary— e.g. they are of the form $0.0110001010110\dots $
+. The bijection between 
+By diagonalization, the set of real numbers between 0 and 1 is 
+uncountably infinite; therefore, so is this set.
+\end{solution}
+\item
+All finite or infinite bit strings.
+\begin{solution}
+Uncountably infinite. This is the union of a countably infinite set 
+(part 3) and an uncountably infinite set (part 4), so it is uncountably 
+infinite.
+\end{solution}
+\end{enumerate}

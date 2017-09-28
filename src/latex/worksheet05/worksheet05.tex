@@ -1,0 +1,74 @@
+\documentclass{exam}
+\usepackage{../../scripts/commonheader}
+
+%%% Change these %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\discnumber{5}
+\title{\textsc{General Errors, Uncountability, Self Reference, Counting}}
+\date{October 2-6, 2017}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\rule{\textwidth}{0.15em}
+\fontsize{12}{15}\selectfont
+\thispagestyle{empty}
+
+%%% Include topics here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{General Errors (Berlekamp and Welch)}
+\subsection{Introduction}
+\subimport{../../topics/error_correction/general/problems/}{general_intro.tex}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/error_correction/general/problems/}{message_calc.tex}
+\end{questions}
+
+\newpage
+
+\section{Secret Sharing}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/secret_sharing/problems/}{astronauts.tex}
+\subimport{../../topics/secret_sharing/problems/}{spies.tex}
+\end{questions}
+
+\section{Uncountability}
+\subsection{Introduction}
+\begin{questions}
+\subimport{../../topics/countability/problems/}{intro.tex}
+\end{questions}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/countability/problems/}{order.tex}
+\subimport{../../topics/countability/problems/}{1_mod_n.tex}
+\subimport{../../topics/countability/problems/}{true_false.tex}
+\end{questions}
+
+\section{Self Reference}
+\subsection{Introduction}
+\subimport{../../topics/self_reference/problems/}{intro.tex}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/self_reference/problems/}{print_abc.tex}
+\end{questions}
+
+
+
+\section{Intro to Counting}
+\subsection{Introduction}
+\subimport{../../topics/counting/problems/}{basic_rules.tex}
+\subsection{When Order Matters}
+\begin{questions}
+\subimport{../../topics/counting/problems/}{chairs.tex}
+\subimport{../../topics/counting/problems/}{identical_digits.tex}
+\end{questions}
+\subsection{More Practice}
+\begin{questions}
+\subimport{../../topics/counting/problems/}{starbucks.tex}
+\subimport{../../topics/counting/problems/}{poker.tex}
+\subimport{../../topics/counting/problems/}{solving_equations.tex}
+\subimport{../../topics/counting/problems/}{arranging_letter.tex}
+\end{questions}
+
+%%% Include topics here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

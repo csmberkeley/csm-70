@@ -1,0 +1,16 @@
+\question Consider a random variable $Y$ with expectation $\mu$ whose 
+maximum value is $\frac{3\mu}{2}$, prove that the probability that $Y$ 
+is 0 is at most $\frac{1}{3}$. 
+\begin{solution}[5cm]
+\begin{equation}
+\begin{split}
+\mu &= \sum_a a * \P[Y=a] \\ \nonumber
+&= \sum_{a\neq 0} a * \P[Y=a] \\
+&\leq \sum_{a\neq 0} \frac{3 \mu}{2} * \P[Y=a]  \\
+&= \frac{3 \mu}{2} * \sum_{a\neq 0} \P[Y=a]  \\
+&=  \frac{3 \mu}{2} * (1 - \P[Y = 0]) 
+\end{split}
+\end{equation}
+
+This implies that $\P[Y = 0] \leq \frac{1}{3}$
+\end{solution}

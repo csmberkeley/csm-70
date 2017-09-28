@@ -1,0 +1,23 @@
+\question \textbf{What Are the Chances}
+\begin{enumerate}[label=(\alph*)]
+\item Two disjoint events $A$ and $B$ with $Pr[A] > 0$ and $Pr[B] > 0$ cannot be independent. True or False?
+\begin{solution}
+True. $Pr[A \cap B] = 0$ which does not equal $Pr[A]Pr[B]$ if $Pr[A], Pr[B] > 0$. Therefore the disjoint events cannot be independent.
+\end{solution}
+
+\item There is a bag with 50 red and 50 blue balls. You pick four balls, without replacement. Given that the first ball is red, what is the probability that the fourth ball is also red?
+\begin{solution}
+$Pr[\text{4th ball is red}] = Pr[\text{2nd ball is red}] = 49/99$
+\end{solution}
+
+\item Let $\Omega = \{1,2,3,4,5,6\}$ be a uniform probability space. Find two independent events $A$ and $B$ with $0 < Pr[A] < 1$ and $0 < Pr[B] < 1$.
+\begin{solution}
+$A = \{2, 3, 4\}, B=\{1, 4\}.$\newline
+$Pr[A] = \frac{3}{6}, Pr[B] = \frac{2}{6}, Pr[A \cap B] = \frac{1}{6}.$
+\end{solution}
+
+\item \textbf{Challenge:} Let $\Omega = \{1,2, \dotsc, n\}$ be a uniform probability space. Assume that $n$ is not a prime number. Find two independent events $A$ and $B$ with $0 < Pr[A] < 1$ and $0 < Pr[B] < 1$.
+\begin{solution}
+Since $n$ is not prime, we know $n=ab$ for some $a,b$. Let’s try what we did in 3, but generalize it. If $Pr[A] = \frac{a}{n}$ and $Pr[B] = \frac{b}{n}$. Then we want $Pr[A \cap B] = \frac{a*b}{n*n} = \frac{1}{n}$. So we want 1 overlapping point. Let $A=\{1, \dotsc, a\}$ and $B=\{a, \dotsc, a+b-1\}$. $|A| = a$, $|B| = b$, $|A \cap B|=1$, as desired.
+\end{solution}
+\end{enumerate}

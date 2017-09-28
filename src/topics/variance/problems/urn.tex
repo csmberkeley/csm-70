@@ -1,0 +1,27 @@
+\question An urn contains $n$ balls numbered $1, 2, \dotsc , n$. We 
+remove $k$ balls at random (without replacement) and add up their 
+numbers. Find the mean and variance of the total. 
+\begin{solution}[7cm]
+The required total is $T=\sum_{i = 1}^{k} X_i$, where $X_i$ is the 
+number shown on the $i$th ball. Hence $\E(T) = k * \E(X_1) = 
+\frac{1}{2} * k * (n + 1)$. Now calculate:
+
+\begin{equation}
+\begin{split}
+\E((\sum_{i = 1}^{k} X_i)^2) &= k \E(X_1^2) + k*(k - 1)*\E(X_1*X_2) \\ \nonumber
+&= \frac{k}{n} \sum_{1}^{n} j^2 + \frac{k * (k - 1)}{n * (n - 1)} * 
+2 * \sum_{i>j} i * j \\
+&= \frac{k}{n} (\frac{1}{3} * n * (n + 1) * (n + 2) - \frac{1}{2} * 
+n * (n + 1)) \\
+&+ \frac{k * (k - 1)}{n * (n - 1)} * \sum_{j = 1}^{n} j * (n * (n + 1) 
+- j * (j + 1)) \\
+&= \frac{1}{6} * k * (n + 1) * (2n + 1) + \frac{1}{12} * k * (k - 1) * 
+(3n + 2) * (n + 1)
+\end{split}
+\end{equation}
+Hence,
+\[\var(T) = k (n + 1)  (\frac{1}{6}  k  (n + 1) (2n + 1) + \frac{1}{12} 
+ k  (k - 1)  (3n + 2)  (n + 1) - \frac{1}{4}  k  (n + 1)) \]
+\[= \frac{1}{12}  (n + 1)  k  (n - k)\]
+
+\end{solution}

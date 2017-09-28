@@ -1,0 +1,97 @@
+\question \textbf{Stanford Cinema} \\*
+You have a database of an infinite number of movies. Each movie has a 
+rating that is uniformly distributed in {0, 0.5, 1, 1.5, 2, 2.5, 3, 
+3.5, 4, 4.5, 5} independent of all other movies. You want to find two 
+movies such that the sum of their ratings is greater than 7.5 (7.5 is 
+not included).
+\begin{enumerate}[label=\alph*)]
+\item
+A Stanford student chooses two movies each time and calculates the sum 
+of their ratings. If is less than or equal to 7.5, the student throws 
+away these two movies and chooses two other movies. The student stops 
+when he/she finds two movies such that the sum of their ratings is 
+greater than 7.5. What is the expected number of movies that this 
+student needs to choose from the database?
+
+\begin{solution}[4cm]
+Each time when the Stanford student chooses two movies, there are $11^2 
+= 121$ different possible pairs of ratings. By simple counting, we 
+know that there are 15 pairs whose sum is greater than $7.5$. Therefore, 
+the probability that in a single trial, the Stanford student gets two 
+movies such that the sum of their ratings is greater than $7.5$ is 
+$\frac{15}{121}$. Then the number of times that the student needs to 
+pick movies is geometrically distributed with mean $\frac{121}{15}$. 
+Then the expected number of movies that the student needs to choose 
+is $\frac{242}{15} \approx 16.13$.
+\end{solution}
+
+\item
+A Berkeley student chooses movies from the database one by one and 
+keeps the movie with the highest rating. The student stops when he/she 
+finds the sum of the ratings of the last movie that he/she has chosen 
+and the movie with the highest rating among all the previous movies is 
+greater than 7.5. What is the expected number of movies that the 
+student will have to choose?
+\begin{solution}[9cm]
+We use a Markov chain to represent to process that the Berkeley student 
+gets two desired movies. There are 11 possible ratings:
+\begin{equation*}
+S = \{0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5 \}
+\end{equation*}
+We divide the set of ratings into 2 subsets, $L = \{0, 0.5, 1, 1.5, 2, 
+2.5\}$ and $H = \{3, 3.5, 4, 4.5, 5\}$. Since the goal of the student 
+is to get two movies that the sum of their rating is greater than 7.5, 
+the movies whose ratings are in the set $L$ have no contribution to 
+this goal. Then we can use 7 states $\{s_L, s_3, s_{3.5}, s_4, s_{4.5}, 
+s_5, s_E\}$ to represent the progress to get two movies such that the 
+sum of their ratings is greater than 7.5. The state $s_L$ denotes the 
+cases when highest movie rating that the Berkeley student has got is 
+in $L$. The states $s_i, 3 \leq i \leq 5$, denote the cases when the 
+highest movie rating that the student has got is $i$. The state $s_E$ 
+denotes the case when the student has got two movies such the sum of 
+their ratings is greater than 7.5 and the choosing process ends. We 
+can see that the process is a Markov chain with probability transition 
+matrix $P$ as follows: \newpage
+$P = \frac{1}{11}
+\begin{bmatrix}
+\begin{array}{ccccccc|c}
+6 & 1 & 1 & 1 & 1 & 1 & 0 & s_L \\
+0 & 7 & 1 & 1 & 1 & 0 & 1 & s_3 \\
+0 & 0 & 8 & 1 & 0 & 0 & 2 & s_{3.5} \\
+0 & 0 & 0 & 8 & 0 & 0 & 3 & s_4 \\
+0 & 0 & 0 & 0 & 7 & 0 & 4 & s_{4.5} \\
+0 & 0 & 0 & 0 & 0 & 6 & 5 & s_5 \\
+0 & 0 & 0 & 0 & 0 & 0 & 11 & s_E \\
+\hline
+s_L & s_3 & s_4 & s_{4.5} & s_5 & s_E
+\end{array}
+\end{bmatrix}$ \\
+Let $F_s$ be the expected time to get to state $s_E$, starting from 
+state $s$,
+$F = 
+\begin{bmatrix}
+F_{s_L} & F_{s_3} & F_{s_{3.5}} & F_{s_4} & F_{s_{4.5}} & F_{s_5} \\
+\end{bmatrix}^T$
+$P'$ be the sub-matrix of $P$ consisting of the first 6 columns and rows 
+of $P$ (which has 7), and $U$ be an all-one column vector with length 6. 
+We have the first step equations 
+\begin{equation*}
+F = P'F + U
+\end{equation*}
+Solving these linear equations, we get \\
+$F = 
+\begin{bmatrix}
+6.0164 & 5.5764 & 4.8889 & 3.666667 & 2.75 & 2.2 
+\end{bmatrix}^T$ \\
+The initial state is $s_L$ with probability $\frac{6}{11}$ and is 
+$s_i, 3 \leq i \leq 5$ with probability $\frac{1}{11}$ respectively. 
+Then we know that the expected number of movies that the student 
+needs to choose is 
+\begin{equation*}
+1 + \frac{6}{11}F_{s_L} + \frac{1}{11}(F_{s_3} + F_{s_{3.5}} + F_{s_4} 
++ F_{s_{4.5}} + F_{s_5}) = 6.02
+\end{equation*}
+This shows that the Berkeley student is smarter than the Stanford student.
+\end{solution}
+
+\end{enumerate}

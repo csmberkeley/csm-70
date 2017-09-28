@@ -1,0 +1,40 @@
+\question The citizens of the country USD (the United States of Drumpf) 
+vote in the following manner for their presidential election: if the 
+country is liberal, then each citizen votes
+for a liberal candidate with probability $p$ and a conservative candidate 
+with probability $1−p$, while if the country is conservative, then 
+each citizen votes for a conservative candidate with probability p and 
+a liberal candidate with probability $1 − p$. After the
+election, the country is declared to be of the party with the majority of the votes.
+\begin{enumerate}[label=(\alph*)]
+\item Assume that $p = \frac{3}{4}$ and suppose that 100 citizens of 
+USD vote in the election and that USD is known to be conservative. 
+Provide a tight bound on the probability that it is declared to be a 
+Liberal country.
+\begin{solution}[2cm]
+Let $X_i$ be the indicator that voter $i$ votes as a Liberal. We are interested
+in boudning the quantity $\P[S_{100} \geq 51]$ where $S_{100} = X_1 + X_2
++ \dotsc + X_{100}$. We have:
+\[\P[S_n \geq 51] = \P[X-25 \geq 26] \leq \P[|X-25| \geq 26] \leq 
+\frac{\var (X)}{26^2} = \frac{75}{4 \cdot 26^2} = 0.03\]
+\end{solution}
+
+\item Now let $p$ be unknown; we wish to estimate it. Using the CLT, determine the
+number of voters necessary to determine $p$ within an error of 0.01, with probability
+at least 0.95.
+\begin{solution}[2 cm]
+For now, we let consider general error and want the probability to
+be at least $1 − \beta$ . We are thus interested in: 
+\[\P[|\frac{S_n}{n} − p| \geq \alpha]\]
+Note that by the CLT,
+\[\frac{S_n}{n} − p \approx \sqrt{ \frac{p \cdot (1−p)}{n}}Z\text{, where }Z \sim N(0, 1).\]
+\[\P[|\frac{S_n}{n} − p| \geq \alpha] \approx \P[|Z| \geq 
+\sqrt{ \frac{p \cdot (1−p)}{n}} \alpha
+\leq \P[|Z| \geq 2 \alpha]\]
+Now, we have: 
+\[\P[|Z| \geq 2\alpha \sqrt{n} ] = 2 \P[Z \geq 2 \alpha \sqrt{n}] = 2 \cdot
+\P[X \leq 2 \alpha \sqrt{n}] = \beta\]
+Now, we substitute in $\alpha = 0.01$, $\beta = 0.05$, and see that: 
+$n = \frac{1.962}{(2 \cdot 0.01)^2} = 98^2 = 9604$.
+\end{solution}
+\end{enumerate}

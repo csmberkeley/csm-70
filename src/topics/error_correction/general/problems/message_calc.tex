@@ -1,0 +1,41 @@
+\question \begin{enumerate}[label=(\alph*)]
+\item Alice sends Bob a message of length 3 on the Galois Field of 
+5 (modular space of mod 5). Bob receives the following message: 
+(3, 2, 1, 1, 1). Assuming that Alice is sending messages using the 
+proper general error message sending scheme, set up the linear equations 
+that, when solved, give you the $Q(x)$ and $E(x)$ needed to find the 
+original $P(x)$.
+\begin{solution}[3in]
+Set up 5 equations for the five values of x that we have, such that 
+\[Q(x) \mod 5 = r_{x}*(x-b) \mod 5\] 
+where 
+\[Q(x)= a_3*x_i^3 + a2*x_i^2 + a_1*x_i + a_0\]
+($r_i$ = ith received number)\newline
+In the form, for 
+\[x = x_i, a3*x_i^3 + a_2*x_i^2 + a_1*x_i + a_0 = r_i*(x - b)\]
+\[x=1, (a_3 + a_2 + a_1 + a_0) \mod 5 = 3(1 - b) \mod 5\]
+\[x=2, (3a_3 + 4a_2 + 2a_1 + a_0) \mod 5 = 2(2 -b) \mod 5\]
+\[x=3, 2a_3 + 4a_2 + 3a_1 + a_0 \mod 5=  1(3 - b) \mod 5\]
+\[x=4,  4a_3 + 1a_2 + 4a_1 + a_0 \mod 5=  1(4 - b) \mod 5\]
+\[x=5, 0 + 0 + 0 + a0 \mod 5 = 1(0 - b) \mod 5\]
+Solving for these equations, which you should give your students after 
+setting up the above, you get the following:
+\[b = 3\]
+\[a_3 = 1\]
+\[a_2 = 3\]
+\[a_1 = 3\]
+\[a_0 = 2\]
+\end{solution}
+\item What is the encoded message that Alice actually sent? What was the 
+original message? Which packet(s) were corrupted?
+\begin{solution}[2 in]
+Now we have $P(x) = \frac{Q(x)}{E(x)}$. Plug in the coefficients for 
+$Q$ and $E$ and divide (using polynomial long division) and you get 
+$P(x) = (x^2) + x + 1$.
+Using the $P(x)$ that we found, we plug in the values 1, 2, 3, 4, 5 
+to find the encoded 5 packet message. $P(1) = 3, P(2) = 2, P(3) = 3, 
+P(4) = 1, P(5) = 1$. The original message is the first 3 $P(1), P(2), 
+P(3)$. Using the value of b, we know that the 3rd packet was corrupted, 
+which we can confirm in the message that was received.
+\end{solution}
+\end{enumerate}

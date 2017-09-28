@@ -1,0 +1,16 @@
+\question \textbf{Losing My Marbles}
+We have $n$ bins and $r$ red marbles, $g$ green marbles, and $b$ blue marbles. We randomly throw the $r +g+b$ marbles into the $n$ bins. 
+\begin{enumerate}[label=(\alph*)]
+\item What is the probability no bin contains two (or more) marbles? 
+\begin{solution}
+Let $k = r + g + b$
+\[\frac{{n \choose k} * k!}{n^k}\]
+\end{solution}
+
+\item What is the probability no bin contains two marbles of the same color?
+\begin{solution}
+Let $k = r + g + b$
+\[\frac{{n \choose r} * r!}{n^r} * \frac{{n \choose g} * g!}{n^g} * \frac{{n \choose b} * b!}{n^b} \]
+\end{solution}
+
+\end{enumerate}

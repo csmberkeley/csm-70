@@ -1,0 +1,32 @@
+\question 
+\begin{enumerate}[label=\alph*.]
+\item Prove that for independent random variables $X$ and $Y$, 
+$\var(X + Y) = \var(X) + \var(Y)$.
+\begin{solution}[3 cm]
+\begin{equation}
+\begin{split}
+\var(X + Y) &= \E((X + Y)^2) - \E(X + Y)^2 \\ \nonumber
+&= \E(X^2) + \E(Y^2) + 2*\E(XY) - (\E(X) + \E(Y))^2 \\
+&= (\E(X^2) - \E(X)^2) + (\E(Y^2)-\E(Y)^2) + 2*\E(XY) - \E(X)*\E(Y) \\
+&= \var(X) + \var(Y) + 2 * (\E(XY) - \E(X)\E(Y))
+\end{split}
+\end{equation}
+\end{solution}
+
+\item Is the above result true for non-independent random variables? 
+Prove or give a counterexample.
+\begin{solution}[4cm]
+No! One simple counterexample is $X = Y$. Then
+\begin{equation}
+\begin{split}
+\var(X + Y) &= \var(2x) \\ \nonumber
+&= \E((2X)^2) - \E(2X)^2 \\
+&= \E(4X^2) - (2*\E(X))^2 \\
+&= 4\E(X^2) - 4(\E(X)^2) \\
+&= 4 (\E(X^2) - \E(X)^2) \\
+&= 4*\var(X)
+\end{split}
+\end{equation}
+\end{solution}
+
+\end{enumerate}

@@ -1,0 +1,25 @@
+\question The United Nations (for the purposes of this question) consists of n countries, each having k representatives.
+A vault in the United Nations can be opened with a secret combination s. The vault should
+only be opened in one of two situations. First, it can be opened if all n countries in the UN help.
+Second, it can be opened if at least m countries get together with the Secretary General of the UN.
+
+Propose a scheme that gives private information to the Secretary General and n countries so that s can
+only be recovered under either one of the two specified conditions.
+
+ 
+\begin{solution}
+\textbf{Solution 1: }
+Have two schemes, one for the first condition and one for the second.
+
+For the first condition: just one polynomial of degree n - 1 or less would do, where each country gets one point. The polynomial evaluated at 0 would give the secret.
+
+For the second condition: one polynomial is created of degree m - 1 and a point is given to each
+country. Another polynomial of degree 1 is created, where one point is given to the secretary general
+and the second point can be constructed from the first polynomial if m or more of the countries come
+together. With these two points, we have a unique 1-degree polynomial, which could give the secret
+evaluated at 0.
+
+\textbf{Solution 2: }
+Create a polynomial of degree n-1, and give each country one point. This satisfies the condition that the countries on their own should be able to find s on their own. To account for the Secretary General, give the Secretary General n-m points. That way, any m countries plus the Secretary General together have n points, which allows them to access s.
+\end{solution}
+\newpage

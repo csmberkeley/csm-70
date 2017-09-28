@@ -1,0 +1,10 @@
+\question \textbf{Interesting Integers}\newline 
+How many different even integers $\geq 4000$ and $< 7000$ have four different digits? 
+\begin{solution}
+There are 3 choices for the thousands digit: 4, 5, 6 (can’t have 7)\newline
+Split this into two cases: even (4, 6) and odd(5)\newline
+If the thousands digit is even, then there are only 4 options for the ones digit (we can’t repeat the one we used for the thousands). Then there are $8*7$ options for the other digits. So we have $4*8*7*2$ even integers from 4000 to 7000 that start with 4 or 6 and have different digits.\newline
+If the thousands is odd there are still 5 options for the ones digit. Everything else is the same.
+So we get a total of: $4*8*7*2 + 5*8*7*1$
+
+\end{solution}

@@ -1,0 +1,15 @@
+\noindent\fbox{\begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+The Algorithm:
+\begin{enumerate}
+\item \textbf{Every Morning}: Each man proposes to the \underline{\smash{most preferred}} woman on his list who has not yet rejected him. 
+\item \textbf{Every Afternoon}: Each woman collects all the proposals she received in the morning; to the man she likes best, she responds “maybe, come back tomorrow” (she now has him \underline{\smash{on a string}}), and to the others, she says “never”. 
+\item \textbf{Every Evening}: Each rejected man crosses off the woman who rejected him from his list.
+The above loop is repeated each successive day until \underline{\smash{each}} woman has a man on a string; on this day, each woman marries the man she has on a string.
+\end{enumerate}
+Definitions: \newline
+\tab M and W are a rogue couple if they prefer to be with each other as opposed to the \newline \tab people they are paired with \newline
+\tab A pairing is stable if there are no rogue couples \newline
+Lemmas: \newline
+\tab The algorithm halts. \newline
+\tab If man M proposes to woman W on the kth day, then on every subsequent day W \newline \tab has someone on a string whom she likes at least as much as M.
+\end{minipage}}

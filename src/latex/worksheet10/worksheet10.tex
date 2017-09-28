@@ -1,0 +1,61 @@
+\documentclass{exam}
+\usepackage{../../scripts/commonheader}
+
+%%% Change these %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\discnumber{10}
+\title{\textsc{Covariance,  LLSE, Conditional  Expectation, Markov Chains}}
+\date{November 14 to November 18, 2016}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\rule{\textwidth}{0.15em}
+\fontsize{12}{15}\selectfont
+\thispagestyle{empty}
+
+%%% Include topics here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Covariance}
+\subsection{Introduction}
+\subimport{../../topics/covariance/problems/}{intro.tex}
+\subsection{Warm Up}
+\begin{questions}
+\subimport{../../topics/covariance/problems/}{cov_x_x.tex}
+\subimport{../../topics/covariance/problems/}{ind_variables.tex}
+\subimport{../../topics/covariance/problems/}{sum.tex}
+\end{questions}
+
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/covariance/problems/}{roll_2_dice.tex}
+\subimport{../../topics/covariance/problems/}{fah_kat.tex}
+\end{questions}
+
+\section{LLSE}
+\subsection{Introduction}
+\subimport{../../topics/llse/problems/}{intro.tex}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/llse/problems/}{find_L.tex}
+\subimport{../../topics/llse/problems/}{find_from_graph.tex}
+\end{questions}
+
+\section{Conditional Expectation}
+\subsection{Introduction}
+\subimport{../../topics/conditional_expectation/problems/}{intro.tex}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/conditional_expectation/problems/}{exp_of_cond_exp.tex}
+\subimport{../../topics/conditional_expectation/problems/}{take_out_h.tex}
+% \subimport{../../topics/conditional_expectation/problems/}{given_prob_dist.tex}
+\end{questions}
+
+% \section{Markov Chains}
+% \subimport{../../topics/markov_chains/problems/}{definitions.tex}
+% \subsection{Questions}
+% \begin{questions}
+% \subimport{../../topics/markov_chains/problems/}{life_of_alex.tex}
+% \end{questions}
+
+
+
+\end{document}

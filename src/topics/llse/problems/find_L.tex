@@ -1,0 +1,19 @@
+\question Assume that 
+\[Y = \alpha X + Z\]
+where $X$ and $Z$ are independent and $\E(X) = \E(Z) = 0$. Find $\L[X|Y]$.
+
+\begin{solution}
+\begin{align*}
+    \cov(X, Y) &= \E(XY) - \E(X) \E(Y) \\
+    &= \E(X \cdot (\alpha X + Z)) = \alpha \E(X^2)
+\end{align*}
+
+\begin{align*}
+	\var(Y)  &= \alpha^2\var(X) + \var(Z) \\
+	&= \alpha^2 \E(X^2) + \E(Z^2)
+\end{align*}    
+Therefore, 
+\begin{align*}
+	\L[X|Y] &=	\frac{\alpha\E(X^2)}{\alpha^2 \E(X^2) + \E(Z^2)} \cdot Y
+\end{align*}
+\end{solution}

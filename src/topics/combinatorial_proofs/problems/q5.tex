@@ -1,0 +1,37 @@
+\question Prove the Hockey Stick Theorem: \\
+\[\sum\limits_{t = k}^n \binom{t}{k} = \binom{n + 1}{k + 1}\] \\
+where $n, t$ are natural numbers and $n > t$ \\
+
+\begin{solution}[8 cm]
+$\sum\limits_{t = k}^n \binom{t}{k} = \binom{n + 1}{k + 1}$ \\
+where $n, t$ are natural numbers and $n > t$ \\
+In the homework you were asked to show the following: \\
+$\binom{n}{k} = \binom{n - 1}{k - 1} + \binom{n - 1}{k}$ \\
+Plug this in for: \\
+$\binom{t + 1}{k + 1}$ \\
+$\binom{t + 1}{k + 1} = \binom{t}{k} + \binom{t}{k + 1} \implies 
+\binom{t}{k} = \binom{t + 1}{k + 1} - \binom{t}{k + 1}$ \\
+Now do the summation: \\
+$\sum\limits_{t = k}^n \binom{t}{k} = \sum\limits_{t = k}^n 
+\binom{t + 1}{k + 1} - \sum\limits_{t = k}^n \binom{t}{k + 1}$ \\
+Split apart the two summations as follows: take out the last term in the 
+first summation and the last term in the second summation \\
+$\sum\limits_{t = k}^n \binom{t}{k} = \left(\sum\limits_{t = k}^{n - 1} 
+\binom{t + 1}{k + 1} + \binom{n + 1}{k + 1}\right) - 
+\left(\sum\limits_{t = k + 1}^n \binom{t}{k + 1} + \binom{k}{k + 1}\right)$ \\
+Look at all subsets of $\{1, 2, 3, \ldots, 2015\}$ that have 1000 elements. 
+Choose the least element from each subset. Find the average of all least 
+elements. Since $\binom{k}{k + 1}$ is 0 we can just remove this term: \\
+$\sum\limits_{t = k}^n \binom{t}{k} = \binom{n + 1}{k + 1} + 
+\sum\limits_{t = k}^{n - 1} \binom{t + 1}{k + 1} - \sum\limits_{t = k + 1}^n 
+\binom{t}{k + 1}$ \\
+We want the summations to “match”. So change $t$ such that the new $t$, 
+$t’$, goes from $k + 1$ to $n - 1$. So let t’ = t - 1. Then 
+$t = k + 1 \rightarrow t’ = k$ and $t = n \rightarrow t’ = n - 1$. \\
+$\sum\limits_{t = k}^n \binom{t}{k} = \binom{n + 1}{k + 1} + 
+\sum\limits_{t = k}^{n - 1} \binom{t + 1}{k + 1} - \sum\limits_{t' = k}^{n - 1} 
+\binom{t' + 1}{k + 1}$ \\
+Notice that the summations cancel out. We are left with the statement 
+we were trying to prove.
+\end{solution}
+    

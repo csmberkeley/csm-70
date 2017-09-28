@@ -1,0 +1,33 @@
+\q{5}{Parting Ways}
+
+Consider a finite undirected graph $G = (V, E)$, and a particle 
+traversing this graph. At each time step, the particle on some 
+node will transition to one of the node's neighbors with uniform 
+probability. Notice that this is a Markov Chain. Consider a distribution 
+$\pi$, with a probability for each node $v$, where 
+$\pi[v] = \frac{d(v)}{2|E|}$ ($d(v)$ is the degree of $v$). 
+Prove that $\pi$ is a stationary distribution of this Markov Chain
+
+\solution{
+Firstly, note that every $\pi[v] \geq 0$, and that 
+$\sum\limits_{v\in V}\pi[v] = 1$, which follows from the 
+Handshaking Lemma. Now we prove that it is stationary. 
+
+Consider the transition matrix $P$. If $\pi$ is a stationary 
+distribution, then $\pi P = \pi$. Without loss of generality, 
+consider some entry $\pi[v] = \frac{d(v)}{2|E|}$. When we 
+multiply $\pi$ against $P$, the new entry we get is the dot 
+product of $\pi$ and the column of $P$ corresponding to $v$. 
+This is $\sum\limits_{u\in V}\frac{d(u)}{2|E|}P(u\rightarrow v)$,
+ where $P(u\rightarrow v)$ is the probability of the particle 
+ transitioning from $u$ to $v$. Note that this probability is 
+ equal to $\frac{1}{d(u)}$ if $u$ is a neighbor of $v$, and $0$
+  otherwise. 
+
+  Then the dot product becomes 
+  $\sum\limits_{u\in V: (u,v) \in E}\frac{d(u)}{2|E|}\frac{1}{d(u)} 
+  = \sum\limits_{u\in V:(u,v)\in E}\frac{1}{2|E|} = \frac{d(v)}{2|E|}$. 
+
+  This is the precisely $\pi[v]$, and this holds for all $v\in V$.
+   \textit{Quid est demonstratum}.
+   }

@@ -1,0 +1,33 @@
+{\tabulinesep=1mm
+\begin{tabu}{|p{16cm} |}
+\hline
+\vspace{1 mm}
+\textbf{Geometric Distribution: Geom(p)}
+Number of trials required to obtain the first success. Each trial has 
+probability of success equal to $p$. The probability of the first success 
+happening at trial $k$ is:
+\[ \P[X = k] = (1 - p)^{k - 1}*p, k > 0\]
+The expectation of a geometric distribution is:
+\[\E(X) = \frac{1}{p}\]
+The variance of a geometric distribution is:
+\[Var(X) = \frac{1 -p}{p^2}\]
+\vspace{1 mm}
+\\
+\hline
+\end{tabu}
+}
+
+\begin{solution} % walkthrough of deriving E(X) for Geometric
+Derivation of $\E(X)$:
+The clever way to find the expectation of the geometric distribution 
+uses a method known as the renewal method. $\E(X)$ is the expected number 
+of trials until the first success. Suppose we carry out the first trial,
+and one of two outcomes occurs. With probability p, we obtain a success 
+and we are done (it only took 1 trial until success). With probability 
+$1 - p$, we obtain a failure, and we are right back where we started. 
+In the latter case, how many trials do we expect until our first success? 
+The answer is $1 + E(X)$: we have already used one trial, and we expect 
+$\E(X)$ more since nothing has changed from our original situation 
+(the geometric distribution is memoryless). Hence 
+$\E(X) = p * 1 + (1 - p) * (1 + E(X))$
+\end{solution}

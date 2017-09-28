@@ -1,0 +1,25 @@
+\noindent\fbox{\begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+\vspace{3 mm}
+ What is an $n$ dimensional hypercube? 
+\begin{enumerate}[label= ]
+\item \fontsize{12pt}{30pt}\selectfont
+\textbf{Bit definition}: Two  \line(1,0){70}  $x$ and $y$ are \line(1,0){70} 
+and only if \line(1,0){30} and \line(1,0){30} differ in \line(1,0){150} bit 
+position. 
+\item \textbf{Recursive definition}: Define the 0-\line(1,0){70} as the $(n-1)$ 
+dimensional \line(1,0){70} \newline with vertices labeled 0x (x is an element 
+of \line(1,0){100} (hint: how many remaining bits are there?). Do the same 
+for the 1-\line(1,0){70} with vertices labeled \line(1,0){50}. Then an 
+$n$ dimensional \line(1,0){70} is created by placing an edge between 
+\line(1,0){50} and \line(1,0){50} in the \line(1,0){90}  and 
+\line(1,0){90} \newline respectively.
+\end{enumerate}
+\end{minipage}}
+
+\begin{solution}
+\textbf{Bit definition}: vertices, adjacent, $x$, $y$, exactly one
+
+
+\textbf{Recursive definition}: subcube, hypercube, $(0, 1)^{n-1}$, 
+subcube, 1x, hypercube, 0x, 1x, 0-subcube, 1-subcube
+\end{solution}

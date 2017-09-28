@@ -1,0 +1,22 @@
+\question The Fibonacci sequence $1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89,
+ 144, \dotsc$ is defined by: \newline
+	$F_1 = 1$, $F_2 = 1$, $F_n = F_{n-2} + F_{n-1}$  \newline
+
+Using induction, prove that $F_1 + \dotsc + F_n = F_{n+2} - 1$
+
+\begin{solution}[2 in]
+\begin{proof}
+Induction on n. \newline
+Base case: $n = 1$ \newline
+	\tab $F_1 = 1$\newline 
+	\tab $F_3 - 1 = 2 - 1 = 1 $ \newline
+Inductive Hypothesis: For $k \geq 1$, $F_1 + \dotsc + F_k = F_{k+2} 
+- 1$\newline
+Inductive Step: We want $F_1 + \dotsc + F_{k+1} = F_{k+3} - 1$. 
+Start with the sum on the LHS to avoid build up error.
+\[F_1 + \dotsc + F_{k+1} = F_1 + \dotsc + F_k + F_{k+1}\]
+\tab \tab  \tab 	   \tab     \tab   \tab  \tab    $= F_{k+2} - 1 
++ F_{k+1}$ \newline
+\tab \tab   \tab      \tab    \tab  \tab   \tab  $= F_{k+3} - 1$
+\end{proof}
+\end{solution}

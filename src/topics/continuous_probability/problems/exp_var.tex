@@ -1,0 +1,64 @@
+\question For what values of the parameters are the following functions 
+probability density functions? What is the expectation and variance of 
+the random variable that the function represents?
+\begin{enumerate}[label=(\alph*)]
+    \item $f(x) = \begin{cases} ax & 0 < x < 1 \\ 0 & \text{otherwise} 
+    \end{cases}$
+ 	\begin{solution}[5.2cm]
+For a function to represent a probability density function, we need to 
+have that the integral of the function from negative infinity to positive 
+infinity to equal 1 and for f(x) to be greater than or equal to 0. So 
+we need integral over $(-\infty, \infty)$ of $f(x) = 1 
+= \int_{0}^{1} ax = \frac{ax^2}{2} \mid_{0}^{1} = 1 \iff  \frac{a}{2} - 
+0 = 1 \iff a = 2$ \\
+For RV $Y$ with pdf = $f(x)$, 
+$\E(Y) = \int_{-\infty}^{\infty} x \times f(x) = \int_{0}^{1} x \times 
+2x = \frac{2x^3}{3} \mid_{0}^{1} = \frac{2}{3} - 0 = \frac{2}{3}$ \\
+$\var(Y) = \int_{-\infty}^{\infty} x^2 \times f(x)  - \E[Y]^2 = 
+\int_{0}^{1} x^2 \times 2x  - \frac{4}{9}= \int_{0}^{1} 2x^3 - 
+\frac{4}{9}= \frac{x^4}{2} \mid_{0}^{1} = \frac{1}{2} - 0 -\frac{4}{9} 
+= \frac{1}{18}$
+	\end{solution}
+    
+\item $f(x) = \begin{cases} -2x & \text{if } a < x < b\ (a = 0 \lor b 
+= 0)\\ 0 & \text{otherwise} \end{cases}$
+\begin{solution}[5.2cm]
+Again we need $f(x) \ge 0$, so here $a, b \le 0$, so $b=0$.
+        Then 
+$\int_{a}{0} f(x) = 1 = \int_{a}^{0} -2x = \frac{-2x^2}{2} \mid_{a}^{0}  \\
+= 0 - (\frac{-2a^2}{2}) = \frac{2a^2}{2} = 1 \iff a^2 = 1 \iff a \\
+= \pm 1 \implies a = -1$. \\
+
+For RV $Y$ with pdf = $f(x)$, \\
+$\E(Y) = \int_{-\infty}^{\infty} x \times f(x) = \int_{-1}^{0} x \times 
+(-2x) =  \frac{-2x^3}{3} \mid_{-1}{0} = 0 - (\frac{(-2)(-1)^3}{3}) = 
+-\frac{2}{3}$. \\
+$Var(Y) = \int_\infty^{-\infty} x^2*f(x) = \int_0^{-1} x^2*(-2x)
+= -x^4/2 |_0^{-1} = 0 - (-(-1)4)/2 = \frac{1}{2}$ \\
+$f(x) = \begin{cases} c & -30 < x < -20 \lor -5 < x < 5 \lor 60 < x < 
+70 \\ 0 & \text{otherwise} \end{cases}$ \\
+We need $\int_{-\infty}^{\infty} f(x) = 1$ and $f(x) \ge 0$. So $c \ge 0$ \\
+$\int_{\infty}^{\infty} f(x) = 1 = \int_{-30}^{-20} c + \int_{-5}^{5} c 
++ \int_{60}^{70} c = cx\mid_{-30}^{-20} + cx\mid_{-5}^{5} + cx\mid_{60}^{70} \\
+= 10c + 10c + 10c = 30c = 1 \implies \frac{1}{30}$
+For RV $Y$ with pdf = $f(x)$, \\
+Don’t worry too much about calculations, but you should be able to set 
+up the equations
+\begin{align*}
+E(Y) &= \int_{-\infty}^{\infty} x * f(x) \\
+&= \int_{-30}^{-20} xc + \int_{-5}^{5} xc + \int_{60}^{70} xc \\
+&= \frac{x^2c}{2}\mid_{-30}^{-20} + \frac{x^2c}{2}\mid_{-5}^{5} + 
+\frac{x^2c}{2}\mid_{60}^{70} \\
+&= \frac{(-30)^2c}{2} - \frac{(-20)^2c}{2} + \frac{5^2c}{2} - 
+\frac{(-5)^2c}{2} + \frac{70^2c}{2} - \frac{60^2c}{2} \\
+&= 900c = \frac{900}{30} = 30 \\\\
+\var(Y) = \int_{-\infty}^{\infty} x^2f(x) \\
+&= \int_{-20}{^30} x^2c + \int_{-5}^{5} x^2c+ \infty_{60}^{70} x^2c \\
+&= \frac{x^3c}{3} \mid_{-30}^{20} + \frac{x^3c}{3}\mid_{-5}^{5} + 
+\frac{x^3c}{3}\mid{60}^{70} \\
+&= \frac{(-30)^3c}{3} - \frac{(-20)^{3}c}{3} + \frac{5^3c}{3} - 
+\frac{(-5)^3c}{3} + \frac{70^3c}{3} - \frac{60^3c}{3} \\
+&= \frac{108250c}{3} = 1202.77\ldots
+\end{align*}
+\end{solution}
+\end{enumerate}

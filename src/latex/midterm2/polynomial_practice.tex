@@ -1,0 +1,9 @@
+\question \textbf{Perfect Polynomial Proof Practice} \newline
+Suppose $p$ is a prime number, $P(x)$ is a polynomial with degree $d$, and $0 < d < \frac{p}{2}$.
+Prove that there are less than $2d +1$ distinct values of $x$ such that $P(x)^2 - P(x) +1 \equiv 0 \mod p$. 
+\begin{solution}
+Suppose for a contradiction that there are at least $2d + 1$ distinct values of $x$ such that $P(x)^2 − P(x) +1 \equiv 0 \mod p$. Then for each of those $x$-values, we have $P(x)^2 +1 \equiv P(x) \mod p$. So $P(x)$ and $P(x)^2 +1$ are two polynomials of degree at most $2d$ that match at $2d + 1$ points: so they are the same polynomial. But this is impossible, since they have different degrees.\newline
+
+There is one case in which $P(x)$ and $P(x)^2 +1$ have the same degree, if $P(x) = a$ for some constant $a$. Does the equality hold $\mod p$ for this case? We have $a^2 − a + 1 = 0 \mod p$. This equation has no real solutions, let alone integer solutions $\mod p$ ! Therefore, we can state with confidence that no such $P(x)$ can exist.
+
+\end{solution}

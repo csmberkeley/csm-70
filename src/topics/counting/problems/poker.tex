@@ -1,0 +1,29 @@
+\question 
+Let's grab a deck of cards – it's poker time! Remember, in poker, order doesn’t matter. By ranks, we refer to the face value of cards (i.e. the number or K/Q/J/A), not the suit.
+\begin{enumerate}[label=(\alph*)]
+
+\item
+How many ways can we have a hand with exactly one pair? This means a hand with ranks (a, a, b, c, d).
+	\begin{solution}
+	$= 13 * {4 \choose 2} * {12 \choose 3} * 4^3$ 
+	There are 13 value options for a (2, 3, 4, $\dots$, K, A). We then need to choose 2 out of the 4 possible suits. Now we need to choose b, c, and d. There are 12 values left (must be different from a). Finally, there are 4 suit options for each of the values chosen for b, c, d.
+	\end{solution}
+
+\item How many ways can we have a hand with four of a kind? This means a hand with ranks (a, a, a, a, b)
+	\begin{solution} $= 13 * 12 * 4$ \end{solution}
+
+\item How many ways can we have a straight? A straight is 5 consecutive cards, 
+	\begin{solution} A straight can begin from any number from 2-10: (2, 3, 4, 5, 6); (3, 4, 5, 6, 7); … ; (10, J, Q, K, A). That gives us 9 possibilities. Each number in hand has 4 possibilities (suits), so we have $9 * (4^5)$ \end{solution}
+
+\item How many ways can we have a hand of all of the same suit? 
+	\begin{solution} $4 * {13 \choose 5}$ 
+	For each of the 4 suits, there are ${13 \choose 5}$ different combinations of 5 cards among 13 to choose from.
+	\end{solution}
+	
+\item How many ways can we have a straight flush? This means we have a consecutive-rank hand of the same suit. For examples, (2, 3, 4, 5, 6), all of spades is a straight flush, while (2, 3, 5, 7, 8) of all spades is NOT, as the ranks are not consecutive. 
+	\begin{solution}
+	For each of 4 suits, there are 9 number combinations (as shown in c, starting from 2 to starting from 10). Each number combination is unique, because there is only one number per suit
+	$= 4 * 9 = 36$
+	\end{solution}
+
+\end{enumerate}

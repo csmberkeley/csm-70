@@ -1,0 +1,43 @@
+{\tabulinesep=1mm
+\begin{tabu}{|p{16cm} |}
+\hline
+\vspace{2 mm}
+\textbf{Poisson Distribution: Pois($\lambda$)}
+This is an approximation to the binomial distribution. Let the number 
+of trials approach infinity, let the probability of success approach 0, 
+such that $\E(X) = np = \lambda$.  This is an accepted model for 
+“rare events”. The probability of having $k$ successes:
+\[ \P[X = k] = \frac{e^{-\lambda} * \lambda^k}{k!} \]
+The expectation of a poisson distribution is:
+\[ \E(X) = \lambda \]
+The variance of a poisson distribution is:
+\[ Var(X) = \lambda \]
+\vspace{5 mm}
+\\
+\hline
+\end{tabu}
+}
+
+\begin{solution} % walkthrough of Pr(X) and E(X)
+Can walk through the derivation of P(X):
+\begin{equation}
+\begin{split}
+\P[X = k] = {n \choose k} * p^k * (1 - p)^{n - k} \\ \nonumber
+&= \frac{n!}{k! * (n - k)!} * p^k * (1 - p)^{n - k} \\
+&\approx \frac{n^k * p^k}{k!} * (1 - \frac{\lambda}{n}) \\
+&\approx \frac{\lambda^k * e^{-\lambda}}{k!}
+\end{split}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+\E(X) = \sum_{k = 0}^{\infty} k* \frac{e^{-\lambda} * \lambda^k}{k!} \\ \nonumber
+&= \sum_{k = 1}^{\infty}k * \frac{e^{-\lambda} * \lambda^k}{k!} \\
+&= e^{-\lambda} * \lambda * \sum_{k = 1}^{\infty} \frac{\lambda^{k - 1}}{(k - 1)!} \\
+&=  e^{-\lambda} * \lambda * \sum_{k = 1}^{\infty} \frac{\lambda^{k}}{k!} \\
+&= e^{-\lambda} * \lambda * e^{\lambda} \\
+&= \lambda 
+\end{split}
+\end{equation}
+
+\end{solution}

@@ -1,0 +1,29 @@
+\question \textbf{Bound It}\newline
+A random variable $X$ is always strictly larger than $-100$. You know 
+that $\E(X) = -60$. Give the best upper bound you can on $\P[X \geq -20]$.
+    %\vspace{2.5cm}
+\begin{solution}[3cm]
+Notice that we do not have the variance of $X$, so Chebyshev's bound 
+is not applicable here. 
+Since $X$ is also not a sum of other random variables, other bounds or 
+approximations(chernoff, Hoeffding's inequality. Don't worry about them if they are not covered.) are not available. This leaves us with just Markov's 
+Inequality. But Markov Bound only applies on a non-negative random 
+variable, whereas $X$ can take on negative values.
+
+% There is no upper bound on $X$, so Hoeffding’s 
+% inequality cannot be used. We know nothing else about its distribution 
+% so we cannot evaluate $\E[esX]$ and so Chernoff bounds are not available. 
+					
+This suggests that we want to “shift” $X$ somehow, so that we can apply 
+Markov’s Inequality on it. Define a random variable $Y = X + 100$, 
+which means $Y$ is strictly larger than 0, since $X$ is always strictly 
+larger than $-100$. Then, $\E(Y) = \E(X +100) = \E(X)+100 = -60+100 = 40$. 
+Finally, the upper bound on $X$ that we want can be calculated via $Y$, 
+and we can now apply Markov's Inequality on $Y$ since $Y$ is strictly 
+positive.
+					
+$\P[X \geq -20] = \P[Y \geq 80] \leq \frac{\E(Y)}{80} = \frac{40}{80} = 
+\frac{1}{2}$
+					
+Hence, the best upper bound on $\P[X \geq -20]$ is $\frac{1}{2}$. 
+\end{solution}

@@ -1,0 +1,58 @@
+\q{5}{Diving Into Distributions}
+\begin{enumerate}
+\item Find the distribution of:
+\begin{enumerate}
+\item $Min(U_1, U_2)$ where $U_1, U_2 \sim Uniform[0, 1]$
+
+\vspace{8cm}
+% \solution{
+% \begin{align*}
+% P(min(U_1, U_2) > x) &= P(U_1 > x)P(U_2 > x)\\
+%  &= (1-x)^2
+% \end{align*}
+% Therefore PDF $= -2(1-x)$
+% }
+
+\item The sum of $N$ i.i.d Geometric random variables with parameter $p$
+
+% \solution{
+% \begin{align*}
+% P(X_{N} = x) &= P(\text{success on the }x^{th}\text{ trial})P(N-1\text{ success in } x-1 \text{ trials}) \\
+%  &= p {{N-1}\choose{x-1}} p^{N-1} (1-p)^{x-N} \\
+%  &= p^N q^{x-N} {{N-1}\choose{x-1}}
+% \end{align*}
+% }
+\end{enumerate}
+\clearpage
+
+\item Expectations of distributions
+\begin{enumerate}
+\item $E[U_1 | U_1 < U_2]$ where $U_1, U_2 \sim Uniform[0,1]$
+\vspace{5cm}
+
+% \solution{
+% Notice that this is the same as $Min(U_1, U_2)$, and we calculated the PDF already, so we can just find the expected value, which is $\frac{1}{3}$.
+% One other way is to use symmetry, which we will use in the next part.
+% }
+
+\item $E[U_1 | U_1 > U_2]$ where $U_1, U_2 \sim Uniform[0, 1]$
+\vspace{5cm}
+
+% \solution{
+% This is $max(U_1, U_2)$. Note that  $E[max(U_1, U_2) + min(U_1, U_2)] = E[U_1 + U_2] = 1$. Therefore $E[max(U_1, U_2)] = 1 - \frac{1}{3} = \frac{2}{3}$
+% }
+
+\item Show that $\mathrm{E}[(X-t)^2]  = \mathrm{E}[(X-\mu)^2] + (t-\mu)^2 = Var(X) + (t-\mu)^2$
+\vspace{5cm}
+
+% \solution{
+% $\mathrm{E}[(X-t)^2] = \mathrm{E}[((X-\mu) - (t-\mu))^2] = \mathrm{E}[(X-\mu)^2] + (t-\mu)^2$ by multiplying out the terms and using linearity.
+% }
+
+\item Find $t$ such that the quantity $g(t) = \mathrm{E}[(X-t)^2]$ is minimized.
+
+% \solution{
+% $g(t) = Var(X) + c$, where $c = (t-\mu)^2$. Evaluating at $t = \mu$, we find that $c = 0$, which minimizes the above expression.
+% }
+\end{enumerate}
+\end{enumerate}

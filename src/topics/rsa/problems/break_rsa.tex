@@ -1,0 +1,14 @@
+\question In RSA, if Alice wants to send a confidential message to Bob, 
+she uses Bob’s public key to encode it. Then Bob uses his private key 
+to decode the message. Suppose that Bob chose $N = 77$. And then Bob 
+chose $e = 3$ so his public key is (3, 77). And then Bob chose $d = 26$ 
+so his private key is (26, 77). \newline
+Will this work for encoding and decoding messages? If not, where did 
+Bob first go wrong in the above sequence of steps and what is the 
+consequence of that error? If it does work, then show that it works.
+
+\begin{solution}[2 in]
+$e$ should be co-prime to $(p - 1)(q - 1)$.\newline
+$e = 3$ is not co-prime to $(7 - 1)(11 - 1) = 60$, so this is incorrect, 
+since therefore $e$ does not have an inverse $\mod 60$. 
+\end{solution}

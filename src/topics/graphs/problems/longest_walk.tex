@@ -1,0 +1,20 @@
+\question Let $v$ be an odd degree node. Consider the longest walk 
+starting at $v$ that does not repeat any edges (though it may omit 
+some). Let $w$ be the final node of the walk . Show that $v \neq w$.
+\begin{solution}[3 in]
+Proof by contradiction.
+Assume that the longest walk does get stuck at $v$. 
+This means that at some point in the walk we entered vertex $v$ and 
+there were no more untraversed edges.
+Now pair up the incoming and departing edges as in the notes.
+Every time we entered vertex $v$ before we got stuck, we also left it.
+Pair up the first edge we traverse when we leave with the last edge 
+we traverse when we got stuck.
+This must imply that we used up an even amount of edges incident to 
+$v$.
+But $v$ is of odd degree (assumption)
+Therefore there must be at least one untraversed edge when we entered 
+$v$ the last time.
+But now we have that we got stuck and there is an untraversed edge. 
+Contradiction. We must not get stuck at $v$.
+\end{solution}

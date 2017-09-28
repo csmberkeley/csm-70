@@ -1,0 +1,7 @@
+\question $k\binom{n}{k} = n\binom{n - 1}{k - 1}$ \\
+
+\begin{solution}[3 cm]
+Choose a team of $k$ players where one of the players is the captain. \\
+LHS: Pick a team with $k$ players. This is ${n \choose k}$. Then make one of the players the captain. There are $k$ options for the captain so we get $k \times \binom{n}{k}$. \\
+RHS: Pick the captain. There are $n$ choices for the captain. Now pick the last $k - 1$ players on the team. There are now $n - 1$ people to choose from. So we get $n \times \binom{n - 1}{k - 1}$.
+\end{solution}

@@ -1,0 +1,47 @@
+\question Theorem: The pairing produced by the stable marriage 
+algorithm is male optimal
+
+\begin{solution}[0in]
+Contradiction. (hint: Well Ordering Principle)
+\begin{proof}  
+\begin{enumerate}
+\item Negate the theorem:\underline{\smash{ The pairing produced by 
+the stable marriage }}\newline \underline{\smash{algorithm is not 
+male optimal.}}
+\item Therefore there must exist a man who \underline{\smash{was not 
+paired with his optimal partner.}}
+\item Then there exists a day on which that man was 
+\underline{\smash{rejected}}  by his \newline 
+\underline{\smash{optimal partner}}
+\item By the Well Ordering Principle, there is a \underline{\smash{first}} 
+such day
+\item Choose your notation: On day \underline{\smash{$k$}} man 
+\underline{\smash{$M_1$}} was \underline{\smash{rejected}} \newline by 
+his \underline{\smash{optimal}}, woman \underline{\smash{$W_1$}} in favor 
+of \underline{\smash{another man $M_2$}}. (WOP)
+\item By \underline{\smash{definition of optimal partner}}, there 
+exists a stable pairing $T$ where \underline{\smash{$M_1$}} and 
+\underline{\smash{$W_1$}} are paired.
+\item Write down the pairing $T$ using the notation chosen in 3: \newline
+	\tab T := \underline{\smash{{ $(M_1, W_1) , (M_2, W_2) ,  \dotsc $} }}
+\item Fact: \underline{\smash{$W_1$}} prefers \underline{\smash{$M_2$}} 
+to \underline{\smash{$M_1$}}. \newline
+\tab Why? \underline{\smash{By part 5, she rejected $M_1$ in favor of $M_2$.
+}}
+\item Fact: \underline{\smash{$M_2$}} has not been rejected by his 
+optimal woman on day \underline{\smash{$k-1$}}.\newline
+\tab Why? \underline{\smash{By assumption the first day that a man was 
+rejected by his }} \newline \tab \tab \underline{\smash{optimal woman 
+was day $k$ (part 5).}}
+\item \underline{\smash{$M_2$}} likes \underline{\smash{$W_1$}} at least as 
+much as his optimal woman.
+\item Therefore \underline{\smash{$M_2$}} likes \underline{\smash{$W_1$}} at 
+least as much as \underline{\smash{$W_2$}}.
+\item \underline{\smash{($M_2$, $W_1$)}}  is a \underline{\smash{rogue}}   
+couple in stable pairing $T$.
+
+\end{enumerate}
+\end{proof} 
+\end{solution}
+
+\clearpage

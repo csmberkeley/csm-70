@@ -1,0 +1,15 @@
+\question Prove with a combinatorial argument: 
+\[1 + 2 + \dotsc + n = \frac{n * (n + 1)}{2}\]
+\begin{solution}
+If we note 
+\[\frac{n * (n + 1)}{2} = {n + 1 \choose 2}\]
+
+that  , then we probably want to be selecting two things from a set of size $n + 1$. Both committees and bit strings can be made to work; we will use bit strings.\newline
+
+Let us count the number of bit strings of length $n + 1$ with exactly 2 ones. One way is to choose the two positions for the 1s, out of the $n + 1$ possible positions. There are  
+\[{n + 1 \choose 2} = \frac{n * (n + 1)}{2}\]
+
+ways to do this. This gives the right hand side.\newline
+
+For the left hand side, count the strings by the location of the first 1 (reading from left to right). If the first 1 is in the first position, then there are n choices for the second 1. If the first 1 is is second position, there are  $n − 1$ positions for the second 1, and so on till we get to the case where the first 1 is in position $n$, in which case the second 1 must be in the last position, so we have only one choice. This gives $n + (n - 1) + \dotsc + 1$, which is the same as $1 + 2 + \dotsc + n$.
+\end{solution}

@@ -1,0 +1,31 @@
+\question We saw in the notes on page 8 that 1 and 2 above were saying 
+the same thing- that is, stated rigorously, 1 $\Leftrightarrow$ 2. 
+We will now prove that 1 $\Leftrightarrow$ 3:
+\begin{solution}
+First we prove the forward direction (1 $\rightarrow$ 3). If $G$ is 
+connected and has no cycles, obviously the first part of 3 (connectedness) 
+is satisfied. We now also prove that, in this case, the removal of any 
+edge from $G$ must also disconnect it. Consider the possibility that 
+removing an edge from $G$ did not disconnect it (point out that you 
+are doing a proof by contradiction!). Consider the nodes on the 
+endpoints of the removed edge, denoted $u$ and $v$. If there is still 
+some path $P$ from $u$ to $v$ in $G$, then that path, when augmented 
+with the removed edge, would form a cycle since we could start at $u$, 
+use $P$ to arrive at $v$, and finally use the removed edge to arrive 
+back at $u$ (from $v$). But this is a cycle, which is a contradiction! 
+Hence, we are done with the forward direction. \newline
+Now we prove the reverse direction: that is, that 3 $\rightarrow$ 1. 
+We are now  given that $G$ is connected and that removing any edge 
+will disconnect it. We now wish to prove that this implies 1. Obviously 
+the first part of 1 (connectedness) is satisfied. Consider the 
+possibility that $G$ did contain a cycle (again, point out that you 
+are doing a proof by contradiction!). If this were the case, we could 
+remove an edge in that cycle, and $G$ would still be connected. Why? 
+Consider any node on the cycle. If we remove one of the edges from the 
+cycle, then it means that the other nodes on that cycle are still 
+reachable from one another (try showing this pictorially). But this 
+contradicts the given that removing any edge disconnects $G$! Now we 
+have proven the reverse direction, and we are done. 
+\end{solution}
+
+\clearpage

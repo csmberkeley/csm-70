@@ -1,0 +1,20 @@
+\question Prove that $\Sigma_{i=0}^{n} i*i! = (n+1)! - 1$  for 
+$n \geq 1$ where $n \in N$.
+\begin{solution}[3in]
+Base case: For $n = 1$, we get 
+$0 * 0! + 1 * 1! = 0 + 1 = 1 = (1 + 1)! - 1 = 2 - 1$, which is true 
+as $1 = 1$ \newline
+
+Induction Hypothesis: Assume the following is true for some $k$. 
+\[\sum_{i=0}^{k} i*i! = (k+1)! - 1\] \newline
+
+Inductive Step: Let's prove this for  $k + 1$.
+\[\sum_{i = 0}^{k + 1} i * i!= \sum_{i = 1}^k i * i!  + (k + 1) * (k + 1)!\]
+\tab \tab \tab \tab$= (k + 1)! - 1 + (k+1)(k+1)!$ by the inductive hypothesis, \newline
+\tab \tab \tab \tab$ = (k + 1)!(1 + k + 1) - 1$ \newline
+\tab \tab \tab \tab$ = (k + 1)!(k + 2) - 1$ \newline
+\tab \tab \tab \tab$ = (k + 2)! - 1$\newline
+Hence, we have proven it for $k+1$, and it is true for all $n$.
+\end{solution}
+
+\clearpage

@@ -1,0 +1,28 @@
+\question Prove the following properties of trees.
+
+\begin{enumerate}[label=\alph*]
+\item Any pair of vertices in a tree are connected by exactly one 
+(simple) path.
+
+\begin{solution}[1.6 in]
+Pick any pair of vertices $x$, $y$. We know there is a path between 
+them since the graph is connected. We will prove that this path is 
+unique by contradiction:
+Suppose there are two distinct paths from $x$ to $y$. At some point 
+(say at vertex $a$) the paths must diverge, and at some point (say at 
+vertex $b$) they must reconnect. So by following the first path from 
+$a$ to $b$ and the second path in reverse from $b$ to $a$ we get a 
+cycle. This gives the necessary contradiction.
+\end{solution}
+
+\item Adding any edge to a tree creates a simple cycle.
+
+\begin{solution}[1.6 in]
+Pick any pair of vertices $x$, $y$ not connected by an edge. We prove 
+that adding the edge $(x,y)$ will create a simple cycle. From part (a), 
+we know that there is a unique path between $x$ and $y$. Therefore, 
+adding the edge $(x,y)$ creates a simple cycle obtained by following 
+the path from $x$ to $y$, then following the edge $(x, y)$ from $y$ 
+back to $x$
+\end{solution}
+\end{enumerate}

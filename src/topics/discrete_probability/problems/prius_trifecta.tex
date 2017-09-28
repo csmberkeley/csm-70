@@ -1,0 +1,15 @@
+\question Suppose you arrange 12 different cars in a parking lot, 
+uniformly at random. Three of the cars are Priuses, four of the cars 
+are Teslas, and the other five are Nissan Leaves. What is the 
+probability that the three Prius's are all together? 
+
+\begin{solution}
+There are $12!$ possible ways to arrange the 12 cars. Now, there are 
+$12 - 3+ 1 = 10$ different places the Prius’s could go (positions 
+1,2,3, positions 2,3,4, all the way until positions 10,11,12). 
+For each of those 10 places, there are 3! ways to arrange the Prius’s 
+and 9! ways to arrange the other 9 cars in the 9 remaining spots. 
+So, in total, there are $10*3!*9!$ ways of arranging the cars so that 
+the 3 Prius’s are together. So the probability we get what we want is 
+$\frac{10*3!*9!}{12! } ≈ .0455$
+ \end{solution}

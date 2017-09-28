@@ -1,0 +1,20 @@
+\q{5}{Minions Using Error Correction Codes}
+\begin{enumerate}
+\item Kevin wants to wants to send a message of 4 packets to Stuart and guard against 1 lost packet. Working over GF(7), he finds the unique polynomial P(x) that passes through the points he wants to send, and sends Stuart 5 packets: (0,P(0)), (1,P(1)), (2,P(2)), (3,P(3)), (4,P(4)). Stuart receives the following packets: (0,3), (1,0), (2,0), (4,0). What is the value of the missing packet? Calculate the exact value.
+\vspace{4in}
+% \solution{
+% 	$$\Delta_{0} = \frac{(x-1)(x-2)(x-4)}{(-1)(-2)(-4)} = -(x-1)(x-2)(x-4) $$
+% 	$$P(x) = 3\Delta_{0}(x) = -3(x-1)(x-2)(x-4)$$
+% 	$$P(3) = 4(2)(1)(-1) = 6 $$
+% 	All calculations are done over GF(7).
+% }
+
+\item Kevin wants to send a message of 60 ordered packets to Stuart. Those packets will first go
+through a hungry dragon who will eat at most one fifth of all packets (do not ask why the dragon loves eating packets). The remaining packets will then go through a powerful but malicious witch who will change the data of at most one eighth of all packets. Given this scenario, how many packets should Kevin send so that Stuart can recover the message?
+
+% \solution{
+%  We observe that the worst case is when one fifth packets are missing and then one eighth packets are corrupted. Assume Kevin needs to send a total of m packets:
+%  $$ (\frac{7}{8}(\frac{4m}{5})) - (\frac{1}{8}(\frac{4m}{5})) \geq 60 $$
+%  Solving the inequality gives $m \geq 60$
+%    }
+\end{enumerate}

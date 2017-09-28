@@ -1,0 +1,91 @@
+\documentclass{exam}
+\usepackage{../../scripts/meta}
+
+%%% Change these %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\discnumber{4}
+\title{}
+\date{Polynomials, Secret Sharing, Erasure Errors, General Errors, Self Reference}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\rule{\textwidth}{0.15em}
+\fontsize{12}{15}\selectfont
+\thispagestyle{empty}
+
+%%% General Notes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{General Comments}
+\begin{questions}
+	\item Logistics
+	\begin{itemize}
+		\item Let students know that not everything will be covered during section. 
+		\item Also remind them to check the piazza for solutions and walkthroughs!
+	\end{itemize}
+	\item Erasure Errors
+	\begin{itemize}
+		\item This should go fairly quickly
+		\item THe first 4 questions (Before Exercises) are meant to be the lesson plan. Go over this together with the students
+		\item First exercise problem is purely algebraic (Group 2 might want to skip)
+	\end{itemize}
+
+\item Secret Sharing
+	\begin{itemize}
+		\item Explain how polynomials are used for secret sharing. basically what is the secret in terms of the polynomial? and what is shared among sharers?
+		\item Figure out which of the schemes to use (polynomial facts, erasure code or general error?) It's most likely that we have not cover general error yet but it's fine to have a quick introduction/leave an open question.
+	\end{itemize}
+
+
+\item Logistics
+	\begin{itemize}
+		\item Let students know that not everything will be covered during section. 
+		\item Also remind them to check the Piazza for solutions and walkthroughs!
+	\end{itemize}
+
+\item RSA
+	\begin{itemize}
+		\item Sections earlier in the week may not have strong RSA practice, so don’t spend too much time if they aren’t very familiar with it
+		\item If you don’t get to the RSA questions, briefly explain how it works on a high-level
+		\item Make sure they understand how RSA actually works – the implementation questions test for that pretty well
+		\item Draw a picture! Ask what is public? What is private?
+		\item Coin tosses question is interesting. Tests if they actually understand why RSA works, rather than just how it’s implemented
+		\item Go over the proof from notes on how/why RSA works
+	\end{itemize}
+
+
+\item Polynomials
+	\begin{itemize}
+		\item Draw a graph to visualize why n+1 points are needed for an n-degree polynomial.
+		\item Make sure that the students are clear with the interpolation formula.
+		\item Question 1a: Have students convince themselves that it works for the first few polynomials.
+		\item Question 1b: Have students write out the first few polynomials to find a pattern with the degree.
+	\end{itemize}
+
+\item Secret Sharing
+	\begin{itemize}
+		\item Explain how polynomials are used for secret sharing. For example: what is the secret in terms of the polynomial? and what is shared among sharers?
+		\item Figure out which of the schemes to use (polynomial facts, erasure code or general error?) It's most likely that we have not cover general error yet but it's fine to have a quick introduction/leave an open question.
+	\end{itemize}
+
+
+\item Erasure Errors
+	\begin{itemize}
+		\item This should go fairly quickly.
+		\item The first 4 questions (before exercises) are meant to be the lesson plan. Go over this together with the students.
+		\item First exercise problem is purely algebraic (Group 2 (Thu/Fri) might want to skip).
+	\end{itemize}
+
+\end{questions}
+
+
+\section{Questions}
+\subsection{Polynomials}
+\begin{enumerate}
+\subimport{../../topics/polynomials/meta/}{facts.tex}
+\end{enumerate}
+
+\subsection{Erasure Errors}
+\begin{enumerate}
+\subimport{../../topics/error_correction/erasure/meta/}{send_n.tex}
+\end{enumerate}
+
+\end{document}

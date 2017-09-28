@@ -1,0 +1,40 @@
+\question In Jorge Luis Borges’ “The Library of Babel,” the narrator 
+describes a massive library: Every book in the library has 410 pages, 
+each page has 40 lines, and each line has 80 characters. Besides 
+lowercase letters, the only characters appearing in the books are the 
+period, the comma, and the space. In order to catch up with the 21st 
+century, the Library got itself a Twitter account (@LibraryofBabel )! 
+It appears to have been active for only a short time, but while it 
+was running it diligently tweeted one 140-character message per day. 
+Assume that it uses only the 26 letters of the English alphabet 
+(plus the period, comma, and space) and that any 140-character 
+combination is possible (e.g. “asdfasdf. . . as” and “,,,,,,. . . ,,,,” 
+are both perfectly valid). 
+
+\begin{enumerate}[label=(\alph*)]
+\item How many possible tweets are there? 
+\begin{solution}[1 cm]
+$29^{140}$
+\end{solution}
+
+\item How many tweets use no spaces? 
+\begin{solution}[1 cm]
+$28^{140}$
+\end{solution}
+
+\item How many tweets consist entirely of whitespace? 
+\begin{solution}[1 cm]
+1
+\end{solution}
+
+\item Let $T$ be some particular tweet. How many tweets differ from $T$ by exactly one character? 
+\begin{solution}[1 cm]
+$140*28 = 3920$
+\end{solution}
+
+\item How many have exactly six spaces and five commas? 
+\begin{solution}[1 cm]
+${140 \choose 6} * {134 \choose 5)} * 27^{129} = 
+\frac{140!}{6!5!128!} * 27^{129}$
+\end{solution}
+\end{enumerate}

@@ -1,0 +1,27 @@
+\question You are Alice, and you have a high-quality RSA-based security 
+system. However, Eve is often successful at hacking your system. You 
+know that the number of security breaches averages 3 a day, but varies greatly.
+
+\begin{enumerate}[label=(\alph*)]
+\item What kind of distribution would you use to model this?
+\begin{solution}[2cm]
+Poisson! That's what we use to model the probably frequencies of rare 
+events.
+\end{solution}
+
+\item What is the probability you experience exactly seven attacks 
+tomorrow? At least seven (no need to simplify your answer)?
+\begin{solution}[2cm]
+\[\P[X=7] = \frac{\lambda^7 * e^{-\lambda}}{7!} = \frac{3^7 * 
+e^{-3}}{7!} \approx 0.0216\]
+\[\P[X \geq 7] = \sum_{i=7}^{\infty}\P[X = i] = \sum_{i = 7}^{\infty} 
+\frac{3^i}{i!} * e^{-3} \]
+\end{solution}
+
+\item What is the probability that, on some day in April, you experience 
+exactly six attacks?
+\begin{solution}[2cm]
+\[\P[X=6] = \frac{3^6 * e^{-3}}{6!} \approx 0.0504 \]
+\[1 - (1 - 0.0504)^{30} \approx 0.788 = 78.8\%\]
+\end{solution}
+\end{enumerate}

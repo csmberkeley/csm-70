@@ -1,0 +1,23 @@
+\question Now you are trying to guess the 6-digit factorization digit 
+by digit. Let’s assume that when you finish putting these digits together, 
+you can figure out how many digits you got right. Use zeros for blank 
+spaces. For example, to guess 25, you would put 000025
+
+\begin{enumerate}[label=(\alph*)]
+\item What kind of distribution would you use to model this?
+\begin{solution}[1cm]
+Binomial, since this is multiple independent trials that can either 
+succeed or fail.
+\end{solution}
+
+\item What is the probability that you get exactly 4 digits right?
+\begin{solution}[2cm]
+${6 \choose 4} * \frac{1}{10}^4 * \frac{9}{10}^2$
+\end{solution}		
+
+\item What is the probability that you get less than 3 correct?
+\begin{solution}[1cm]
+${6 \choose 2} * \frac{1}{10}^2 * \frac{9}{10}^4 + {6 \choose 1} * 
+\frac{1}{10} * \frac{9}{10}^5 + {6 \choose 0} * \frac{1}{10}^0*\frac{9}{10}^6$
+		\end{solution}
+\end{enumerate}
