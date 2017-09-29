@@ -25,6 +25,7 @@ Let's implement this with RSA.
 	\item Send your encrypted message to your friend, along with your public key. Sending the public key is important, since it forces you to commit to the result that you got (if you were to send your public key after your friend flipped their coin, you could calculate a public key and private key such that your encrypted message decrypts to whatever you want it to).
 	\item Since your friend currently has no information about your flip, as you can't decrypt with just the public key, they have no choice but to just flip their coin and relay their result back to you.
 	\item Now, you send your friend your private key. With your public key and private key, they can decrypt your message to see what your original word was, telling them whether you got heads or tails.
+\end{enumerate}
 \end{solution}
 
 \clearpage
