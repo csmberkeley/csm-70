@@ -10,46 +10,21 @@ toss and report the results.\newline
 					
 How can you use RSA to help fix the problem?	
 \begin{solution}
-If there was a way for me to make my choice (i.e. toss the coin) 
-without revealing to my friend what the result was before s/he makes 
-her/his decision, then we would be in good shape.
-RSA enables us to do just that. One can commit to a choice without 
-revealing what that choice really is. So here is how we proceed: 
-\begin{enumerate}
+Firstly, we need some way to create two events of equal probability. One way to do this is have both of you flip a coin, and if you both get the same coin (i.e. "HH" or "TT") then one of you has to wait in line, and if you both get different coins (i.e. "HT" or "TH") then the other one of you needs to wait in line. Since each combination of two flips has probability $\frac{1}{4}$, each of you has a $2 \cdot \frac{1}{4} = \frac{1}{2}$ chance of having to wait in line.
 
-\item One issue we need to consider is that if "heads" and "tails" are
-the only things we're encrypting and decrypting, then given some public key
-and an encrypted message it's easy to simply encrypt "heads" and encrypt
-"tails" and check which one matches the received encrypted message.
-\item  I select a public key (N,e) and a private key d. I toss a 
-coin. If I get "heads", I choose some random word that begins with an H.
-If I get "tails", I choose some random word that begins with a T. I do this
-so that my friend can't "reverse engineer" the encrypted message to figure out
-what my result was.
-Instead of sending the result to my friend, I first encrypt my word
-using the public key (N,e). Then I send my friend the public key 
-along with the encrypted message. 
-\item My friend is supposedly (read the next part for why the word 
-supposedly is used) unable to see what the result of the coin toss was 
-and therefore cannot cheat. So s/he makes her/his choice (what HEADS 
-and TAILS mean) and sends it to me, using the same technique (some word
-starting with H for heads and T for tails).
-\item Once I have successfully received the result, I reveal the 
-result of the coin toss by sending my friend my word in plain text 
-(i.e. with no encryption). My friend can now verify that I have not 
-cheated (i.e. I have not changed the result) by encrypting the result 
-using the public key I have given her/him and making sure it was the 
-same as the encrypted message I send her/him. Note that RSA encryption 
-and decryption are both bijections, therefore if I know the encrypted 
-version of two messages are the same, then those two messages must be 
-the same. 
-\end{enumerate}					
-Note that I cannot cheat here, because I commit to the result of the 
-coin toss before I know my friend’s choice. Commitment is a very useful 
-primitive (used in many places in cryptography) that enables a party 
-to convincingly commit to a choice without revealing it until they 
-choose to reveal it. The party should not be able to change their 
-mind after the commitment which is what the scheme guarantees. 
+Some form of encryption is necessary in this question, because otherwise, you could send your non-encrypted result to your friend and they could simply lie and say that they got the result that would cause you to have to go wait in line. Consider the following abstraction:
+\begin{enumerate}
+	\item I flip a coin, write down my result on a piece of paper, and turn over the piece of paper
+	\item I give you the paper, you flip your coin, and then turn over my paper
+\end{enumerate}
+The main idea of the above scheme boiled down to the fact that I was able to give you my result without you being able to see it. After flipping my coin and writing down the result, I'm unable to change my flip, therefore I was forced to "commit" to my answer. Since you weren't able to see my coin, you had no choice but to actually flip the coin, as you had no additional information.
+
+Let's implement this with RSA.
+\begin{enumerate}
+	\item You generate a public key $(N, e)$, and flip your coin. If you got heads, encrypt some random word beginning with the letter "H". If you got tails, encrpyt some random word beginning with the letter "T". The reasoning for this will be evident in the next step.
+	\item Send your encrypted message to your friend, along with your public key. Sending the public key is important, since it forces you to commit to the result that you got (if you were to send your public key after your friend flipped their coin, you could calculate a public key and private key such that your encrypted message decrypts to whatever you want it to).
+	\item Since your friend currently has no information about your flip, as you can't decrypt with just the public key, they have no choice but to just flip their coin and relay their result back to you.
+	\item Now, you send your friend your private key. With your public key and private key, they can decrypt your message to see what your original word was, telling them whether you got heads or tails.
 \end{solution}
 
 \clearpage
