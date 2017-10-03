@@ -2,8 +2,14 @@
 friend gets at least 1 cookie?
 
 \begin{solution}[2 cm]
+Method 1: \\
 Give out 4 “necessary” cookies, then count the number of ways to give 
 6 cookies to 4 friends if some can get no cookies. 6 choices from 4 
 options with repetition, so the number of ways is  
-$(6 + 4 - {1\choose 4} - 1)  =  {9 \choose 3}  = 84.$
+$(6 + 4 - {4\choose 1} - 1)  =  {9 \choose 3}  = 84.$ \\
+\newline
+Method 2: \\
+Give out 4 "necessary" cookies. \\
+Then, the problem reduces to giving 6 cookies to 4 friends. \\
+$\therefore (6 + 3) / (3) = {9 \choose 3}$
 \end{solution}
