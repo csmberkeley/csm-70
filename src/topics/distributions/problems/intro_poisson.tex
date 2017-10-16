@@ -20,24 +20,27 @@ The variance of a poisson distribution is:
 
 \begin{solution} % walkthrough of Pr(X) and E(X)
 Can walk through the derivation of P(X):
-\begin{equation}
-\begin{split}
-\P[X = k] = {n \choose k} * p^k * (1 - p)^{n - k} \\ \nonumber
+\begin{align}
+\P[X = k] &= {n \choose k} * p^k * (1 - p)^{n - k} \\ 
 &= \frac{n!}{k! * (n - k)!} * p^k * (1 - p)^{n - k} \\
-&\approx \frac{n^k * p^k}{k!} * (1 - \frac{\lambda}{n}) \\
+&\approx \frac{n^k * p^k}{k!} * (1 - \frac{\lambda}{n})^{n-k} \\
 &\approx \frac{\lambda^k * e^{-\lambda}}{k!}
-\end{split}
-\end{equation}
+\end{align}
 
-\begin{equation}
-\begin{split}
-\E(X) = \sum_{k = 0}^{\infty} k* \frac{e^{-\lambda} * \lambda^k}{k!} \\ \nonumber
+To get from equation (2) to (3) we make use of the assumption that $$n$$ is large for the approximation 
+\[ \frac{n!}{(n-k)!} \approx n^k \] 
+
+and to get from (3) to (4) we calculate the limit of $(1 - \frac{\lambda}{n})^{n-k}$ as $n$ approahces $\infty$.  
+
+\begin{align*}
+\E(X) &= \sum_{k = 0}^{\infty} k* \frac{e^{-\lambda} * \lambda^k}{k!} \\ \nonumber
 &= \sum_{k = 1}^{\infty}k * \frac{e^{-\lambda} * \lambda^k}{k!} \\
 &= e^{-\lambda} * \lambda * \sum_{k = 1}^{\infty} \frac{\lambda^{k - 1}}{(k - 1)!} \\
 &=  e^{-\lambda} * \lambda * \sum_{k = 1}^{\infty} \frac{\lambda^{k}}{k!} \\
 &= e^{-\lambda} * \lambda * e^{\lambda} \\
 &= \lambda 
-\end{split}
-\end{equation}
+\end{align*}
+
+We note that this expectation is exactly what we want it to be (it matches the expectation of the binomial). 
 
 \end{solution}
