@@ -28,12 +28,11 @@ his dog, what is the probability that the dog is in $A$?
 %\vspace{2.5cm}
 \begin{solution}[2cm]
 \begin{align*}
-P(\text{Dog In A } &\mid \text{ Searched A and Failed}) 
-\\ &=  \dfrac{P(\text{Dog In A } \cap \text{ Searched
-A and Failed})}{P(\text{Dog In A } \cap \text{ Searched A and Failed}) + 
-P(\text{Dog Not In A})} \\ 
+P(\text{Dog In A } &\mid \text{ No Success in A}) 
+\\ &=  \dfrac{P(\text{Dog In A } \cap \text{ No Success in A})}{P(\text{Dog In A } \cap \text{ No Success in A}) + 
+P(\text{Dog Not In A} \cap \text{ No Success in A})} \\ 
 &= \dfrac{\dfrac{4}{10} * \dfrac{3}{4} }{\dfrac{4}{10} * \dfrac{3}{4} + 
-\dfrac{6}{10}}
+\dfrac{6}{10} * \dfrac{1}{1}}
                     = \frac{1}{3}    
 \end{align*}
 \end{solution}
@@ -61,5 +60,6 @@ P(\text{Dog Dies})^{C} \cap
 P(\text{Finds Dog Second Day}) \\
 = \frac{4}{10} * \frac{3}{4} * \frac{2}{3} * \frac{1}{4}
 \end{multline}
+Note that $A^{C}$ means the complement of event C above.
 \end{solution}
 \end{enumerate}
