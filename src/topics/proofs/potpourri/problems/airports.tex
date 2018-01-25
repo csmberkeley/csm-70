@@ -1,0 +1,12 @@
+\question Suppose that there are $2n+1$ airports where $n$ is a positive integer. The distances between any two airports are all different. For each airport, there is exactly one airplane departing from it, and heading towards the closest airport. Prove by induction that there is an airport which none of the airplanes are heading towards.
+
+\begin{solution}
+We can do this with induction. \newline
+Base case ($n = 1$): If there are 3 airports, the closest pair of airports
+will exchange planes. The third airport will then send a plane to one of the first two,
+meaning this third airport will have no incoming planes. \newline
+Induction Hypothesis: Assume for some $k$, in $2k+1$ airports one airport has no incoming planes. \newline
+Induction Step: For $2(k+1) + 1 = 2k + 3$ airports, consider the two airports that are closest to one another.
+This is necessarily unique, given the problem statement. These airports will exchange planes, thus reducing the problem
+to $2k + 1$ airports. We know the $2k+1$ case holds from the induction hypothesis. QED.
+\end{solution}
