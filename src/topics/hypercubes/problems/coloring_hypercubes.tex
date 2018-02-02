@@ -6,7 +6,12 @@ if it is possible to assign one of $k$ colors to each edge of $G$ so
 that no two edges incident on the same vertex receive the same color. \newline
 Show that the $n$-dimensional hypercube is 2-vertex-colorable for 
 every $n$.
-\begin{solution}[3in]
+\begin{solution}[3in] 
+
+\textbf{Direct proof:}
+Notice that 2-vertex colorable is another way to say bipartite. Thus we are looking for a way to split the vertices into two sets $U$ and $V$ such that every edge in the graph connects some vertex in $U$ to some vertex in $V$. Let $U$ be the set of vertices with odd parity and let $V$ be the set of vertices with even parity. An edge will always connect a vertices of different parities since an edge corresponds with a bit flip in the bit-definition. Thus every edge crosses $U$ and $V$.\newline
+
+\textbf{Inductive proof:}
 Base case: For $n = 1$, the hypercube is a single edge. If we color 
 one vertex red and the other blue we have a 2-vertex coloring, since 
 the adjacent vertices are colored differently. 
@@ -24,7 +29,9 @@ scheme which is a legal 2-vertex coloring of $H_0$. Given this coloring,
 we will color $H_1$ in the opposite coloring scheme which, given a color 
 of vertex $ i$ in $H_0$ assigns the opposite color to the vertex $i$ in 
 $H_1$. Since we colored the vertices in both $H_0$ and $H_1$, we have 
-colored all the vertices in the hypercube. It remains to show that this coloring scheme is legal. Assume, for purpose of contradiction that there is a given 
+colored all the vertices in the hypercube. 
+
+It remains to show that this coloring scheme is legal. Assume, for purpose of contradiction that there is a given 
 vertex $i$ in $H_1$ which has an adjacent neighbor colored with the 
 same color. If that neighbor is in $H_1$, then this means that the 
 coloring of $H_1$ is not legal. Observe that if a coloring scheme is 
