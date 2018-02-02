@@ -21,9 +21,11 @@ does not repeat vertices (except the first and last)
 does not repeat vertices (except the first and last)
 \end{solution}
 
-\question  How can you represent a tournament using a graph?
+\question  Suppose we want to represent a round-robin tennis tournament in which every player plays one match against every other player. How might we represent this using a graph?
 \begin{solution}[1 in]
-A directed graph for which any pair of vertices, $u, v$ either have an edge $u \rightarrow v$ or $v \rightarrow u$. It can be used to represent a tournament in which every pair of player play at least once.
+Have a node for each player. For every pair of players $(u, v)$, place an edge from the winner to the loser. This kind of graph is referred to as a tournament. 
+
+This is similar to a complete graph, but it is directed.
 \end{solution}
 
 \question  What is a simple path?
