@@ -1,0 +1,10 @@
+\begin{mdframed}
+\begin{enumerate} 
+    \item Set up: $n$ officials indexed from $1$ to $n$. Secret $s$ is an integer. Use $GF(q)$: $q$ is a prime number such that $q > n$ and $q > s$. 
+    \item Scheme: Pick a random $p(x)$ of degree $k-1$ such that $p(0) = s$. Thus, 
+        \begin{enumerate}
+            \item Any $k$ officials can use Lagrange Interpolation to find $p(x)$, therefore $x$. 
+            \item Any $k-1$ officials have no information about $s$. 
+        \end{enumerate}
+\end{enumerate}
+\end{mdframed}

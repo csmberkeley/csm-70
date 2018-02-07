@@ -1,0 +1,14 @@
+{\tabulinesep=1mm
+\begin{tabu}{|p{16cm} |}
+\hline
+\textbf{Main idea}: find an encryption function $E$ and an decryption function $D$ such that $D(E(x)) = x$. 
+In other words, two people can encrypt and decrypt a message $x$ (an integer) if they know $E$ and $D$. \\
+\textbf{Mechanism}:\\ 
+Public key: $(N, e)$\\ 
+Private key: $d$\\
+Assumption: Given $N$, there is no efficient algorithm to determine $(p-1)(q-1)$. \\
+Encryption function: $E(x) = x^e$ mod N\\ 
+Decryption function: $D(x) = x^d$ mod N, where $d = e^{-1}$ mod$(p-1)(q-1)$\\	
+\hline
+\end{tabu}
+}

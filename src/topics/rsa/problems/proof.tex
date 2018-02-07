@@ -1,0 +1,26 @@
+{\tabulinesep=1mm
+\begin{tabu}{|p{16cm} |}
+\hline
+\textit{Goal}: To show $(x^e)^d \equiv x$ mod ($N$), $\forall x \in \{0, 1, \cdots, N-1\}$. 
+
+Since $ed \equiv 1$ mod $(p-1)(q-1)$ (that's how we define $d$), 
+$ed = 1 + k(p-1)(q-1)$ for some integer $k$. 
+Therefore, $x^{ed} = x^{1 + k(p-1)(q-1)}$\\
+$\implies x^{ed} - x = x^{1 + k(p-1)(q-1)} - x = x(x^{k(p-1)(q-1)} - 1)$. \\ 
+\textit{Claim}: $p \mid x^{ed} - x$
+
+\textit{Case 1} ($x \not\equiv 0$ mod $p$): \\
+According to Fermat's Little Theorem, $x^{p-1} \equiv 1$ mod $p$. 
+
+
+$\implies (x^{p-1})^{k(q-1)} \equiv 1^{k(q-1)} \mod p$ \\
+$\implies x^{k(p-1)(q-1)} - 1 \equiv 0$ mod $p$  \\
+$\implies x^{k(p-1)(q-1)+1} - x \equiv 0$ mod $p$\\
+$\implies p \mid x^{ed} - x$\\
+\textit{Case 2} ($x \equiv 0$ mod $p$): \\
+$p \mid x(x^{ed - 1} - 1)$ \\ 
+$\implies p \mid x^{ed} - x$\\
+By symmetry, $q \mid x^{ed} - x$. Thus, $pq \mid x^{ed} - x$, which means $(x^e)^d \equiv x$ mod ($N$). \\
+\hline
+\end{tabu}
+}
