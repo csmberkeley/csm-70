@@ -1,0 +1,31 @@
+\question 
+Let $P(x)$ be a polynomial of degree 2 over GF(7).
+
+\begin{enumerate}
+    \item 
+        Suppose $P(0) = 3$ and $P(1) = 2$.
+        How many values can $P(5)$ have?
+        How many distinct polynomials are there?
+
+        \begin{solution}[0.8 in]
+            7 polynomials, one for each different possible value of $P(5)$.
+        \end{solution}
+
+    \item
+        Suppose we only know $P(0) = 3$.
+        How many possible pairs of $(P(1), P(5))$ are there?
+        How many different polynomials are there?
+
+        \begin{solution}[0.8 in]
+            49 polynomials because there are 7 possible values for each of $P(1)$ and $P(5)$
+        \end{solution}
+
+    \item
+        If we only know $k$ different points, where $k \leq d$, of a degree $d$ polynomial over GF($p$), how many possible polynomials are there?
+
+        \begin{solution}[0.8 in]
+            There are $p^{d+1-k}$ polynomials.
+            Since we need $d+1$ points to uniquely determine the polynomial, we need to choose values for the $d+1-k$ remaining points that we don't know, and each point can be one of $p$ possible values.
+            For $k = d+1$ there is only 1 possible polynomial.
+        \end{solution}
+\end{enumerate}
