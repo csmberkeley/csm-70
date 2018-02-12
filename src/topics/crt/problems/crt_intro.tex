@@ -4,10 +4,10 @@
  sequence of remainders with pairwise coprime divisors defines a unique remainder modulo the product of those divisors. Formally,
  if $x$ can be expressed as
  \begin{align*}
-     x &\equiv a_1 \pmod m_1 \\
-     x &\equiv a_2 \pmod m_2
- \end{align*}
- where $m_1$ and $m_2$ are relatively prime to each other, CRT tells us that there is an unique number mod $m_1m_2$ that satisfies this equation.  \\
+     x &\equiv a_1 (\mod m_1) \\
+     x &\equiv a_2 (\mod m_2)
+ \end{align*} 
+ where $m_1$ and $m_2$ are relatively prime to each other, CRT tells us that there is an unique number mod $m_1m_2$ that satisfies this equation.  \\ 
  In simple cases, we can often use extended Euclid's algorithm in simple cases to find $x$. However, a failsafe equation is given by: \\
  $x = \sum_{i=1}^k a_i b_i \mod N$, where $b_i$ are defined as $\left(\frac{N}{n_i} \right) \left(\frac{N}{n_i} \right)^{-1}_{\mod n_i}$ and $N = n_1 \cdot n_2 ... \cdot n_k$.
 \end{minipage}}
