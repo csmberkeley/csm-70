@@ -2,27 +2,31 @@
 \begin{tabu}{|p{16cm} |}
 \hline
 \vspace{2 mm}
-\textbf{Theorem 1} : Distributing $k$ distinguishable balls into $n$ 
-distinguishable boxes, with exclusion, corresponds to forming a 
-permutation of size $k$, taken from a set of size $n$. Therefore, 
-there are $P(n, k)  = n_k  = n*(n - 1)*(n - 2) \dotsc (n - k+1)$ 
-different ways to distribute $k$ distinguishable balls into $n$ 
-distinguishable boxes, with exclusion  \vspace{5 mm}
+\textbf{Balls and Bins:} \newline
 
-\textbf{Theorem 2} : Distributing $k$ distinguishable balls into $n$ 
-distinguishable boxes, without exclusion, corresponds to forming a 
-permutation of size $k$, with unrestricted repetitions, taken from a 
-set of size $n$. Therefore, there are $n^k$ different ways to 
-distribute $k$ distinguishable balls into $n$ distinguishable boxes, 
-without exclusion.\vspace{5 mm}
+\textit{Example Question}: How many ways can we distribute 7 dollar bills amongst 3 students? \newline
 
-\textbf{Theorem 3} : Distributing $k$ indistinguishable balls into 
-$n$ distinguishable boxes, with exclusion corresponds to forming a 
-combination of size $k$, taken from a set of size $n$. Therefore, 
-there are $C(n, k) =  { n \choose k}$ different ways to distribute 
-$k$ indistinguishable balls into $n$ distinguishable boxes, with 
-exclusion. \vspace{5 mm}
+Approaching this with the approaches we currently know fails: There are 7 possible options for the number of bills you give to the first student, but the number of bills you choose to give the first student has a \textit{direct} effect on the numbers of bills you can give to the second student - previously, if I had 7 options for the first student and choose one of the options, the second student always had 6 options to choose from. However, this is not the case in our example: if I choose to give the first student 5 dollars, for example, the second student can only get 1 or 2 dollar bills. \newline
+
+How do we solve this problem? We need to format it slightly differently: put the dollar bills on a line, and then try to insert 2 dividers. Everything to the left of the first divider is given to the first student. Everything in the middle of the 2 dividers is given to the second student. And everything to the right of the second divider is given to the 3rd student: \newline 
+\textbf{\textdollar $\vert$ \textdollar \textdollar \textdollar \textdollar $\vert$ \textdollar \textdollar} \newline 		
+\textit{In the above example, the first student gets 1 dollar, the second 4, and the 3rd 2 dollars.} \newline
+
+So we can see that the idea is to count how many ways we can arrange the 7 identical dollar bills and 2 identical dividers. Every permutation leads to some valid, distinct distribution of the money! From the previous sections we can see that we will have $ \frac{9!}{7!2!} = {9 \choose 2}  = 36 $ ways to arrange the bills and dividers, and therefore 36 ways to distribute the money.
+
+This tactic of using dividers is commonly referred to \textit{stars and bars} or \textit{sticks and stones}. \newline
+
+ \textbf{General problem:} We want to distribute $n$ indistinguishable items amongst $k$ people.
+ \textbf{General solution:} ${n+k-1 \choose k}$ \newline
+
+\textit{Balls and Bins:} \newline
+\textbf{Distributing $n$ \underline{distinguishable} balls amongst $k$ \underline{distinguishable} bins:} Each ball has $k$ possible bins to go into, and there are $n$ balls. Solution: $k^{n}$ \newline
+\textbf{Distributing $n$ \underline{indistinguishable} balls amongst $k$ \underline{distinguishable} bins:} Classic stars-and-bars. Solution: ${n+k-1 \choose k}$ \newline
+\textit{Note}: Distributing balls among indistinguishable bins is not covered in CS 70! 
+\newline
 \\
 \hline
 \end{tabu}
 }
+
+

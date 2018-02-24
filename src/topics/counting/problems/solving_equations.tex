@@ -1,20 +1,8 @@
 \question How many solutions does $x + y + z = 10$ have, if all variables 
 must be positive integers? 
 
-\begin{solution}[1 in]
-We know no number can be greater than 8, because all are positive.
-So position: $y$ can take on any value from $1 \rightarrow 8$, and $z$ will just be 
-whatever is left ($y$ can only each of 8 values of $x$ 
-($1 \rightarrow 8$), we solve $y + z = 10 - x$
-Take example $x = 1$, then $y + z = 9$. Because each value $\ge 1$, there 
-are 8 solutions for this equality take on 8 values because $z \ge 1$).
-So we can see that in general, there are $10-x-1$ solutions for each 
-value of $x$.
-so when $x = 1$, 8 solutions; when $x = 2$, 7 solutions, etc. for a total 
-of $8 + 7 + 6 + 5 + 4 + 3 + 2 + 1$ (1 happens when $x=8$ and $y$ and $z$ both must $= 1$)
-total $= 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 = 36 $ solutions
-
-It's easier to think in terms of stars and bars. Bars can't be next to each 
-other since variables are all positive integers, and this would imply that one of the values is 0. So $n = 10$ stars, 
-$k = 3$ bars. Answer = ${n-1 \choose k-1} = {9 \choose 2} = 36$
+\begin{solution}[.5 in]
+We can think of this in terms of stars and bars. Bars can't be next to each 
+other since variables are all positive integers. So $n = 10$ stars, 
+$k = 3$ bars. Answer = ${n-1 \choose k-1} = {9 \choose 2} = 36$.
 \end{solution}
