@@ -17,11 +17,11 @@ So we can see that the idea is to count how many ways we can arrange the 7 ident
 This tactic of using dividers is commonly referred to \textit{stars and bars} or \textit{sticks and stones}. \newline
 
  \textbf{General problem:} We want to distribute $n$ indistinguishable items amongst $k$ people.
- \textbf{General solution:} ${n+k-1 \choose k}$ \newline
+ \textbf{General solution:} ${n+k-1 \choose k-1}$ \newline
 
 \textit{Balls and Bins:} \newline
 \textbf{Distributing $n$ \underline{distinguishable} balls amongst $k$ \underline{distinguishable} bins:} Each ball has $k$ possible bins to go into, and there are $n$ balls. Solution: $k^{n}$ \newline
-\textbf{Distributing $n$ \underline{indistinguishable} balls amongst $k$ \underline{distinguishable} bins:} Classic stars-and-bars. Solution: ${n+k-1 \choose k}$ \newline
+\textbf{Distributing $n$ \underline{indistinguishable} balls amongst $k$ \underline{distinguishable} bins:} Classic stars-and-bars. Solution: ${n+k-1 \choose k-1}$ \newline
 \textit{Note}: Distributing balls among indistinguishable bins is not covered in CS 70! 
 \newline
 \\
