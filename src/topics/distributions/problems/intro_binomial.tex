@@ -1,36 +1,28 @@
-{\tabulinesep=1mm
-\begin{tabu}{|p{16cm} |}
-\hline
 \vspace{2 mm}
-\textbf{Binomial Distribution: Bin(n, p)}
-Number of successes when we do n independent trials. Each trial has a 
-probability $p$ of success. The probability of having $k$ successes:
-\[ \P[X = k] = {n \choose k} * p^k * (1 - p)^{n - k}  \]
-The expectation of a binomial distribution is:
-\[ \E(X) = np \]
-The variance of a binomial distribution is:
-\[ Var(X) = np(1-p) \]
+\textbf{Binomial Distribution}: Bin($n$, $p$)
+
+The binomial distribution counts the number of successes when we conduct $n$ independent trials. Each trial has a probability $p$ of success. For this reason, we can think of the binomial distribution as a sum of $n$ independent Bernoulli trials, each with probability $p$. 
+
+The probability of having $k$ successes:
+$$\P[X = k] = {n \choose k} * p^k * (1 - p)^{n - k}$$
+
+For example, if we flip a fair coin 10 times, the probability of 6 heads is
+
+$$P(H = 6) = {10 \choose 6} \left(\frac{1}{2}\right)^6 \left(\frac{1}{2}\right)^4$$
 \\
-\hline
-\end{tabu}
-}
 
-\begin{solution} % walkthrough of deriving E(X) for Binomial
-Can walk through the derivation of $\E(X)$: 
-We would have to compute this sum:
-\[\E(X) = \sum_{k} k * \P[X = k] = \sum_{k = 0}^{n} k * {n \choose k} * 
-p^k * (1 - p)^{n - k} \]
+\textit{Expectation}: \\
+If we were to compute the sum the traditional way, we would have to compute the sum
+$$E(X) = \sum_{x \in X} x \cdot {n \choose x} p^x (1-p)^{n-x}$$
 
-Instead of doing that just use Bernoulli variables:
-\[ X = X_1 + \dotsc + X_n \]
+Instead of doing that, we can use the fact that the binomial distribution is the sum of $n$ independent Bernoulli distributions:
+$$X = X_1 + \dotsc + X_n$$
 
 And now use linearity of expectation:
-\begin{equation}
-\begin{split}
-\E(X) = \E(X_1 + \dotsc + X_n) = \E(X_1) + \dotsc + \E(X_n) \nonumber
-\end{split}
-\end{equation}
+$$E(X) = E(X_1 + \dotsc + X_n) = E(X_1) + \dotsc + E(X_n) = p + p + ... + p = np$$
 
-Since the probability of a success happening at each step is $p$, and 
-there are $n$ steps, we are just summing $p$  $n$ times.
-\end{solution}
+\textit{Variance}: \\
+We know that variance is only separable when variables are mutually independent, i.e. $var(X_1 + X_2 + ... + X_n) = var(X_1) + var(X_2) + ... + var(X_n)$ only when $X_1, X_2, ... X_n$ are mutually independent. Since our sum of Bernoulli trials is independent, we can do the following:
+
+$$var(X) = var(X_1 + X_2 + ... + X_n) = var(X_1) + var(X_2) + ... + var(X_n)$$
+$$= p(1-p) + p(1-p) + ... + p(1-p) = np(1-p)$$

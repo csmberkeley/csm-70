@@ -1,27 +1,62 @@
-\question You are Alice, and you have a high-quality RSA-based security 
-system. However, Eve is often successful at hacking your system. You 
-know that the number of security breaches averages 3 a day, but varies greatly.
+\question In this problem, we will explore how we can apply multiple distributions to the same problem.
+
+Suppose you are a professor doing research in \textit{machine learning}. On average, you receive 12 emails a day from students wanting to do research in your lab, but this number varies greatly.
 
 \begin{enumerate}[label=(\alph*)]
-\item What kind of distribution would you use to model this?
+\item Which distribution would you use to model the number of emails you receive from students on any one day?
 \begin{solution}[2cm]
-Poisson! That's what we use to model the probably frequencies of rare 
-events.
+Poisson with parameter $\lambda = 12$. 
 \end{solution}
 
-\item What is the probability you experience exactly seven attacks 
-tomorrow? At least seven (no need to simplify your answer)?
+\item What is the probability that you receive 7 emails tomorrow? At least 7?
 \begin{solution}[2cm]
-\[\P[X=7] = \frac{\lambda^7 * e^{-\lambda}}{7!} = \frac{3^7 * 
-e^{-3}}{7!} \approx 0.0216\]
-\[\P[X \geq 7] = \sum_{i=7}^{\infty}\P[X = i] = \sum_{i = 7}^{\infty} 
-\frac{3^i}{i!} * e^{-3} \]
+The probability we receive exactly 7 emails tomorrow is
+$$P(X = 7) = \frac{e^{-12}12^7}{7!} \approx 0.0437$$
+
+The probability we receive at least 7 emails tomorrow is
+$$P(X \geq 7) = P(X = 7) + P(X = 8) + ...
+\\ = e^{-12} \sum_{k = 7}^\infty \frac{12^k}{k!}$$
+
+Equivalently, we can calculate it as:
+$$P(X \geq 7) = 1 - P(X \leq 6)$$
+$$= 1 - P(X = 0) - P(X = 1) - ... - P(X = 5) - P(X = 6)$$
+which gets rid of the infinite sum.
 \end{solution}
 
-\item What is the probability that, on some day in April, you experience 
-exactly six attacks?
+\item Now, let's look at the month of April, in which lots of students are emailing you to secure a summer position. What is the probability that the first day in April that you receive exactly 15 emails is April 7th? \textit{Hint: Break this problem down into parts, and assign your result to the first part to the variable $p$.}
 \begin{solution}[2cm]
-\[\P[X=6] = \frac{3^6 * e^{-3}}{6!} \approx 0.0504 \]
-\[1 - (1 - 0.0504)^{30} \approx 0.788 = 78.8\%\]
+It is worth mentioning that "receiving exactly 15 emails in one day" is an event, and either it happens or it does not. We will use the geometric distribution to model this. First, though, we need to find the probability $p$:
+
+$$p = e^{-15} \frac{12^{15}}{15!} \approx 0.003604$$
+
+Now, for days April 1, April 2, ... April 7, we know that we receive some number of emails that isn't 15, followed by receiving exactly 15 emails on April 8. This corresponds to 7 failures and 1 success in geometric:
+
+$$P(\text{April 8th is first day with exactly 15 emails}) = (1-p)^7 p$$
+$$\approx 0.996396^7 * 0.003604 \approx 0.003514$$
 \end{solution}
+
+\item Now, calculate the probability that April 8th is the first day that we receive \textbf{at least} 15 emails.
+\begin{solution}[2cm]
+Our geometric model is the same, but we have a different $p$ now.
+
+$$p = e^{-12} \sum_{k = 15}^\infty \frac{12^k}{k!} \approx 0.22798$$
+
+$$P(\text{April 8th is first day with at least 15 emails}) = (1-p)^7 p$$
+$$\approx (0.77202)^7 * 0.22798 \approx 0.03726$$
+\end{solution}
+
+\item What is the probability that you receive at least 15 emails on 10 different days in April?
+\begin{solution}[2cm]
+We can take $p = 0.22798$ from the previous part. Now, we will count with the binomial distribution – we have 30 trials (one for each day in April), and each is "successful" with probability $p$. We want the probability of exactly 10 "successes". Let $X$ be the random variable that counts the number of days that we receive at least 15 emails.
+
+$$P(X = 10) = {30 \choose 10} p^{10} (1-p)^{20}$$
+$$\approx 0.06446$$
+\end{solution}
+
+\item What is the probability that you receive at least 15 emails on at least 15 days in April?
+\begin{solution}[2cm]
+$$P(X \geq 15) = P(X = 15) + P(X = 16) + ... + P(X = 30)$$
+$$= \sum_{k = 15}^{30} {30 \choose k} 0.22798^k 0.77202^{30-k} \approx 0.00102$$
+\end{solution}
+
 \end{enumerate}
