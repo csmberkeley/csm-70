@@ -2,7 +2,5 @@
 must be positive integers? 
 
 \begin{solution}[.5 in]
-We can think of this in terms of stars and bars. Bars can't be next to each 
-other since variables are all positive integers. So $n = 10$ stars, 
-$k = 2$ bars. Answer = ${n-1 \choose k} = {9 \choose 2} = 36$.
+We can think of this in terms of stars and bars. We have two bars between the variables x, y, and z, and our stars are the 10 1s we have to distribute among them. Since all variables must be positive integers, x, y, and z will each be at least 1. So, we have 7 1s left to distribute. So $n = 7$ stars, $k = 2$ bars. Answer = ${n+k \choose k} = {9 \choose 2} = 36$.
 \end{solution}
