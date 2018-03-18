@@ -6,20 +6,19 @@
 For a non-negative random variable $X$ with expectation $\E(X) = \mu$, 
 and any  $\alpha > 0$:
 \[\P[X \geq \alpha] \leq \frac{\E(X)}{\alpha}\]
+
+\vspace{2 mm}
+\textbf{Proof of Markov's Inequality}\newline
+
+\[E(X) &= \sum_a a * Pr[X = a]  \nonumber\]
+\[&\geq \sum_{a \geq \alpha} a *  Pr[X = a] \]
+\[&\geq \alpha \sum_{a \geq \alpha} Pr[X = a] \]
+\[&= \alpha Pr[X \geq a]\]
+
 \vspace{2 mm}
 \\
 \hline
 \end{tabu}
 }
 
-\begin{solution}
-\textbf{Proof of Markov's Inequality}\newline
-\begin{equation}
-\begin{split}
-E(X) &= \sum_a a * Pr[X = a] \\ \nonumber
-&\geq \sum_{a \geq \alpha} a *  Pr[X = a] \\
-&\geq \alpha \sum_{a \geq \alpha} Pr[X = a] \\
-&= \alpha Pr[X \geq a]
-\end{split}
-\end{equation}
-\end{solution}
+
