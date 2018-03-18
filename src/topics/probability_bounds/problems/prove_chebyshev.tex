@@ -2,9 +2,9 @@
 \begin{solution}[5cm]
 Define the random variable $Y = (X - \mu)^2$. Note that $\E(Y) =\E( 
 (X - \mu)^2) = \var(X)$
-Also, notice that the event that we are interested in, $|X − \mu| ≥ 
-\alpha $ is exactly the same as the event $Y = (X − \mu)^2 ≥ \alpha ^2$ .
-Therefore, $\P[|X −\mu| \geq \alpha] = \P[Y \geq \alpha^2 ]$. Moreover, 
+Also, notice that the event that we are interested in, $|X - \mu| \geq 
+\alpha $ is exactly the same as the event $Y = (X - \mu)^2 \geq \alpha ^2$ .
+Therefore, $\P[|X -\mu| \geq \alpha] = \P[Y \geq \alpha^2 ]$. Moreover, 
 $Y$ is non-negative, so we can apply Markov's inequality to it to get:
 \[\P[Y \geq \alpha^2] \leq \frac{\E(Y)}{\alpha^2} = \frac{\var(X)}{\alpha^2}\]
 Substituting in $Y = (X-\mu)^2$ above and taking square roots yields the form we are used to.

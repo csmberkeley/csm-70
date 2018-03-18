@@ -18,56 +18,13 @@ Recall,
 \begin{equation}
 \begin{split}
 \var(X) &= \sum_i \var(X_i) \\ \nonumber
-&= \sum_i i - 1 \\
+&= \sum_i (i - 1) \\
 &= -n + \sum_i i \\
 &= -n + \frac{n * (n + 1)}{2} \\
 &= \frac{n*(n + 1) - 2n}{2} \\
 &= \frac{n^2 + n - 2n}{2} \\
 &= \frac{n^2 - n}{2} \\
 &= \frac{n*(n - 1)}{2}
-\end{split}
-\end{equation}
-\end{solution}
-
-\item For what value of $n$ does $\E(X) = \var(X)$?
-\begin{solution}[3cm]
-\begin{equation}
-\begin{split}
-\E(X_i) &= \P[X_i = i]*i + 0 \\ \nonumber
-&= \frac{1}{i}*i = 1
-\end{split}
-\end{equation}
-
-
-\begin{equation}
-\begin{split}
-\E(X) &= \E(X_1 + \dotsc + X_n) \\ \nonumber
-&= \E(X_1) + \dotsc + \E(X_n) \\
-&= n
-\end{split}
-\end{equation}
-
-
-\begin{equation}
-\begin{split}
-n = \frac{n*(n-1)}{2} &\rightarrow 1 = \frac{n-1}{2} \\ \nonumber
-&\rightarrow 2 = n - 1 \\
-&\rightarrow 3 = n
-\end{split}
-\end{equation}
-\end{solution}
-
-\item For what value of $n$ does $E(X) = SD(X)*\sqrt{2} + 100$?
-\begin{solution}[2 cm]
-$\E(X) = n, SD(X) = \sqrt{\var(X)}$
-\begin{equation}
-\begin{split}
-n &= \sqrt{\frac{n*(n-1)}{2}}*\sqrt{2} + 100 \\ \nonumber
-n &= \sqrt{n*(n-1)} + 100 \\
-(n - 100)^2 &= n*(n-1) \\
-n^2 - 200n + 10000 &= n^2 - n \\
-10000 &= 199n \\
-n &= \frac{10000}{199}
 \end{split}
 \end{equation}
 \end{solution}
