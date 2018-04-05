@@ -1,0 +1,17 @@
+\question Five students are enrolled in a CSM section which starts at 2pm. They never arrive before 2pm but they all agree to arrive within berkeley time. That is, each person arrives uniformly distributed between 2pm and 2:10pm, independently. 
+
+\begin{enumerate}[label=(\alph*)] 
+\item A and B are two students in the section. What is the probability that A arrives at least 2 minutes before B? 
+\begin{solution}[4cm] 
+This problem is very similar to the previous problem. The difference is that the region is only one triangle. Thus, P(A arrives at least two minutes before B) = $\frac{1}{2} \times \frac{8}{10} \times \frac{8}{10} = 0.32$. 
+\end{solution}
+
+\item Find the probability that the event that the first person arrives before 2:02pm, and the last person arrives after 2:08pm. 
+\begin{solution}[4cm] 
+\textit{This problem shows that you don't always have to integrate the joint density in order to get the probability.} 
+
+Let $X$ be the event that the first person arrives before 2:02pm and $Y$ be the event that the last person arrives after 2:08pm. Then, \\ 
+$P(X and Y) = 1 - P(\neg (X and Y)) = 1 - \ P(\neg X or \neg Y) = 1 - P(\neg X) - P(\neg Y) + P(\neg X and \neg Y) =  1 - (\frac{8}{10})^5 - (\frac{8}{10})^5+ {\frac{6}{10}}^5$ 
+
+\end{solution}
+\end{enumerate}
