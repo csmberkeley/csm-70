@@ -1,28 +1,28 @@
 \question 
 \begin{enumerate}[label=(\alph*)]
-\item
-You have 15 chairs in a room and there are 9 people. How many different 
+\item You have 15 chairs in a room and there are 9 people. How many different 
 ways can everyone sit down?
-\begin{solution}[1 in]
+
+\begin{solution}
 $\frac{15!}{6!}$
 There are 15 places to put the first person, then 14 places to put the 
-second person, 13 places to put the third person, etc… all the way to 
-the last person who has 7 places to sit
+second person, 13 places to put the third person, etc. all the way to 
+the last person who has 7 places to sit.
 Another way to think about this is like the anagram example above. We 
 have 9 unique “letters” and 6 repeats (our empty spaces). We divide by 
-the repeats giving us:
+the number of repeats giving us:
 $15*14*13*12*11*10*9*8*7 = \frac{15!}{6!}$
  \end{solution}
  
-\item How many ways are there to fill 9 of the 15 chairs? (We don’t 
-care who sits in them)
+\item How many ways are there to fill 9 of the 15 chairs? (We do not 
+care who sits in them.)
 
-\begin{solution}
+\begin{solution} [7 mm]
 ${15 \choose 9}  = \frac{15!}{9!(15-9)!}$
-In this example, we don’t care about the uniqueness of each person, 
+In this example, we do not� care about the uniqueness of each person, 
 so we can just count each person as a “repeat”. So like the anagram 
-example we’ll divide for every repeat. We have 9 human repeats, and 
-6 empty space repeats. Hence $\frac{15!}{9!6!}$
+example we wi��ll divide for every repeat. We have 9 human repeats, and 
+6 empty space repeats. Hence $\frac{15!}{9!6!}$.
 \end{solution}
 
 \end{enumerate}

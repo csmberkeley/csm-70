@@ -7,7 +7,7 @@ Thing to create worksheets.
 
 # Setting up your machine
 1. Create a directory.
-2. git clone https://github.com/kstukalova/latexer.git
+2. `git clone https://github.com/csmberkeley/csm-70.git`
 3. Make sure you have pdflatex set up on your machine. If it isn't download MacTex.
 
 ![alt text](https://github.com/kstukalova/latexer/blob/master/scripts/setting_up.gif "Logo Title Text 1")

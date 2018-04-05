@@ -7,34 +7,13 @@
 \item On a straight line, such that “SUPER” occurs as a substring?
 \begin{solution} 4! (treat “SUPER” as one character) \end{solution}
 
-\item On a straight line, such that “SUPER” occurs as a subsequence 
-(S U P E R appear in that order, but not necessarily next to each other)? 
-\begin{solution} 3! * (8 choose 3)
-This reduces to a stars and bars problem--the S U P E R are bars, and 
-we want to put M A N somewhere in the sequence. Once we do so, there 
-can be any permutation of M A N within the bars.
-Equivalently, we can arrange the letters of SUPERMAN (8! ways), but 
-divide by 5! because we have arranged SUPER in any of 5! ways, when 
-we only want one way. This gives us 8! / 5!, which is equal to 
-$3! * 8! / (5! 3!) = 3! * {8 \choose 3}$
- \end{solution}
-
-
 \item On a circle? 
-\begin{solution} 7!
-    Anchor one element, arrange the other 7 in a line around it
+\begin{solution} 7! Anchor one element, arrange the other 7 around in a line
  \end{solution}
-
 
 \item On a circle, such that “SUPER” occurs as a substring?
-\begin{solution} 3!
-Anchor one element, arrange the other 7 around in a line, but treat 
-SUPER as a single character, so it’s arranging the other 3 around in 
+\begin{solution} [2 mm] 3!
+Treat SUPER as a single character, anchor one element, arrange the other 3 around in 
 a line  \end{solution}
-
-\item On a circle, such that “SUPER” occurs as a subsequence (S U P E R 
-appear in that order, but not necessarily next to each other)?
-\begin{solution} $3! * {7 \choose 3}$
-Anchor one element (for simplicity, choose M, A, or N). Then follow the same procedures as in (c) \end{solution}
 
 \end{enumerate}

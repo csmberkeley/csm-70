@@ -6,7 +6,7 @@ on a given input?
 \includegraphics[width=10cm, height=1cm]{intro_testhalt.jpg}
 \end{center}
 
-How do we prove that \texttt{TestHalt} doesn’t exist? Let’s assume that it does, 
+How do we prove that \texttt{TestHalt} does not exist? Let’s assume that it does, 
 and hope we reach a contradiction. \newline
 Define another program:
 \begin{center}
@@ -15,12 +15,12 @@ Define another program:
 What happens when we call \texttt{Turing(Turing)}?
 \begin{solution}[5 cm]
 \begin{description}
-\item[Case 1]: It halts
+\item[Case 1]: It halts.
 If \texttt{Turing(Turing)} halts then \texttt{TestHalt(Turing, Turing)} 
 must have returned no. But \texttt{TestHalt(Turing Turing)} calls 
 \texttt{Turing(Turing)} and calling \texttt{Turing(Turing)} must loop. 
 But we assumed that \texttt{Turing(Turing)} halted. Contradiction.
-\item[Case 2]: It loops
+\item[Case 2]: It loops.
 This implies that \texttt{TestHalt(Turing, Turing)} returned yes, which by the 
 way that \texttt{TestHalt} is defined implies that \texttt{Turing} halted. 
 But we assumed  that \texttt{Turing(Turing)} looped. Contradiction.

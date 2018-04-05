@@ -12,7 +12,7 @@ sending $k$ additional packets, we will send an additional $2k$.\newline
 \begin{enumerate}
 \item Identical to erasure errors: Alice creates $n - 1$ degree polynomial 
 $P(x)$.\newline
-\[P(x) = p_0 + p_1x + \dotsc + p_{n-1}x^n \]
+\[P(x) = p_0 + p_1x + \dotsc + p_{n-1}x^{n-1} \]
 \item Alice sends $P(1), \dotsc, P(n + 2k)$ \\
 \item Bob receives $R(1), \dotsc, R(n + 2k) $ \newline
 \end{enumerate}
@@ -52,7 +52,7 @@ Then $P(i) * E(i) = r_i * E(i)$ for any $i$ greater than 1 and less than $n + 2k
 	Case 1: $i$ is corrupted
 \[E(i) = 0 \rightarrow 0 = 0\]
 			Case 2: $i$ is not corrupted
-				\[P(i) = ri \rightarrow P(i) * E(i) = r_i E(i)\]
+				\[P(i) = r_i \rightarrow P(i) * E(i) = r_i E(i)\]
 \end{solution}
 
 Let $Q(i) = P(i) E(i)$
@@ -69,7 +69,7 @@ $n + k$
 
 What degree is $P(i)$? 
 \begin{solution}[1 cm]
-$k$
+$n - 1$
 \end{solution}
 
 How many unknown coefficients do we need to describe $E(i)$? 
@@ -77,7 +77,7 @@ How many unknown coefficients do we need to describe $E(i)$?
 $k$ (we know that the first coefficient has to be 1)
 \end{solution}
 
-We can write $Q(i) = r_i E(i)$ for every$ i$ that is $1 \leq i \leq 2k + n$. \newline
+We can write $Q(i) = r_i E(i)$ for every $ i$ that is $1 \leq i \leq 2k + n$. \newline
 How many equations do we have? How many unknowns? 
 \begin{solution}[1 cm]
 $n + 2k$
@@ -87,7 +87,7 @@ Once we have the above described equations, how do we determine what
 $P(i)$ is?
 \begin{solution}[3 cm]
 Solve the equations to get the coefficients for $E(i)$ and $Q(i)$. 
-Then divide $\frac{E(i)}{Q(i)}$ to get $P(i)$.
+Then divide $\frac{Q(i)}{E(i)}$ to get $P(i)$.
 \end{solution}
 \\
 \hline

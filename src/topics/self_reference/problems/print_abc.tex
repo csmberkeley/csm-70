@@ -1,6 +1,6 @@
 \question Say that we have a program $M$ that decides whether any input 
 program halts as long as it prints out the string “ABC” as the first 
-operation that it carries out. Can such a program exist? 
+operation that it carries out. Can such a program exist? Prove your answer.
 
  
  
@@ -20,4 +20,22 @@ is a contradiction, since by diagonalization we can prove that the
 halting problem is not solvable.
 
 Therefore, $M$ can not exist!  
+
+Below we have the Pseudocode for our program P.
+
+\begin{verbatim}
+    define M'(Program p, input i):
+        Construct program p' which will first print('ABC') 
+            then run p(i)
+        run M(p', i)
+    
+    
+    define M(Program p, input i):
+        if p's first command is print('ABC'):
+            if p(i) halts:
+                return True
+            else if p(i) loops forever:
+                return False
+\end{verbatim}
+
 \end{solution}
