@@ -10,8 +10,13 @@ This problem is very similar to the previous problem. The difference is that the
 \begin{solution}[4cm] 
 \textit{This problem shows that you don't always have to integrate the joint density in order to get the probability.} 
 
-Let $X$ be the event that the first person arrives before 2:02pm and $Y$ be the event that the last person arrives after 2:08pm. Then, \\ 
-$P(X and Y) = 1 - P(\neg (X and Y)) = 1 - \ P(\neg X or \neg Y) = 1 - P(\neg X) - P(\neg Y) + P(\neg X and \neg Y) =  1 - (\frac{8}{10})^5 - (\frac{8}{10})^5+ {\frac{6}{10}}^5$ 
+Let $X$ be the event that the first person to arrive arrives before 2:02pm and $Y$ be the event that the last person to arrive arrives after 2:08pm. Then, 
+\begin{align*}
+    P(X \cap Y) &= 1 - P(\neg (X \cap Y)) \\
+                &= 1 - \ P(\neg X \cup \neg Y) \\
+                &= 1 - P(\neg X) - P(\neg Y) + P(\neg X \cap \neg Y) \\
+                &= 1 - (\frac{8}{10})^5 - (\frac{8}{10})^5+ {\frac{6}{10}}^5
+\end{align*}
 
 \end{solution}
 \end{enumerate}
