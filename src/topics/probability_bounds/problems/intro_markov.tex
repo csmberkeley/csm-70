@@ -13,6 +13,22 @@ and any  $\alpha > 0$:
 \[\geq \sum_{a \geq \alpha} a *  Pr[X = a] \]
 \[\geq \alpha \sum_{a \geq \alpha} Pr[X = a] \]
 \[= \alpha Pr[X \geq a]\]
+
+\textbf{Alternate Proof of Markov's Inequality} \newline
+Consider the indicator random variable $Y$ which equals $1$ if $X \geq a$ and $0$ otherwise. \newline
+Now consider the relationship between $X$ and $aY$ \newline
+\begin{itemize}
+	\item If $X < a$, then $Y = 0$, which means $aY = a * 0 = 0$ \newline
+	Because $X$ is a non-negative random variable, $X \geq 0$, so $aY \leq X$ in this case. 
+	\item If $X \geq a$, then $Y = 1$, which means $aY = a * 1 = a \leq X$ \newline
+\end{itemize}
+Thus, we have $aY \leq X$. \newline
+We take expectation on both sides to get: 
+\[E[aY] \leq X\]
+\[aE[Y] \leq E[X]\]
+\[E[Y] \leq \frac{E[X]}{a} \]
+Now we note that the expectation of an indicator random variable is the probability that it is equal to $1$ and we have the proof:
+\[P(X \geq a) \leq \frac{E[X]}{a} \]
 \vspace{2 mm}
 \\
 \hline
