@@ -1,0 +1,8 @@
+\question Let $X_1, X_2, ... , X_n$ be $n$ iid Geometric random variables with parameter $p$. Using Chebyshev's inequality, provide an upper-bound on: $P(|\frac{X_1 + X_2 + ... + X_n}{n} - \frac{1}{p})| \geq a)$ \newline
+Recall the variance for a Geometric Distribution with parameter $p$ is $\frac{1-p}{p^2}$
+\begin{solution}[2cm]
+	Let $S_n = \frac{X_1 + X_2 + ... + X_n}{n}$. \newline
+	$E[S_n] = \frac{1}{n} * E[X_1 + X_2 + ... + X_n] = \frac{1}{n} * n * E[X_1] = \frac{1}{p}$ \newline
+	$var(S_n) = \frac{1}{n^2}var(X_1 + X_2 + ... + X_n) = \frac{1}{n^2} * n * var(X_1) = \frac{1-p}{np^2}$ \newline
+	Therefore, $P(|S_n - E[S_n]| \geq a) \leq \frac{var(S_n)}{a^2} = \frac{1-p}{p^2na^2}$
+\end{solution}
