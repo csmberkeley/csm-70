@@ -1,0 +1,12 @@
+\question Suppose we have a sequence of iid random variables $X_1, X_2, ... , X_n$ \newline
+Let $A_n = \frac{X_1 + X_2 + ... + X_n}{n}$ be the sample mean. \newline 
+Show that the true mean of $X_i = \mu$ is within the interval 
+$[\mu - 4.5\frac{\sigma}{\sqrt{n}}, \mu + 4.5\frac{\sigma}{\sqrt{n}}]$ with $95\%$ probability. 
+\begin{solution}[2cm]
+	Using Chebyshev's Inequality, we have: \newline 
+	$P(|A_n - \mu| > 4.5\frac{\sigma}{\sqrt{n}}) \leq \frac{var(A_n)}{(4.5\frac{\sigma}{\sqrt{n}})^2}$ \newline
+	$var(A_n) = var(\frac{X_1 + X_2 + ... X_n}{n}) = \frac{1}{n^2}var(X_1 + X_2 + ... + X_n)
+	= \frac{1}{n^2} * n * var(X_1) = \frac{\sigma^2}{n}$ \newline 
+	$P(|A_n - \mu| > 4.5\frac{\sigma}{\sqrt{n}}) \leq \frac{\frac{\sigma^2}{n}}{20 \frac{\sigma^2}{n}} = \frac{1}{20}$. \newline 
+	The probability that you are outside of the confidence interval is $0.05$, so therefore, the probability that the true mean lies within the interval is $1-0.05 = 0.95$.
+\end{solution}

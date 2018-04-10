@@ -1,3 +1,4 @@
+
 \question The citizens of the country USD (the United States of Drumpf) 
 vote in the following manner for their presidential election: if the 
 country is liberal, then each citizen votes
@@ -19,22 +20,20 @@ in boudning the quantity $\P[S_{100} \geq 51]$ where $S_{100} = X_1 + X_2
 \frac{\var (X)}{26^2} = \frac{75}{4 \cdot 26^2} = 0.03\]
 \end{solution}
 
-\item Now let $p$ be unknown; we wish to estimate it. Using the CLT, determine the
-number of voters necessary to determine $p$ within an error of 0.01, with probability
-at least 0.95.
+\item Now let $p$ be unknown; we wish to estimate it. Using Chebyshev's Inequality, determine the number of voters necessary to determine $p$ within an error of 0.01, with probability at least 0.95.
 \begin{solution}[2 cm]
-For now, we let consider general error and want the probability to
-be at least $1 - \beta$ . We are thus interested in: 
-\[\P[|\frac{S_n}{n} - p| \geq \alpha]\]
-Note that by the CLT,
-\[\frac{S_n}{n} - p \approx \sqrt{ \frac{p \cdot (1-p)}{n}}Z\text{, where }Z \sim N(0, 1).\]
-\[\P[|\frac{S_n}{n} - p| \geq \alpha] \approx \P[|Z| \geq 
-\sqrt{ \frac{p \cdot (1-p)}{n}} \alpha
-\leq \P[|Z| \geq 2 \alpha]\]
-Now, we have: 
-\[\P[|Z| \geq 2\alpha \sqrt{n} ] = 2 \P[Z \geq 2 \alpha \sqrt{n}] = 2 \cdot
-\P[X \leq 2 \alpha \sqrt{n}] = \beta\]
-Now, we substitute in $\alpha = 0.01$, $\beta = 0.05$, and see that: 
-$n = \frac{1.962}{(2 \cdot 0.01)^2} = 98^2 = 9604$.
+Again let $X_i$ be the indicator variable that person $i$ votes as a liberal. \newline 
+Let $\hat{p}$ be our sample proportion. \newline 
+We have: 
+\[\hat{p} = \frac{X_1 + X_2 + ... + X_n}{n}\] 
+We want our sample proportion to be within $0.01$ of $p$ with probability $0.95$. \newline
+Thus, we want to bound:  
+\[\P[|\hat{p} - p| \geq 0.01]\]
+We know that $\mathrm{Var}(\hat{p}) = \frac{\sigma^2}{n}$ where $\sigma^2 = \mathrm{Var}(X_i) = p(1-p) \leq \frac{1}{4}$. \newline 
+Therefore, our variance $\mathrm{Var}(\hat{p}) \leq \frac{1}{4n}$
+\[\P[|\hat{p} - p| \geq 0.01] \leq \frac{\mathrm{Var}(\hat{p})}{0.01^2} \leq \frac{1}{4 * 0.01^2 n} = 0.05\]
+Solving for $n$, we get: $n \geq 50000$. 
+
+
 \end{solution}
 \end{enumerate}
