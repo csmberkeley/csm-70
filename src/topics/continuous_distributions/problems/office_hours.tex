@@ -5,11 +5,16 @@ is the expected value of the sum of the time they wait in hours and
 their score on the exam?
 
 \begin{solution}[0.5cm]
-Since the student and the office hours lie on the same distribution, there is no
-difference between when the student comes and when the office hours are held. So
+    Model the beginnings of office hours as $8$ points throughout a 24-hour day.
+    Model the student's arrival as $1$ point in a 24-hour day.
+    Then in total there are $9$ points distributed throughout a 24-hour day.
+    By symmetry, the expected time interval from the student's arrival to the next office hour is $\frac{24}{9}$.
 
-\E(waiting time) = \E(exp(lambda=9/24)) = 8/3 \\
-\E(score) = \E(normal(50, 36)) = 50 \\
+    \begin{align*}
+        \E(\text{waiting time}) = \frac{24}{9} \\
+        \E(\text{score}) = \E(\mathcal{N}(50, 36)) = 50 \\
+    \end{align*}
 By linearity of expectation, the sum is $52 \frac{2}{3}$.
+
 \end{solution}
  
