@@ -19,7 +19,7 @@ Given that Alice's throw was greater than $5$, what is the probability that Bob 
 	As like the previous problem, we only consider when Bob throws a distance greater than Alice. \\
 	The joint pdf $f_{A, B} = f_A * f_B = \frac{1}{100}$ as $A$ and $B$ are independent.  \\
 	Therefore, \\
-	$P(B > A | A > 5)  =  \frac{P(B > A, A > 5)}{P(A > 5)} = 2*P(B > A, A > 5) \\
+	$P(B > A | A > 5)  =  \frac{P(B > A, A > 5)}{P(A > 5)} = \frac{P(B > A, A > 5)}{\frac{1}{2}} \\
 	= 2\int\limits_{5}^{10}\int\limits_{a}^{10}f_{A, B} db da \\
 	=  2\int\limits_{5}^{10}\int\limits_{a}^{10}\frac{1}{100} db da \\
 	= 2\int\limits_{5}^{10} (\frac{1}{100}b)\big|_{a}^{10} da \\

@@ -3,7 +3,7 @@ Suppose you have two coins, one that has heads on both sides and another that ha
 Use the CLT to approximate the probability of getting more than 220 heads.
 \begin{solution}[3cm]
 Let $X$ be the number of heads we get. We have a $\frac{1}{2}$ probability of getting the coin with $2$ heads and thus getting a head and we have a $\frac{1}{2}$ probability of getting the coin with $2$ tails and not getting heads. Thus $X \mathtt{\sim} \mathrm{Bin}(400, \frac{1}{2})$. \newline
-Now, we know that $E[X] = 400 * \frac{1}{2} = 200$ and $\mathrm{Var}(X) = 200 * \frac{1}{2} * (1-\frac{1}{2}) = 100$, so standard deviation $\sigma = \sqrt{100} = 10$ \newline 
+Now, we know that $E[X] = 400 * \frac{1}{2} = 200$ and $\mathrm{Var}(X) = 400 * \frac{1}{2} * (1-\frac{1}{2}) = 100$, so standard deviation $\sigma = \sqrt{100} = 10$ \newline 
 Using CLT, we approximate $\frac{X - E[X]}{\sigma} = \frac{X - 200}{10}$ as $Z \mathtt{\sim}N(0, 1)$ \newline
 Therefore, $P(X > 200)  = P(\frac{X - 200}{10} > 2) \approx P(Z > 2) = 1 - P(Z \leq 2) \approx 1 - 0.9772 \\ = 0.0228$.
 \end{solution}   
