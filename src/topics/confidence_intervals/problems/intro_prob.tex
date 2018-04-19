@@ -8,11 +8,11 @@ $[\frac{1}{n} \sum_{i} A_k - 0.25, \frac{1}{n} \sum_{i} A_k + 0.25]$
 \end{solution}
 
 \item We know that the variables $X_i$, for $i$ from 1 to $n$, are i.i.d. 
-random variables and have variance. We also have a value (an observation) 
+random variables and have variance $\sigma^2$. We also have a value (an observation) 
 of $A_n = \frac{X_1 + \ldots + X_n}{n}$. We want to guess the mean, $\mu$, 
 of each $X_i$.
 
-Prove that we have 95\% confidence $\mu$ lies in the interval
+Prove that we have 95\% confidence that $\mu$ lies in the interval
 $\big[ A_n - 4.5\frac{\sigma}{\sqrt{n}}, A_n + 4.5\frac{\sigma}{\sqrt{n}} \big]$
 
 That is,
@@ -26,10 +26,10 @@ is more than the interval size at 5\%:\newline
 \frac{\text{Var}(A_n)}{(4.5 \frac{\sigma}{\sqrt{n}})^2} \approx 
 \frac{\frac{\sigma^2}{n}}{\frac{20\sigma^2}{n}} = \frac{1}{20} = 5\%\].
 
-Thus, the probability that $\mu$ is \textit{in} the interval is 95%.
+Thus, the probability that $\mu$ is \textit{in} the interval is 95\%.
 \end{solution}
 
-\item Give the 99\% confidence interval for $\mu$:
+\item Give the 99\% confidence interval for $\mu$.
 \begin{solution}[3cm]
 Solution is similar to that of the 95\% confidence interval. 
 
