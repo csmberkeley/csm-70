@@ -1,10 +1,17 @@
-\question We have a die whose 6 faces are values of consecutive integers, 
-but we do no€™t know where it starts (it is shifted over by some value 
-$k$; for example, if $k = 6$, the die faces would take on the values 
-$7, 8, 9, 10, 11, 12$). If we observe that the average of the $n$ 
+\question We have a die with 6 faces of values $1, 2, 3, 4, 5, 6$.
+
+\begin{enumerate}[label=(\alph*)]
+\item Develop a 99\% confidence interval for the value of n samples assuming $n$ is large enough. 
+\begin{solution}[3cm]
+ Consider the $99\%$ confidence interval for the average of $n$ rolls of a standard die, $X$. We can model it using the normal distribution with a mean $\E[\frac{nD}{n}] = \frac{n\E[D]}{n} = \E[D]= 3.5$ and a variance $\text{Var}[X] = \text{Var}[\frac{nD}{n}] = (\frac{1}{n})^2\text{Var}[nD] = (\frac{1}{n})^2n\text{Var}[D] = \frac{\text{Var}[D]}{n} = \frac{35}{12n}$ where $D$ is the distribution of a standard dice roll. We can now find the $99\%$ confidence interval as $|\frac{x - \E[X]}{\sqrt{\text{Var}[X]}}| = Z(99\%) = 2.576$. We solve this to find $x = \E[X] \pm Z(99\%)\sqrt{\text{Var}[X]} = 3.5 \pm 2.576\sqrt{\frac{35}{12n}}$
+\end{solution}
+
+\item Now, we say the die's values are consecutive integers, but we do no€™t know where it starts. It is shifted over by some value $k$; for example, if $k = 6$, the die faces would take on the values 
+$7, 8, 9, 10, 11, 12$. If we observe that the average of the $n$ 
 samples is 15.5, develop a 99\% confidence 
 interval for the value of $k$ assuming $n$ is large enough. 
+
 \begin{solution}
-  Consider the $99\%$ confidence interval for the average of $n$ rolls of a standard die, $X$. We can model it using the normal distribution with a mean $\E[\frac{nD}{n}] = \frac{n\E[D]}{n} = \E[D]= 3.5$ and a variance $\text{Var}[X] = \text{Var}[\frac{nD}{n}] = (\frac{1}{n})^2\text{Var}[nD] = (\frac{1}{n})^2n\text{Var}[D] = \frac{\text{Var}[D]}{n} = \frac{35}{12n}$ where $D$ is the distribution of a standard dice roll. We can now find the $99\%$ confidence interval as $|\frac{x - \E[X]}{\sqrt{\text{Var}[X]}}| = Z(99\%) = 2.576$. We solve this to find $x = \E[X] \pm Z(99\%)\sqrt{\text{Var}[X]} = 3.5 \pm 2.576\sqrt{\frac{35}{12n}}$. We can now say that the confidence interval for $k$ is given by $15.5$ - confidence interval for $X$.
+We can now say that the confidence interval for $k$ is given by $15.5$ - confidence interval for $X$.
 \end{solution}
-%% Confidence interval write out. to fix later 
+\end{enumerate}

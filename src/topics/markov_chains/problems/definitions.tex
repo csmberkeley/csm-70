@@ -30,7 +30,9 @@ any other state, possibly in multiple steps.
 
 \vspace{1cm}
 
-Define value \textbf{$d(i)$} for each state $i$ as:
+Periodicity has to do with the period of occurrence of a state. If a state $s$ has period 2, the Markov chain can be in $s$ at every other time point. If a state has period 1, it's aperiodic; otherwise, it's periodic. 
+
+More quantitatively, define value \textbf{$d(i)$} for each state $i$ as:
 \[d(i) \coloneqq g.c.d\{n > 0 | P^n(i, i) = \P[X_n = i | X_0 = i] > 0 \}, 
 i \in \state\]
 
