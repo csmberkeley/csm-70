@@ -1,6 +1,7 @@
 \documentclass{exam}
 \usepackage{../../scripts/commonheader}
 \usepackage{tikz}
+\usepackage{hyperref}
 
 %%% Change these %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \discnumber{11}
@@ -21,23 +22,35 @@
 \begin{questions}
 \subimport{../../topics/probability_bounds/problems/}{clt.tex}
 \end{questions}
+
+
+\section{More Continuous Practice}
+\subsection{Questions}
+\begin{questions}
+	\subimport{../../topics/continuous_probability/problems/}{joint_uniform.tex}
+	\subimport{../../topics/continuous_probability/problems/}{joint_uniform2.tex}
+\end{questions}
+
+
+
 \section{Inequalities}
 \subsection{Introduction}
 \subimport{../../topics/probability_bounds/problems/}{intro_markov.tex}
 \subimport{../../topics/probability_bounds/problems/}{intro_chebyshev.tex}
 \subsection{Questions}
 \begin{questions}
-\subimport{../../topics/probability_bounds/problems/}{prove_chebyshev.tex}
+%\subimport{../../topics/probability_bounds/problems/}{prove_chebyshev.tex}
 \subimport{../../topics/probability_bounds/problems/}{compare_bounds.tex}
 \subimport{../../topics/probability_bounds/problems/}{bound_it.tex}
 \subimport{../../topics/probability_bounds/problems/}{drumpf.tex}
 \subimport{../../topics/probability_bounds/problems/}{squirrel.tex}
+\newpage
 \subimport{../../topics/probability_bounds/problems/}{bound_by_1_3.tex}
 \subimport{../../topics/probability_bounds/problems/}{basic_chebyshev.tex}
 \subimport{../../topics/probability_bounds/problems/}{chebyshev_2.tex}
 \end{questions}
 
-\subsection{Covariance}
+\section{Covariance}
 \subsection{Introduction}
 \subimport{../../topics/covariance/problems/}{intro.tex}
 \subsection{Questions}
