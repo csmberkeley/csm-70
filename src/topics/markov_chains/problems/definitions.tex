@@ -6,7 +6,7 @@ P is a \textbf{transition probability matrix} if:
 \item The sum of entries in each row is 1.
 \end{enumerate}
 
-\vspace{.8cm}
+\vspace{.5cm}
 
 A \textbf{Markov chain} is defined by four things: (\state, $\pi_0$, 
 $P$, $\{X_n\}_{n=0}^{\infty}$) \newline
@@ -23,16 +23,14 @@ $\{X_n\}_{n=0}^{\infty}$ & Sequence of random variables where: \\
 \end{tabular}
 \end{center}
 
-\vspace{1cm}
+\vspace{.5cm}
 
 A Markov chain is \textbf{irreducible} if we can go from any state to 
 any other state, possibly in multiple steps.
 
-\vspace{1cm}
+\vspace{.5cm}
 
-Periodicity has to do with the period of occurrence of a state. If a state $s$ has period 2, the Markov chain can be in $s$ at every other time point. If a state has period 1, it's aperiodic; otherwise, it's periodic. 
-
-More quantitatively, define value \textbf{$d(i)$} for each state $i$ as:
+Periodicity has to do with the period of occurrence of a state. If a state $s$ has period 2, the Markov chain can be in $s$ at every other time point. If a state has period 1, it's aperiodic; otherwise, it's periodic. More quantitatively, define value \textbf{$d(i)$} for each state $i$ as:
 \[d(i) \coloneqq g.c.d\{n > 0 | P^n(i, i) = \P[X_n = i | X_0 = i] > 0 \}, 
 i \in \state\]
 
@@ -40,7 +38,7 @@ If $d(i) = 1$, then the Markov chain is \textbf{aperiodic}. If $d(i)
 \neq 1$, then the Markov chain is periodic and its \textbf{period} is 
 $d(i)$.
 
-\vspace{1cm}
+\vspace{.5cm}
 
 A distribution $\pi$ is \textbf{invariant} for the transition probability $P$ if it satisfies the following \textbf{balance equations}
 \[\pi \cdot P = \pi.\]
@@ -55,7 +53,7 @@ the invariant distribution as n grows large
 Equations that model what will happen at the next step are called 
 \textbf{first step equations}
 
-\vspace{5mm}
+\vspace{.5cm}
 
 \begin{minipage}[b]{0.6\linewidth}
 \begin{center}
