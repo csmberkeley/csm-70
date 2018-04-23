@@ -3,7 +3,10 @@
 \begin{enumerate}[label=(\alph*)]
 \item Develop a 99\% confidence interval for the value of n samples. 
 \begin{solution}[3cm]
-Consider the $99\%$ confidence interval for the average of $n$ rolls of a standard die, $X$. We can model it using the normal distribution with a mean $\E[\frac{nD}{n}] = \frac{n\E[D]}{n} = \E[D]= 3.5$ and a variance $\text{Var}[X] = \text{Var}[\frac{nD}{n}] = (\frac{1}{n})^2\text{Var}[nD] = (\frac{1}{n})^2n\text{Var}[D] = \frac{\text{Var}[D]}{n} = \frac{35}{12n}$ where $D$ is the distribution of a standard dice roll. We can now find the $99\%$ confidence interval as $|\frac{x - \E[X]}{\sqrt{\text{Var}[X]}}| = Z(99\%) = 2.576$. We solve this to find $x = \E[X] \pm Z(99\%)\sqrt{\text{Var}[X]} = 3.5 \pm 2.576\sqrt{\frac{35}{12n}}$
+Consider the $99\%$ confidence interval for the average of $n$ rolls of a standard die, $X = \frac{1}{n} \sum_{i=1}^n D_i$. 
+We can model it using the normal distribution with a mean $\E[X] = \frac{n\E[D_i]}{n} = \E[D]= 3.5$ and a variance $\text{Var}[X] = (\frac{1}{n})^2\text{Var}[X] = (\frac{1}{n})^2 n \text{Var}[D_i] = \frac{\text{Var}[D_i]}{n} = \frac{35}{12n}$.
+We can now find the $99\%$ confidence interval as $|\frac{X - \E[X]}{\sqrt{\text{Var}[X]}}| = \Phi^{-1} (0.995) = 2.576$. 
+We solve this to find $x = \E[X] \pm \Phi^{-1}(0.995)\sqrt{\text{Var}[X]} = 3.5 \pm 2.576\sqrt{\frac{35}{12n}}$
 \end{solution}
 
 \item Now, we say the die's face values are consecutive integers, but we do no€™t know the starting number. The values are shifted over by some $k$; for example, if $k = 6$, the die faces would take on the values 
