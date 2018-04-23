@@ -5,8 +5,8 @@
 \begin{solution}[3cm]
 Consider the $99\%$ confidence interval for the average of $n$ rolls of a standard die, $X = \frac{1}{n} \sum_{i=1}^n D_i$. 
 We can model it using the normal distribution with a mean $\E[X] = \frac{n\E[D_i]}{n} = \E[D]= 3.5$ and a variance $\text{Var}[X] = (\frac{1}{n})^2\text{Var}[X] = (\frac{1}{n})^2 n \text{Var}[D_i] = \frac{\text{Var}[D_i]}{n} = \frac{35}{12n}$.
-We can now find the $99\%$ confidence interval as $|\frac{X - \E[X]}{\sqrt{\text{Var}[X]}}| = \Phi^{-1} (0.995) = 2.576$. 
-We solve this to find $x = \E[X] \pm \Phi^{-1}(0.995)\sqrt{\text{Var}[X]} = 3.5 \pm 2.576\sqrt{\frac{35}{12n}}$
+We can now find the z-score (normalized $x$ value) of the $99\%$ confidence interval is $\Phi^{-1} (0.995) = 2.576$. 
+Recall that the relationship between $X$ and $Z$ (the standard normal random variable) is $Z = \frac{X - \E[X]}{\sqrt{Var[(X)}}$. Thus, $x = \E[X] \pm \Phi^{-1}(0.995)\sqrt{\text{Var}(X)} = 3.5 \pm 2.576\sqrt{\frac{35}{12n}}$
 \end{solution}
 
 \item Now, we say the die's face values are consecutive integers, but we do no€™t know the starting number. The values are shifted over by some $k$; for example, if $k = 6$, the die faces would take on the values 
