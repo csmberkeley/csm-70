@@ -1,34 +1,29 @@
 \question Let $G=(V, E)$ be an undirected graph. Match the term with the definition. \newline
 \noindent\fbox{\begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
 \vspace{3mm}
-\hspace{.5 cm} Walk \hspace{3.5 cm} Cycle  \hspace{3.5 cm} Tour \hspace{3.5 cm} Path\hspace{.5 cm}
+Path/Simple Path \hspace{.8 cm} Tour \hspace{.8 cm} Walk \hspace{.8 cm} Tournament \hspace{.8 cm} Cycle \hspace{.8 cm} Eulerian Tour   
 \vspace{.9mm}
 \end{minipage}}
 
 \fbox{\begin{minipage}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
- \line(1,0){150} Walk that starts and ends at the same node \\
- \line(1,0){150} Sequence of edges. \\
- \line(1,0){150} Sequences of edges with possibly repeated vertex or edge. \\
- \line(1,0){150} Sequence of edges that starts and ends on the same vertex and 
-does not repeat vertices (except the first and last) 
+ \line(1,0){70} Sequence of edges. \\
+ \line(1,0){70} Sequence of edges that does not repeat vertices. \\
+ \line(1,0){70} Sequence of edges that starts and ends at the same vertex. \\
+ \line(1,0){70} Sequence of edges that starts and ends on the same vertex and does not repeat any other vertices. \\
+ \line(1,0){70} Sequence that uses each edge exactly once and starts and ends at the same vertex. \\
+ \line(1,0){70} Directed graph in which every pair of distinct vertices is connected by a single directed edge. 
 \end{minipage}}
+\vspace{3mm}
+Note: In CS 70, we typically assume paths are simple paths. \\
+Additional Note: The questions below do not cover Eulerian tours, but they are an important topic included in the optional practice that you should review on your own. \\  
 
-\begin{solution}
- \center{\underline{tour}} Walk that starts and ends at the same node \\
- \center{\underline{path}} Sequence of edges. \\
- \center{\underline{walk}} Sequences of edges with possibly repeated vertex or edge.\\
- \center{\underline{cycle}} Sequence of edges that starts and ends on the same vertex and 
-does not repeat vertices (except the first and last)
+
+\begin{solution} 
+\underline{walk:} Sequences of edges.\\
+\underline{path/simple path:} Sequence of edges that does not repeat vertices. \\
+\underline{tour:} Sequence of edges that starts and ends at the same vertex. \\
+\underline{cycle:} Sequence of edges that starts and ends on the same vertex and does not repeat any other vertices. \\
+\underline{eulerian tour:} Sequence that uses each edge exactly once and starts and ends at the same vertex. \\
+\underline{tournament:} Directed graph in which every pair of distinct vertices is connected by a single directed edge. 
 \end{solution}
 
-\question  Suppose we want to represent a round-robin tennis tournament in which every player plays one match against every other player. How might we represent this using a graph?
-\begin{solution}[1 in]
-Have a node for each player. For every pair of players $(u, v)$, place an edge from the winner to the loser. This kind of graph is referred to as a tournament. 
-
-This is similar to a complete graph, but it is directed.
-\end{solution}
-
-\question  What is a simple path?
-\begin{solution}[1 in]
-A sequence of edges where the vertices are necessarily distinct.
-\end{solution}

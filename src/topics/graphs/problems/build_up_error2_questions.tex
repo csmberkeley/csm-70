@@ -1,0 +1,11 @@
+\question Give a counter-example to show the claim is false.
+\begin{solution}[1 in]
+Consider $K_8$ where every node has degree 7, then remove 6 edges from 2 vertices. 6 vertices have degree at least 5 since in the form $K_6$, there are 16 edges, which corresponds to an average degree of $\frac{32}{8}$ of 4. 
+\end{solution}
+
+
+\question Since the claim is false, there must be an error in the proof. Explain the error. 
+\begin{solution}[1.5 in]
+The problem is that for $P(n+1)$ to be true, we must show that for every ($n+1$)-vertex graph with average degree $k$, more than half of the vertices must have degree at most $k$. Instead, the proof shows that every ($n+1$)-vertex graph with average degree $k$ that can be constructed by adding a vertex of positive degree to an existing ($n$)-vertex graph with average degree $k$. Confirm that there is no way to build your counter-example graph by the method in the proof. \\
+More generally, this is an example of "build-up error". This error arises from a faulty assumption that every graph of size $n+1$ with some property can be built by adding a vertex to an $n$ vertex graph that also has that property. This assumption is correct in some cases, and incorrect in others. 
+\end{solution}

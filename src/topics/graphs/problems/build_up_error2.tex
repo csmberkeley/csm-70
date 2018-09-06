@@ -1,0 +1,7 @@
+In this section we will work through an example of buildup error. \\ 
+\textit{Faulty Claim:} If a graph has average degree $k$, more than half the vertices must have degree at most $k$.\\
+\textbf{Proof:} We use induction on the number of vertices $n$. \\
+\textit{Base Case:} A graph with just 1 vertex has average degree $0$. 1 out of 1 vertices, or more than half of the vertices have degree 0. \\
+\textit{Inductive Hypothesis:} For a graph with $n$ vertices that has average degree $k$, more than half of the vertices have degree at most $k$.\\
+\textit{Inductive Step:} Consider a graph of $n$ vertices, that has average degree $k$. By our inductive hypothesis, we claim that at least $\frac{n}{2}$ vertices have degree at most $k$. Add another vertex to this graph. In order for the graph to still have average degree $k$, we need to connect the new vertex to exactly $k$ vertices. Now we have an $n+1$ vertex graph with at least $\frac{n}{2} + 1$ vertices with at most degree $k$. $\frac{n}{2} + 1 \geq \frac{n+1}{2}$ as desired.
+
