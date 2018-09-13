@@ -1,12 +1,9 @@
 \question Find an integer $x$ such that $x$ is congruent to $3 \mod 4$ and $5 \mod 9$.
-\begin{solution}[1 in]
-In general if $x$ can be expressed as
+\begin{solution}[.5 in]
+We can express $x$ as: 
 \begin{align*}
-    x &\equiv a_1 \text{mod} m_1 \\
-    x &\equiv a_2 \text{mod} m_2
+    x &\equiv 3 \mod 4 \\
+    x &\equiv 5 \mod 9
 \end{align*}
-where $m_1$ and $m_2$ are relatively prime to each other, CRT tells us that there is an unique number mod $m_1m_2$ that satisfies this equation.
-
-Since $m_1$ and $m_2$ are relatively prime, we can, using Euclid's algorithm, write an equation of the form
-\[ 1 = (m_1^{-1} \pmod ) \]
+where $4$ and $9$ are relatively prime to each other. We write the congruence with the largest modulus as an equation, $x = 9t + 5$. We substitute into the other congruence and solve for $t$. $9t + 5 \equiv 3 \mod 4$, which means $9t \equiv 2 \mod 4$ and $t \equiv 2 \mod 4$. We write this congruence as an equation, $t = 4s + 2$, and substitute into the equation for $x$. $x = 9(4s + 2) + 5 = 36s + 23$. So $x = 23 \mod 36$ is the solution. Note that $lcm(4, 9) = 36.$ 
 \end{solution}
