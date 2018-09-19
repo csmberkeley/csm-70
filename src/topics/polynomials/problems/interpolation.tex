@@ -1,0 +1,20 @@
+\question 
+Let $p$ be a degree 2 polynomial and $q$ be another degree 2 polynomial in GF(7). Both of them go through the points (1, 2), (2, 1), and (3, 4). Find $p$ and $q$. 
+
+\begin{solution}[1 in]
+Using Lagrange interpolation: 
+\begin{align*}
+	p(x) = 2*\frac{(x-2)(x-3)}{(1-2)(1-3)} + 1*\frac{(x-1)(x-3)}{(2-1)(2-3)} + 4*\frac{(x-1)(x-2)}{(3-1)(3-2)} \\
+	p(x)  = x^2 + 5x + 6 - x^2 + 4x - 3 + 2x^2 - 6x + 4 \\
+	p(x) = 2x^2 - 7x + 7 \\
+	q(x) = 2x^2 (\mod 7)
+\end{align*}
+To do this with coefficients, we have the system of equations:
+\begin{align*}
+    p(1) \equiv a_2 + a_1 + a_0 \equiv 2 \mod 7 \\
+    p(2) \equiv 4a_2 + 2a_1 + a_0 \equiv 1 \mod 7 \\
+    p(3) \equiv 9a_2 + 3a_1 + a_0 \equiv 2a_2 + 3a_1 + a_0 \equiv 4 \mod 7
+\end{align*}
+This is a system of 3 equations with 3 variables that can be solved (painfully) to get the same answer.
+\end{solution}
+

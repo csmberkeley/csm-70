@@ -9,14 +9,12 @@ and $3$ Readers. The answers are all encrypted and we know that:
 
 Design a secret sharing scheme to make this work.
 
-\begin{solution}
-Use a $2$ degree polynomial which requires at least $3$ shares to 
-recover the polynomial. Generate a total of 7 shares, give each Reader 
-a share, and each TA 2 shares. Then, all possible combinations will 
-have at least $3$ shares to recover the answer key. Basically the point 
+\begin{solution}[1 in]
+Use a degree $2$ polynomial which requires at least $3$ shares to 
+recover the polynomial. Generate a total of 7 points; give each Reader 
+a point and each TA 2 points. Then, all possible combinations will 
+have at least $3$ points to recover the answer key. Basically the point 
 of this problem is to assign different weights to different classes of 
-people. If we give one share to everyone, then $2$ Readers can also 
+people. If we give one point to everyone, then $2$ Readers can also 
 recover the secret and the scheme is broken.
 \end{solution}
-
-\clearpage

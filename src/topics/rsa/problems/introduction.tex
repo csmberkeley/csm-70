@@ -1,14 +1,13 @@
 {\tabulinesep=1mm
 \begin{tabu}{|p{16cm} |}
 \hline
-\textbf{Main idea}: find an encryption function $E$ and an decryption function $D$ such that $D(E(x)) = x$. 
-In other words, two people can encrypt and decrypt a message $x$ (an integer) if they know $E$ and $D$. \\
+\textbf{Main idea}: Given two large primes, $p$ and $q$, and a message $x$ (an integer), find an encryption function $E$ and an decryption function $D$ such that $D(E(x)) = x$. In other words, two people can encrypt and decrypt a message if they know $E$ and $D$. \\
 \textbf{Mechanism}:\\ 
-Public key: $(N, e)$\\ 
-Private key: $d$\\
-Assumption: Given $N$, there is no efficient algorithm to determine $(p-1)(q-1)$. \\
-Encryption function: $E(x) = x^e$ mod N\\ 
-Decryption function: $D(x) = x^d$ mod N, where $d = e^{-1}$ mod$(p-1)(q-1)$\\	
+N = pq \\ 
+$E(x) = x^e$ mod N\\ 
+$D(x) = x^d$ mod N, where $d = e^{-1}$ mod$(p-1)(q-1)$ \\
+The pair $(N, e)$ is the recipient's \textbf{public key}, and $d$ is the recipient's \textbf{private key}.
+The sender sends $E(x)$ to the recipient, and the recipient uses $D(x)$ to recover the original message. The security of RSA relies on the assumption that given $N$, there is no efficient algorithm to determine $(p-1)(q-1)$. \\
 \hline
 \end{tabu}
 }
