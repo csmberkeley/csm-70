@@ -1,16 +1,32 @@
 \question Determine the computability of the following tasks. If it's not computable, write a reduction or self-reference proof. If it is, write the program.\\
 \begin {enumerate}
-\item You want to determine whether a program $P$ on input $x$ prints "Hello World!" Is there a computer program that can perform this task? Justify your answer? \\
+\item You want to determine whether a program $P$ on input $x$ prints "Hello World!" Is there a computer program that can perform this task? Justify your answer. \\
 \begin{solution}[.3 in]
-Define a program that takes programs as inputs, and prints Hello World at the end of the execution of the program:
-\\
-\texttt{def reduce(input):}\\
-\hphantom{xyz}\texttt{execute(input)}\\
-\hphantom{xyz}\texttt{print("Hello World")}\\
-Now if we have some arbitrary program input $x$, if we call \\
-\texttt{testHelloWorld(reduce(x))}, we will be able to solve the Halting Problem, so we know that this is impossible.\\
+Define a program that takes a program (you can think of it as a function), and transforms it into a program that runs the input program and then
+prints hello world:\\
+
+\texttt{def transform(P):}\\
+\hphantom{xyz}\texttt{def Q(x):}\\
+\hphantom{xyz}\hphantom{xyz}\texttt{P(x)}\\
+\hphantom{xyz}\hphantom{xyz}\texttt{print("Hello World")}\\
+\hphantom{xyz}\texttt{return Q}
+
+Let \texttt{testHelloWorld(P, x)} be our procedure that determines whether $P$ eventually prints "Hello World!" when run on $x$.
+Now we want to solve the halting problem using this transformation.
+We write a function that uses \texttt{testHelloWorld} and \texttt{transform} to solve the halting problem:
+
+\texttt{def halts(P, x):}\\
+\hphantom{xyz}\texttt{return testHelloWorld(transform(P), x)}
+
+More compactly, we could write the entire thing like this:
+
+\texttt{def halts(P, x):}\\
+\hphantom{xyz}\texttt{def Q(x):}\\
+\hphantom{xyz}\hphantom{xyz}\texttt{P(x)}\\
+\hphantom{xyz}\hphantom{xyz}\texttt{print("Hello World")}\\
+\hphantom{xyz}\texttt{return testHelloWorld(Q, x)}
 \end{solution}
-\item You want to determine whether a program $P$ prints "Hello World!" before running the $kth$ line of the program.
+\item You want to determine whether a program $P$ prints "Hello World!" before running the $k$th line of the program.
 \begin{solution}[.3 in]
 Similar to the last program, we can write a reduction program:\\
 \texttt{def reduce(input):}\\
