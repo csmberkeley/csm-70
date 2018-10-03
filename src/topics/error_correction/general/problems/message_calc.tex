@@ -5,36 +5,32 @@
 proper general error message sending scheme, set up the linear equations 
 that, when solved, give you the $Q(x)$ and $E(x)$ needed to find the 
 original $P(x)$.
-\begin{solution}[3in]
-Set up 5 equations for the five values of x that we have, such that 
+\begin{solution}[2in]
+To determine $Q(x)$ and $E(x)$, set up 5 equations for the five values of x that we have, such that 
 \[Q(x) = r_{x}*(x-b) \mod 5\] 
 where 
 \[Q(x)= a_3*x_i^3 + a_2*x_i^2 + a_1*x_i + a_0\]
 ($r_i$ = ith received number)\newline
-In the form, for 
-\[x = x_i, a_3*x_i^3 + a_2*x_i^2 + a_1*x_i + a_0 = r_i*(x - b)\mod 5\]
-\[x=1, (a_3 + a_2 + a_1 + a_0) = 3(1 - b) \mod 5\]
-\[x=2, (3a_3 + 4a_2 + 2a_1 + a_0) = 2(2 -b) \mod 5\]
-\[x=3, 2a_3 + 4a_2 + 3a_1 + a_0 =  1(3 - b) \mod 5\]
-\[x=4,  4a_3 + 1a_2 + 4a_1 + a_0 =  1(4 - b) \mod 5\]
-\[x=5, 0 + 0 + 0 + a_0 = 1(0 - b) \mod 5\]
-After solving for these equations, you should get the following:
-\[b = 3\]
-\[a_3 = 1\]
-\[a_2 = 3\]
-\[a_1 = 3\]
-\[a_0 = 2\]
+$ x=1: a_3 + a_2 + a_1 + a_0 = 3(1 - b) $ mod 5 \newline
+$ x=2: 3a_3 + 4a_2 + 2a_1 + a_0 = 2(2 - b) $ mod 5 \newline
+$ x=3: 2a_3 + 4a_2 + 3a_1 + a_0 =  1(3 - b) $ mod 5 \newline
+$ x=4: 4a_3 + 1a_2 + 4a_1 + a_0 =  1(4 - b) $ mod 5 \newline
+$ x=5: 0 + 0 + 0 + a_0 = 1(0 - b) $ mod 5 \newline 
+\newline
+The solution to these equations is: 
+$ b = 3, a_3 = 1, a_2 = 3, a_1 = 3, a_0 = 2 $. \newline
 \end{solution}
-\item What is the encoded message that Alice actually sent? What was the 
-original message? Which packet(s) were corrupted?
-\begin{solution}[2 in]
-Now we have $P(x) = \frac{Q(x)}{E(x)}$. Plug in the coefficients for 
-$Q$ and $E$ and divide (using polynomial long division) and you get 
-$P(x) = x^2 + x + 1$.
-Using the $P(x)$ that we found, we plug in the values 1, 2, 3, 4, 5 
-to find the encoded 5 packet message. $P(1) = 3, P(2) = 2, P(3) = 3, 
-P(4) = 1, P(5) = 1$. The original message is the first 3: $P(1), P(2), 
-P(3)$. Using the value of b, we know that the 3rd packet was corrupted, 
-which we can confirm in the message that was received.
+\item What is the encoded message that Alice actually sent? What was the originalmessage? Which packet(s) were corrupted?
+\begin{solution}[1 in]
+This means that $Q(x) = x^3 + 3x^2 + 3x + 2$ and $E(x) = x-3$. \newline
+To find the actual encoded message we use
+$P(x) = \frac{Q(x)}{E(x)}$. We divide and find that $P(x) = x^2 + 6x + 21 + \frac{65}{x-3} = x^2 + x + 1$ mod 5.
+We plug in the values 1, 2, 3, 4, 5 to find the encoded 5 packet message. \newline 
+$ P(1) = 1^2 + 1 + 1 = 3$ mod 5 \newline
+$ P(2) = 2^2 + 2 + 1 = 7 = 2$ mod 5 \newline
+$ P(3) = 3^2 + 3 + 1 = 13 = 3$ mod 5 \newline
+$ P(4) = 4^2 + 4 + 1 = 21 = 1$ mod 5 \newline
+$ P(5) = 5^2 + 5 + 1 = 31 = 1$ mod 5 \newline 
+The actual message is (3,2,3,1,1). We see that the 3rd packet doesn't match the initial message of (3,2,1,1,1), and is therefore the corrupted one (we could also have seen this by looking at the value of b. 
 \end{solution}
 \end{enumerate}

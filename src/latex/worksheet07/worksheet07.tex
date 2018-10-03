@@ -3,8 +3,8 @@
 
 %%% Change these %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \discnumber{7}
-\title{\textsc{Conditional Probability, Random Variables}}
-\date{March 12 - 16, 2018}
+\title{\textsc{Discrete and Conditional Probability}}
+\date{October 15 - 19, 2018}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -14,6 +14,14 @@
 \thispagestyle{empty}
 
 %%% Include topics here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discrete Probability}
+\subsection{Introduction}
+\subimport{../../topics/discrete_probability/problems/}{intro.tex}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/discrete_probability/problems/}{probably_poker.tex}
+\subimport{../../topics/discrete_probability/problems/}{prius_trifecta.tex}
+\end{questions}
 
 \section{Monty Hall}
 \subsection{Introduction}
@@ -24,6 +32,9 @@
 \subimport{../topics/conditional_probability/problems/}{intro.tex}
 \subsection{Questions}
 \begin{questions}
+\subimport{../../topics/conditional_probability/problems/}{coin_flip.tex}
+\subimport{../../topics/conditional_probability/problems/}{deck.tex}
+\subimport{../../topics/conditional_probability/problems/}{mutually_ind.tex}
 \subimport{../../topics/conditional_probability/problems/}{lie_detector.tex}
 \subimport{../../topics/conditional_probability/problems/}{oski.tex}
 \end{questions}
@@ -34,27 +45,7 @@
 \subimport{../../topics/balls_and_bins/problems/}{balls_bins_1.tex}
 \end{questions}
 
-\section{Expectation and Variance of Random Variables}
-\subsection{Introduction}
-\subimport{../../topics/expectation_variance/problems/}{intro.tex}
-\subsection{Questions}
-\begin{questions}
-\subimport{../../topics/expectation_variance/problems/}{var_constant.tex}
-\subimport{../../topics/expectation_variance/problems/}{value.tex}
-\subimport{../../topics/expectation_variance/problems/}{calculate_exp.tex}
-\end{questions}
+% add independence, combination of events, inclusion-exclusion, union bound
 
-\section{Distributions}
-\subsection{Bernoulli Distribution}
-\subimport{../../topics/distributions/problems/}{intro_bernoulli.tex}
-\subsection{Binomial Distribution}
-\subimport{../../topics/distributions/problems/}{intro_binomial.tex}
-\subsection{Poisson Distribution}
-\subimport{../../topics/distributions/problems/}{intro_poisson.tex}
-\subsection{Geometric Distribution}
-\subimport{../../topics/distributions/problems/}{intro_geometric.tex}
-\subsection{Questions}
-\begin{questions}
-\subimport{../../topics/distributions/problems/}{security_breaches.tex}
 \end{questions}
 \end{document}

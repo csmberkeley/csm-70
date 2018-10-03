@@ -10,9 +10,9 @@ $3 \cdot 2 \cdot 4  \cdot 2 $ (\# necklaces $\cdot$ \# vests  $\cdot$ \# sweater
 These are all independent choices, so we can simply multiply the number of ways to make each choice together.
 \end{solution}
 
-\item Now say that the order in which you put on your necklace, vest, and sweater matters. Specifically, your look after putting on necklace n, vest v, and then sweater s is different than if you put on vest v first, then necklace n, and then sweater s. Assume that when you put on your watch is irrelevant. Now how many options do you have?
+\item Now the order in which you put on your necklace, vest, and sweater matters. Specifically, your look after putting on necklace n first, vest v, and then sweater s is different than if you put on vest v first, necklace n, and then sweater s. When you put on your watch is irrelevant. Now how many options do you have?
 
-\begin{solution}
+\begin{solution} [0.3 in]
 $3 \cdot 2 \cdot 4  \cdot 2 \cdot 3! = 144$. We cannot simply multiply the outcomes like we did in the previous problem, because then we don't differentiate between (vest v, necklace n, sweater s) and (necklace n, vest v, sweater s) - we count them as the same case. We must count the number of ways to select a combination of 3 items, and then the number of ways to order each selection - 3!. 
 \end{solution}
 

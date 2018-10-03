@@ -1,29 +1,27 @@
 {\tabulinesep=1mm
 \begin{tabu}{|p{16cm} |}
 \hline
-\vspace{2 mm}
-\textbf{Balls and Bins:} \newline
+\textbf{Balls and Bins:} \\
+\begin{enumerate}[label=\alph*.]
+\item \textbf{Distributing $n$ \underline{distinguishable} balls amongst $k$ \underline{distinguishable} bins:} Each ball has $k$ possible bins to go into, and there are $n$ balls. Solution: $k^{n}$ 
+\item \textbf{Distributing $n$ \underline{indistinguishable} balls amongst $k$ \underline{distinguishable} bins:}Solution: ${n+k-1 \choose k-1}$ \newline
+\textit{Note}: Distributing balls among indistinguishable bins is not covered in CS 70! \newline
+\end{enumerate}
 
-\textit{Example Question}: How many ways can we distribute 7 dollar bills amongst 3 students? \newline
+The solution for case (b) initially seems somewhat unintuitive, but can be explained through an example. \newline
 
-Approaching this with the approaches we currently know fails: There are 7 possible options for the number of bills you give to the first student, but the number of bills you choose to give the first student has a \textit{direct} effect on the numbers of bills you can give to the second student - previously, if I had 7 options for the first student and choose one of the options, the second student always had 6 options to choose from. However, this is not the case in our example: if I choose to give the first student 5 dollars, for example, the second student can only get 1 or 2 dollar bills. \newline
+\textit{How many ways can we distribute 7 dollar bills amongst 3 students?} \newline
 
-How do we solve this problem? We need to format it slightly differently: put the dollar bills on a line, and then try to insert 2 dividers. Everything to the left of the first divider is given to the first student. Everything in the middle of the 2 dividers is given to the second student. And everything to the right of the second divider is given to the 3rd student: \newline 
-\textbf{\textdollar $\vert$ \textdollar \textdollar \textdollar \textdollar $\vert$ \textdollar \textdollar} \newline 		
-\textit{In the above example, the first student gets 1 dollar, the second 4, and the 3rd 2 dollars.} \newline
-
-So we can see that the idea is to count how many ways we can arrange the 7 identical dollar bills and 2 identical dividers. Every permutation leads to some valid, distinct distribution of the money! From the previous sections we can see that we will have $ \frac{9!}{7!2!} = {9 \choose 2}  = 36 $ ways to arrange the bills and dividers, and therefore 36 ways to distribute the money.
-
-This tactic of using dividers is commonly referred to \textit{stars and bars} or \textit{sticks and stones}. \newline
-
- \textbf{General problem:} We want to distribute $n$ indistinguishable items amongst $k$ people.
- \textbf{General solution:} ${n+k-1 \choose k-1}$ \newline
-
-\textit{Balls and Bins:} \newline
-\textbf{Distributing $n$ \underline{distinguishable} balls amongst $k$ \underline{distinguishable} bins:} Each ball has $k$ possible bins to go into, and there are $n$ balls. Solution: $k^{n}$ \newline
-\textbf{Distributing $n$ \underline{indistinguishable} balls amongst $k$ \underline{distinguishable} bins:} Classic stars-and-bars. Solution: ${n+k-1 \choose k-1}$ \newline
-\textit{Note}: Distributing balls among indistinguishable bins is not covered in CS 70! 
+Approaching this with the approaches we currently know fails: There are 7 possible options for the number of bills you give to the first student, but the number of bills you choose to give the first student has a \textit{direct} effect on the numbers of bills you can give to the second student. % Previously, if I had 7 options for the first student and choose one of the options, the second student always had 6 options to choose from. However, this is not the case in our example: if I choose to give the first student 5 dollars, for example, the second student can only get 1 or 2 dollar bills. %  
 \newline
+
+To solve this problem, we need to format it slightly differently: put the dollar bills on a line, and insert 2 dividers. Everything to the left of the first divider is given to the first student. Everything in between the dividers is given to the second student. Everything to the right of the second divider is given to the third student: \newline 
+%\textbf{\textdollar $\vert$ \textdollar \textdollar \textdollar \textdollar $\vert$ \textdollar \textdollar} \newline 		
+% \textit{In the above example, the first student gets 1 dollar, the second 4, and the 3rd 2 dollars.} \newline
+
+%We count how many ways we can arrange the 7 identical dollar bills and 2 identical dividers; each permutation leads to some valid, distinct distribution of the money. 
+
+There are $ \frac{9!}{7!2!} = {9 \choose 2}  = 36 $ ways to place 2 dividers among 9 positions such that the remaining positions are filled with dollar bills, and therefore 36 ways to distribute the money. This tactic of using dividers is commonly referred to \textit{stars and bars} or \textit{sticks and stones}. More generally, there are ${n+k-1 \choose k-1}$ ways to distribute $n$ indistinguishable items amongst $k$ people. \newline
 \\
 \hline
 \end{tabu}

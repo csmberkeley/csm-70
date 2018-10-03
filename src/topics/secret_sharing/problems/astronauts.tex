@@ -7,7 +7,7 @@ astronauts (including the malicious ones) still find the correct message
 that you want to send. You can send any number of astronauts, but try to 
 make the number that you have to send as small as possible. Astronauts 
 can only carry one packet with them.
-\begin{solution}[2 in]
+\begin{solution}[1.5 in]
 We can use the scheme provided in the notes for general errors. If 
 there are up to 5 malicious astronauts, then we have up to 5 general 
 errors in our transmission. To account for those errors and to send 
@@ -16,6 +16,5 @@ message plus the twice the possible number of general errors. Thus,
 we have to send 20 astronauts or more. Create a polynomial of degree 
 9 (which is the length of the message minus 1), such that $P(0), P(1), 
 \dotsc, P(10)$ is the original message, and give each of the 20 
-astronauts unique points on that polynomial. Then use the methods we 
-used in the previous question to find the message.
+astronauts unique points on that polynomial. 
 \end{solution}

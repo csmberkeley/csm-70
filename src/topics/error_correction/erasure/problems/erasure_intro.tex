@@ -22,14 +22,14 @@ How large should $q$ be if Alice is sending n packets with k erasure errors,
 where each packet is a integer between $0$ and $m$?
 \newline
 \begin{solution}[1 in]
-Modulus should be larger than $n+k$ and larger than $m$ and be prime
+Modulus should be larger than $n+k$, larger than $m$, and prime
 \end{solution}
 
-What would happen if Alice instead send $n + k - 1$? Why will Bob be 
+What would happen if Alice instead sends $n + k - 1$? Why will Bob be 
 unable to recover the message?
 \begin{solution}[1 in]
 Bob will receive $n - 1$ distinct points and needs to reconstruct a 
-polynomial of degree $n - 1$. By Fact \#3 this is impossible. There are 
+polynomial of degree $n - 1$; this is impossible. There are 
 $q$ polynomials of at most degree $n - 1$ in $GF(q)$ that go through the 
 $n - 1$ points that Alice sent. 
 \end{solution}

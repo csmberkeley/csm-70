@@ -1,10 +1,9 @@
 \question Suppose we want to send $n$ packets, and we know $p = 20\%$ 
 of the packets will be erased. How many extra packets should we send? 
 What happens if $p$ increases (say to $90\%$)?
-\begin{solution}
+\begin{solution}[.1 in]
 We want to have $(1-p)*(n + k) = n$, where $k$ is the number of 
-additional packets we send. Solving for $k$, we get $\frac{n}{1 - p} - n$.  
+additional packets we send. This is because the fraction of packets not erased * number of packets that are sent = number of packets in original message. Solving for $k$, we get $\frac{n}{1 - p} - n$.  
 When $p$ is large, we have to send many times the number of original packets. 
-(fraction packets not erased)*(how many packets are sent) = (number 
-packets in original message)
+
 \end{solution}

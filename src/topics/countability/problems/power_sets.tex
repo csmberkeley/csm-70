@@ -1,0 +1,5 @@
+\question Are the power sets $S$ of a countably infinite set are finite, countably infinite, or uncountably infinite? Provide a proof for your answer. 
+
+\begin{solution} [1 in]
+The power sets of a countably infinite set are uncountably infinite. There is a bijection between the set $2^\mathbb{N}$ and $2^S$, as $S$ and $\mathbb{N}$ have the same cardinality. The set $2^\mathbb{N}$ is uncountable. We prove this through contradiction. We assume the set $2^\mathbb{N}$ is countably infinite. This means we can list the subsets of $\mathbb{N}$ such that every subset is $N_i$ for some $i$. We define another set $A = \{i | i \geq 0$ and $i \notin N_i\}$ which contains integers $i$ not part of $N_i$. But, $N$ is a subset of $\mathbb{N}$ so we must have $N = N_j$ for some $j$. This means that if $j \in N$, then $j \notin N$, and if $j \notin N$, then $j \in N$. This is a contradiction since $j$ is either in $N$ or not, so the set is not countably infinite.  
+\end{solution}

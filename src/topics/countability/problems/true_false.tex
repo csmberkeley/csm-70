@@ -2,8 +2,7 @@
 \begin{enumerate}[label=(\alph*)]
 \item Every infinite subset of a countable set is countable
 \begin{solution}
-True. Define set $S$ as the infinite subset, and set $T$ as the countable set. $S \subseteq T$, which means $|S| \leq |T|$. This means $S$ is countable. $S$ is also an infinite subset, so it is infinite. $\therefore$ $S$ is countably infinite.
-numbers, there is a mapping between $E$ and $N$.
+True. Define set $S$ as the infinite subset, and set $T$ as the countable set. $S \subseteq T$, which means $|S| \leq |T|$. This means $S$ is countable. $S$ is also an infinite subset, so it is infinite. Therefore, $S$ is countably infinite.
 \end{solution}
 
 \item If $A$ and $B$ are both countable, then $A \times B$ is countable
@@ -12,9 +11,16 @@ True. Can draw a bijection where first elem of $A$ maps to 1, first elem
 of $B$ maps to 2, second elem of $A$ maps to 3, etc. This will include $A \times B$
 at the end, and because there is a bijection from $A$ to $\mathbb{N}$ and $B$ to $\mathbb{N}$, there is a bijection from $A \times B$ to $\mathbb{N}$. There is clearly a mapping from 
 $A \times B$ to $\mathbb{N} \times \mathbb{N}$, and $\mathbb{N} \times \mathbb{N}$ to $\mathbb{N}$, so there is a 
-bijective mapping from $A \times B$ to $\mathbb{N}$
+bijective mapping from $A \times B$ to $\mathbb{N}$. 
 \end{solution}
-
+\item If $A_i$ is countable, then $A_1\times A_2\times A_3....\times A_N$ for $N$ finite is countable. 
+\begin{solution}
+We can give a kind of a "collapsing" argument. We know that $A_1\times A_2$ is countable, so we can just define $A_{12} = A_1\times A_2$, then we have $A_{12} \times A_3..$ and so on. 
+\end{solution}
+\item If $A_i$ is countable, then $A_1\times A_2\times A_3...$ a countably infinite number of times is countable.
+\begin{solution}
+False. Consider the real numbers - each "digit" is picked from a finite countable set, crossed a countable number of times, but the entire set is uncountable.
+\end{solution}
 \item Every infinite set that contains an uncountable set is uncountable. 
 \begin{solution}
 True.
