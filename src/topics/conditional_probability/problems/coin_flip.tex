@@ -1,5 +1,5 @@
 \question Say that we have a bag with 2 coins. One of the coins is fake: it has heads on both faces. The other is a normal coin. You pull a coin out of the bag, and flip it. It comes up heads. What is the probability that this coin is the fake one? 
 
-\begin{solution}[1.5 cm]
+\begin{solution}[1 cm]
 Define the event A as drawing the fake coin. Define the event B as the coin that we flipped coming up heads. We are looking for the probability of $\P[A|B]$ - the probability that we drew the fake coin, given that the flipped coin came up heads. We can directly plug this into Bayes' rule: $\P[A|B] = \frac{\P[A \cap B]}{\P[B]}$.  $\P[A \cap B] = \frac{1}{2} \cdot \frac{1}{1} = \frac{1}{2}$. $\P[B] = \frac{1}{2} \cdot \frac{1}{1} + \frac{1}{2} \cdot \frac{1}{2} = \frac{3}{4} $. So, we get $\frac{\frac{1}{2}}{\frac{3}{4}} = \frac{2}{3}$.
 \end{solution}

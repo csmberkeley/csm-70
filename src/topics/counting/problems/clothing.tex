@@ -6,14 +6,13 @@ You're getting ready in the morning, and you have to choose your outfit for the 
 You need to wear a necklace, a vest, and a sweater. Depending on the day, you decide whether it is worth wearing your watch. If you have 3 necklaces, 2 vests, and 4 sweaters, how many different combinations do you choose from each morning?
 
 \begin{solution}[.3 in]
-$3 \cdot 2 \cdot 4  \cdot 2 $ (\# necklaces $\cdot$ \# vests  $\cdot$ \# sweaters $\cdot$ wearing watch or not), 
-These are all independent choices, so we can simply multiply the number of ways to make each choice together.
+$3 \cdot 2 \cdot 4  \cdot 2 $ = 48 (\# necklaces $\cdot$ \# vests  $\cdot$ \# sweaters $\cdot$ wearing watch or not). These are all independent choices, so we can simply multiply the number of ways to make each choice together.
 \end{solution}
 
 \item Now the order in which you put on your necklace, vest, and sweater matters. Specifically, your look after putting on necklace n first, vest v, and then sweater s is different than if you put on vest v first, necklace n, and then sweater s. When you put on your watch is irrelevant. Now how many options do you have?
 
 \begin{solution} [0.3 in]
-$3 \cdot 2 \cdot 4  \cdot 2 \cdot 3! = 144$. We cannot simply multiply the outcomes like we did in the previous problem, because then we don't differentiate between (vest v, necklace n, sweater s) and (necklace n, vest v, sweater s) - we count them as the same case. We must count the number of ways to select a combination of 3 items, and then the number of ways to order each selection - 3!. 
+$3 \cdot 2 \cdot 4  \cdot 2 \cdot 3! = 288$. We cannot simply multiply the outcomes like we did in the previous problem, because then we don't differentiate between (vest v, necklace n, sweater s) and (necklace n, vest v, sweater s) - we count them as the same case. We must count the number of ways to select a combination of 3 items, and then the number of ways to order each selection - 3!. 
 \end{solution}
 
 \end{enumerate}

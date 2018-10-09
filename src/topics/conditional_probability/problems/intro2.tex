@@ -1,0 +1,25 @@
+{\tabulinesep=1mm
+\begin{tabu}{|p{16cm} |}
+\hline
+Often we are interested in the probabilities of combinations of events, whether it be their union or intersection. \\ 
+\vspace{2mm}
+\textbf{Independence} \\
+Two events $A$, $B$ in the same probability space are independent if 
+\[\P[A \cap B] = \P[A] * \P[B] \]
+Note that things get more complicated when we have more than two events. The independence of a pair of events (pairwise independence) doesn't necessarily imply the events are all mutually independent. \\
+\vspace{2mm}
+\textbf{Intersections} \\
+When events are independent, we compute the probability of their intersection by simply multiplying the probabilities of each event. When events aren't necessarily independent, we must use the product rule. 
+\[\P[A \cap B] = \P[A] * \P[B|A] \]
+This rule can be extended to more than two events.
+\[\P[\cap^{n}_{i=1}A_i] = \P[A_1] * \P[A_2|A_1] * ... * \P[A_{n-1}|\cap^{n-2}_{i=1}A_i] *  \P[A_{n}|\cap^{n-1}_{i=1}A_i]  \]
+\vspace{2mm}
+\textbf{Unions}\\
+If events are disjoint, computing the probability of their union is simple; just add up the probabilities of each. Unfortunately, many events are not disjoint (independent events in particular cannot be: why?). So, we must use the Principle of Inclusion/Exclusion.
+\[\P[\cap^{n}_{i=1}] = \sum_{n=1}^{n} \P[A_i] - \sum_{\{i, j\}} \P[A_i \cap A_j] + \sum_{\{i, j, k\}} \P[A_i \cap A_j \cap A_k] - \pm \P[\cap^{n}_{i=1}] \]
+This sum is always less than adding up the individual probabilities of the events; this concept is known as the union bound. 
+\[\P[\cap^{n}_{i=1}] \leq \sum^{n}_{i=1} \P[A_i] \]
+\\
+\hline
+\end{tabu}
+}

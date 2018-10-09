@@ -1,0 +1,13 @@
+\question You own a pizzeria. You observe that one of your customers, Andy, buys a cheese pizza on Saturday with probability $0.3$ and on Sunday with probability $0.6.$ 
+
+\begin{enumerate}[label=(\alph*)]
+    \item If Andy's pizza purchasing on Sunday is independent from his pizza purchasing on Saturday, what is the probability that he buys pizza on a given weekend?
+    \begin{solution}[.5 cm] We use the Inclusion-Exclusion principle. If event $A$ is the situation Andy buys a  pizza on Saturday, and event $B$ is the situation in which Andy buys a pizza on Sunday, then the probability that Andy buys pizza a given weekend is $P(A\cup B) = \P(A) + \P(B) - \P(A\cap B) = 0.3 + 0.6 - 0.3*0.6 = 0.72$.
+    \end{solution}
+    \item If Andy buying a pizza on Saturday means that he will not buy pizza on Sunday, what is the probability that he buys pizza on a given weekend (i.e if he buys pizza on one day, he is guaranteed to not buy a pizza the next day)?
+     \begin{solution}[.5 cm] Now we know that $P(A\cap B) = 0$. Use the Inclusion-Exclusion principle: $P(A\cup B) = \P(A) + \P(B) - \P(A\cap B) = 0.3 + 0.6 - 0 = 0.9$.
+      \end{solution}
+    \item Given that Andy buys pizza on a given weekend with probability $0.65$, what is the probability that he buys pizza both days?
+    \begin{solution}[.5 cm] By the Inclusion-Exclusion principle, we know that $\P(A) + \P(B) - \P(A\cap B)$. Solving, we find that $\P(A\cap B) = 0.25$.
+    \end{solution}
+ \end{enumerate}

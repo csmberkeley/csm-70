@@ -1,27 +1,24 @@
 {\tabulinesep=1mm
 \begin{tabu}{|p{16cm} |}
-\hline 
+\hline
 \textbf{The Halting Problem:} Does a given program ever halt when executed 
 on a given input? This given input has to be general. \\
 \begin{center}
 \includegraphics[width=10cm, height=1cm]{intro_testhalt.jpg}
 \end{center}
 
-How do we prove that \texttt{TestHalt} does not exist? Let'€™s assume that it does, 
-and hope we reach a contradiction. \newline
-Define another program:
+To prove \texttt{TestHalt} doesn't exist, we assume it does, 
+and hope to reach a contradiction. We define another program:
 \begin{center}
 \includegraphics[width=10cm, height=1.5cm]{intro_turing.jpg}
 \end{center}
 What happens when we call \texttt{Turing(Turing)}?
 \begin{description}
-\item[Case 1]: It halts.
-If \texttt{Turing(Turing)} halts then \texttt{TestHalt(Turing, Turing)} 
+\item[Case 1]: It halts. If \texttt{Turing(Turing)} halts then \texttt{TestHalt(Turing, Turing)} 
 must have returned no. But \texttt{TestHalt(Turing Turing)} calls 
 \texttt{Turing(Turing)} and calling \texttt{Turing(Turing)} must loop. 
 But we assumed that \texttt{Turing(Turing)} halted. Contradiction.
-\item[Case 2]: It loops.
-This implies that \texttt{TestHalt(Turing, Turing)} returned yes, which by the 
+\item[Case 2]: It loops. This implies that \texttt{TestHalt(Turing, Turing)} returned yes, which by the 
 way that \texttt{TestHalt} is defined implies that \texttt{Turing} halted. 
 But we assumed  that \texttt{Turing(Turing)} looped. Contradiction.
 \end{description}
