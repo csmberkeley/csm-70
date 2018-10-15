@@ -1,0 +1,19 @@
+\question In an arcade, you play game A 10 times and game B 20 times. Each time you play game A, you
+win with probability $\frac{1}{3}$ (independently of the other times), and if you win you get 3 tickets
+(redeemable for prizes), and if you lose you get 0 tickets. Game B is similar, but you win with
+probability $\frac{1}{5}$, and if you win you get 4 tickets. What is the expected total number of tickets
+you receive?
+
+\begin{solution}[4 cm]
+Let $A_i$ be the indicator you win the $i$th time you play game A and $B_i$ be the same for game B.
+The expected value of $A_i$ and $B_i$ are:
+\begin{center}
+\[\E[A_i] = 1*\frac{1}{3} + 0*\frac{2}{3} = \frac{1}{3}\]
+\[\E[B_i] = 1*\frac{1}{5} + 0*\frac{4}{5} = \frac{1}{5}\]
+\end{center}
+Let $T_A$ be the random variable for the number of tickets you win in game A, and $T_B$ be the number of tickets you win in game B. 
+\begin{center}
+\[\E[T_A + T_B] = 3\E[A_1] + ... + 3\E[A_{10}] + 4\E[B_1] + ... + 4\E[B_{20}]\]
+\[=10*(3*\frac{1}{3}) + 20*(4*\frac{1}{5}) = 26 \]
+\end{center}
+\end{solution}

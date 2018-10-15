@@ -1,0 +1,8 @@
+\question Show that $Var(aX + b) = a^2 Var(X)$ where $X$ is any random variable.
+
+\begin{solution}[1.5 cm]
+$$Var(aX + b) = \E(aX + b - \E(aX + b))^2$$
+$$= \E(aX + b - a\E[X] - b)^2$$
+$$= \E(aX - a\E[X])^2$$
+$$= a^2 \E(X - \E[X])^2 = a^2 Var(X)$$
+\end{solution}
