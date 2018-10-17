@@ -16,9 +16,9 @@ This rule can be extended to more than two events.
 \vspace{2mm}
 \textbf{Unions}\\
 If events are disjoint, computing the probability of their union is simple; just add up the probabilities of each. Unfortunately, many events are not disjoint (independent events in particular cannot be: why?). So, we must use the Principle of Inclusion/Exclusion.
-\[\P[\cap^{n}_{i=1}] = \sum_{n=1}^{n} \P[A_i] - \sum_{\{i, j\}} \P[A_i \cap A_j] + \sum_{\{i, j, k\}} \P[A_i \cap A_j \cap A_k] - \pm \P[\cap^{n}_{i=1}] \]
+\[\P[\cup^{n}_{i=1}] = \sum_{n=1}^{n} \P[A_i] - \sum_{\{i, j\}} \P[A_i \cap A_j] + \sum_{\{i, j, k\}} \P[A_i \cap A_j \cap A_k] - \pm \P[\cap^{n}_{i=1}] \]
 This sum is always less than adding up the individual probabilities of the events; this concept is known as the union bound. 
-\[\P[\cap^{n}_{i=1}] \leq \sum^{n}_{i=1} \P[A_i] \]
+\[\P[\cup^{n}_{i=1}] \leq \sum^{n}_{i=1} \P[A_i] \]
 \\
 \hline
 \end{tabu}
