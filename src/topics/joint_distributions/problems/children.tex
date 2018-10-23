@@ -1,0 +1,75 @@
+\question Mr. and Mrs. Brown decide to continue having children until they either have their first girl or until
+they have three children. Assume that each child is equally likely to be a boy or a girl, independent
+of all other children, and that there are no multiple births. Let G denote the numbers of girls that
+the Browns have. Let C be the total number of children they have.
+
+\begin{enumerate}[label=(\alph*)]
+\item Determine the sample space, along with the probability of each sample point.
+\begin{solution}[.75 cm]
+The sample space is the set of all possible sequences of children that the Browns can have: $\omega = \{g, bg, bbg, bbbg\}$. The probabilities of these sample points are:
+\[\P(g) = \frac{1}{2}\]
+\[\P(bg) = \frac{1}{2} + \frac{1}{2} = \frac{1}{4}\]
+\[\P(bbg) = {\frac{1}{2}}^3= \frac{1}{8}\]
+\[\P(bbb) = {\frac{1}{2}}^3= \frac{1}{8}\]
+\end{solution}
+
+\item Compute the joint distribution of G and C. Fill in the table below.
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{}      & \textbf{C = 1} & \textbf{C = 2} & \textbf{C = 3} \\ \hline
+\textbf{G = 0} &                &                &                \\ \hline
+\textbf{G = 1} &                &                &                \\ \hline
+\end{tabular}
+\end{center}
+\begin{solution}[.75 cm]
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{}      & \textbf{C = 1}             & \textbf{C = 2} & \textbf{C = 3} \\ \hline
+\textbf{G = 0} & 0                          & 0              & \P(bbb) = 1/8   \\ \hline
+\textbf{G = 1} & \P(g) = 1/2 & \P(bg) = 1/4    & \P(g) = 1/8     \\ \hline
+\end{tabular}
+\end{center}
+\end{solution}
+
+\item Use the joint distribution to compute the marginal distributions of G and C and confirm that the values are as you'd expect. Fill in the tables below. 
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{\P(G = 0)} &  \\ \hline
+\textbf{\P(G = 1)} &  \\ \hline
+\end{tabular}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{\P(C = 1)} & \textbf{\P(C = 2)} & \textbf{\P(C = 3)} \\ \hline
+                  &                   &                   \\ \hline
+\end{tabular}
+\end{center}
+\begin{solution}[.75 cm]
+Marginal distribution for G:
+\[\P(G = 0) = 0 + 0 + \frac{1}{8} = \frac{1}{8}\]
+\[\P(G = 1) = \frac{1}{2} + \frac{1}{4} + \frac{1}{8} = \frac{7}{8}\]
+Marginal distribution for C:
+\[\P(C = 1) = 0 + \frac{1}{2} = \frac{1}{2}\]
+\[\P(C = 2) = 0 + \frac{1}{4} = \frac{1}{4}\]
+\[\P(C = 3) = \frac{1}{8} + \frac{1}{8} = \frac{1}{4}\]
+\end{solution}
+
+\item Are G and C independent?
+\begin{solution}[3 mm]
+No, G and C are not independent. If two random variables are independent, then
+\[\P(X = x, Y = y) = \P(X = x)\P(Y = y)\]
+To show this dependence, consider an entry in the joint distribution table, such as
+$\P(G = 0, C = 3) = \frac{1}{8}$. This is not equal to $\P(G = 0)\P(C = 3) = \frac{1}{8}*\frac{1}{4} = \frac{1}{32}$, so the random variables are not independent.
+\end{solution}
+
+\item What is the expected number of girls the Browns will have? What is the expected number of
+children that the Browns will have?
+\begin{solution}[1 cm]
+We can apply the definition of expectation directly for this problem, since we?ve computed the
+marginal distribution for both random variables.
+\[\E(G) = 0*\P(G = 0) + 1*\P(G = 1) = \frac{7}{8}\]
+\[\E(C) = 1*\P(C = 1) + 2*\P(C = 2) + 3*\P(C = 3) = 1*\frac{1}{2} + 2*\frac{1}{4} + 3*\frac{1}{4} = \frac{7}{4}\]
+\end{solution}
+\end{enumerate}

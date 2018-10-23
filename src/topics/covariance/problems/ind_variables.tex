@@ -1,6 +1,32 @@
-\question Prove that if $X$ and $Y$ are independent, then $\cov(X, Y) = 0$:
-\begin{solution}[2cm]
+\question 
+\begin{enumerate}[label=(\alph*)]
+\item Prove that if $X$ and $Y$ are independent, then $\cov(X, Y) = 0$.
+\begin{solution}[.75cm]
 	\[\cov(X, Y) = \E(X \cdot Y) - \E(X) \cdot \E(Y)\]
 Remember that a property of expectation is that if $X$ and $Y$ are 
-independent, then $\E(XY) = \E(X) \cdot \E(Y)$, so we get 0 when we subtract
+independent, then $\E(XY) = \E(X) \cdot \E(Y)$, so we get 0 when we subtract. 
 \end{solution}
+\item Prove that the converse is not necessarily true. In other words, give an example of $2$ random variables whose covariance is $0$ but are not independent.
+\begin{solution}[1cm]
+There are a number of examples that can be used. \\
+One possible solution: Let $X$ be a random variable that with uniform probability space \{-1, 1\}. Let $Y$ be a random variable such that $Y = 0$ if $X = -1$ and $Y$ is -1 or 1 with equal probability if $X = 1$. \\
+\[\cov(X, Y) = \E(X \cdot Y) - \E(X) \cdot \E(Y)\]
+$\E(X)$ and $\E(Y)$ = 0, so: 
+\[\cov(X, Y) = \E(X \cdot Y)\]
+\[\E(X \cdot Y) = \P(X = -1) \cdot -1 \cdot 0 + \P(X = 1, Y = 1) \cdot 1 \cdot 1 + \P(X = 1, Y = -1) \cdot -1 \cdot 1 = 0\]
+So, $\cov(X, Y) = 0$. But, $X$ and $Y$ are clearly dependent, and thus this is a valid counterexample. 
+
+	% haven't learned continuous yet
+	\begin{comment}
+	Let $X \mathtt{\sim} U(-1, 1)$ and let $Y = X^2$ \newline
+	
+	We have $E[X] = \frac{-1+1}{2} = 0$ \newline
+	The pdf of $X$ is $\frac{1}{2}$, so \newline 
+	$E[Y] = E[X^2] = \int\limits_{-1}^{1}x^2f_X(x) dx = \int\limits_{-1}^{1}\frac{1}{2}x^2 = \frac{1}{3}$ \newline
+	We also have $E[XY] = E[X * X^2] = E[X^3] = \int\limits_{-1}^{1}x^3f_X(x) dx
+	=  \int\limits_{-1}^{1}\frac{1}{2}x^3 dx  = 0$ \newline
+	cov$(X, Y) = E[XY] - E[X]E[Y] = 0 - 0 * \frac{1}{3} = 0$ \newline
+	However, $Y$ is clearly dependent on $X$ as $Y = X^2$, and thus we provide a valid counterexample. 
+	\end{comment}
+\end{solution}
+\end{enumerate}

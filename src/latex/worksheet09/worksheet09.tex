@@ -3,8 +3,8 @@
 
 %%% Change these %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \discnumber{9}
-\title{\textsc{Variance, Independence, Joint Distributions, Conidtional Expectation}}
-\date{April 2 - 4, 2018}
+\title{\textsc{Variance, Joint Distributions, Covariance}}
+\date{Oct 29 - Nov 2, 2018}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -15,22 +15,51 @@
 
 %%% Include topics here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% add section about independence, covariance, correlation (take from last worksheet) 
-% multiple RV -- conditional exp??
+\section{Variance}
+\subsection{Introduction}
+\subimport{../../topics/expectation_variance/problems/}{intro_var.tex}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/expectation_variance/problems/}{tf.tex}
+\subimport{../../topics/expectation_variance/problems/}{basic_var_proof.tex}
+\subimport{../../topics/expectation_variance/problems/}{var_proof.tex}
+\subimport{../../topics/expectation_variance/problems/}{coins_dice.tex}
+\subimport{../../topics/expectation_variance/problems/}{solo_cup.tex}
+\end {questions}
+
+\section{Independence, Joint Distributions}
+\subsection{Introduction}
+\subimport{../../topics/joint_distributions/problems/}{intro.tex}
+\subsection{Questions}
+\begin{questions}
+\subimport{../../topics/expectation_variance/problems/}{coins_mul_dice.tex}
+\subimport{../../topics/expectation_variance/problems/}{books.tex}
+%\subimport{../../topics/expectation_variance/problems/}{sum_of_var.tex}
+%\subimport{../../topics/expectation_variance/problems/}{1_over_i.tex}
+\subimport{../../topics/joint_distributions/problems/}{probability_distribution.tex}
+\subimport{../../topics/joint_distributions/problems/}{children.tex}
+% not covering conditional expectation of RVs 
+%\subimport{../../topics/conditional_expectation/problems/}{intro.tex}
+% \subimport{../../topics/conditional_expectation/problems/}{given_prob_dist.tex}
+% \subimport{../../topics/conditional_expectation/problems/}{exp_of_cond_exp.tex}
+% \subimport{../../topics/conditional_expectation/problems/}{take_out_h.tex}
+\end{questions}
 
 \section{Covariance}
 \subsection{Introduction}
 \subimport{../../topics/covariance/problems/}{intro.tex}
 \subsection{Questions}
 \begin{questions}
+\subimport{../../topics/covariance/problems/}{cov_proof.tex}
 \subimport{../../topics/covariance/problems/}{cov_x_x.tex}
-\subimport{../../topics/covariance/problems/}{fah_kat.tex}
+%\subimport{../../topics/covariance/problems/}{sum.tex}
+%\subimport{../../topics/covariance/problems/}{fah_kat.tex}
 \subimport{../../topics/covariance/problems/}{ind_variables.tex}
-\subimport{../../topics/covariance/problems/}{ind_variables2.tex}
 \subimport{../../topics/covariance/problems/}{roll_2_dice.tex}
-\subimport{../../topics/covariance/problems/}{sum.tex}
 \end{questions}
 
+% not covering LLSE this year 
+\begin{comment}
 \section{Linear Least Squares Estimator}
 \subimport{../../topics/llse/problems/}{intro.tex}
 \subsection{Questions}
@@ -38,30 +67,7 @@
 \subimport{../../topics/llse/problems/}{find_L.tex}
 \subimport{../../topics/llse/problems/}{find_from_graph.tex}
 \end{questions}
-
-
-\section{Conditional Expectation}
-\subsection{Introduction}
-\subimport{../../topics/conditional_expectation/problems/}{intro.tex}
-\subsection{Questions}
-\begin{questions}
-\subimport{../../topics/conditional_expectation/problems/}{given_prob_dist.tex}
-\subimport{../../topics/conditional_expectation/problems/}{exp_of_cond_exp.tex}
-\subimport{../../topics/conditional_expectation/problems/}{take_out_h.tex}
-\end{questions}
-
-% non continuous versions of this...take from my discussion or something 
-
-\section{Joint Densities}
-\subsection{Questions}
-\begin{questions}
-	\subimport{../../topics/joint_densities/problems/}{basics.tex}
-	\subimport{../../topics/joint_densities/problems/}{exam.tex}
-	\subimport{../../topics/joint_densities/problems/}{section.tex}
-\end{questions}
-
-
-
+\end{comment}
 
 
 \end{document}

@@ -1,0 +1,18 @@
+\question Two friends have n books they would like to read. Each friend independently picks a random permutation of the books and reads them in that order, one book per week (for n consecutive weeks). Let X be the number of weeks in which both friends are reading the same book. Compute \var(X).
+\begin{solution}[2cm]
+Let $X_i,...,X_n$ be indicator variables such that $X_i = 1$ if both friends are reading the same book on week i. Thus, we have
+\[\E(X_i) = \P[X_i = 1] = \frac{1}{n}.\]
+From linear of expectation,
+\[\E(X) = \sum_{i= 1}^{n} \E(X_i) = n*\frac{1}{n} = 1.\]
+We know that 
+\[\E(X^2) = \sum_{i}^{n} \E(X_i^2) + \sum_{i \neq j} \E(X_i*X_j).\]
+Since $X_i$ is an indicator variable, $\E(X_i)^2 = 1^2*\P[X_i= 1] = \frac{1}{n}, and$ 
+\[\sum_{i}^{n} \E(X_i^2) = n*\frac{1}{n} = 1. \]
+Because $X_i$ and $X_j$ are indicator variables, we're interested in 
+\[\P[X_i = X_j = 1] = \P[X_i = 1 \cap X_j = 1] = \frac{1}{n(n-1)}\], 
+the probability that all three friends pick the same book on week $i$ and week $j$. Thus, 
+\[\sum_{i \neq j} \E(X_i*X_j) = n(n-1)*\frac{1}{n(n-1)} = 1.\]
+Finally, we 
+\[\var(X) = \E(X^2) - \E(X)^2 = 1 + 1 - 1^2 = 1.\]
+\end{solution}
+

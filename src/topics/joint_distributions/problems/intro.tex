@@ -1,0 +1,20 @@
+{\tabulinesep=1mm
+\begin{tabu}{|p{16cm} |}
+\hline
+\textbf{Joint Distribution}: We use a joint distribution to describe a probability distribution over multiple random variables. A joint distribution is characterized by its joint probability mass function: 
+\[p_{xy}(x,y) =\P(X=x \cap Y=y).\]
+We can recover the \textit{marginal} distributions:
+\[p_x(x) = p(X=x) = \sum_y \P(X=x, Y=y) = \sum_y p_{xy}(x, y)\] 
+\[p_y(y) = \P(Y=y) = \sum_x \P(X=x, y) = \sum_x p_{xy}(x,y).\]
+Note that in general, we can't get the joint distribution just by knowing the marginal distributions: in order to get the joint distribution, we also have to know how the variables relate to each other. However, if two random variables are \textbf{independent}, then we know that 
+\[p_{xy}(x,y) = \P(X=x \cap Y=y) = \P(X=x)\P(Y=y) = p_x(x)p_y(y).\]
+We can say the following about the expectations and variances of independent variables:
+ \[\E[X*Y] = \E[X]*\E[Y]\]
+ \[\var(X+Y) = \var(X) + \var(Y)\]
+These facts are proved in the notes.
+
+\\
+\hline
+\end{tabu}
+
+}
