@@ -1,14 +1,17 @@
 {\tabulinesep=1mm
 \begin{tabu}{|p{16cm} |}
 \hline
-\vspace{2 mm}
-\textbf{Markov's Inequality } \newline
+\textbf{Markov's Inequality:} \\
 For a non-negative random variable $X$ with expectation $\E(X) = \mu$, 
 and any  $\alpha > 0$:
 \[\P[X \geq \alpha] \leq \frac{\E(X)}{\alpha}\]
-\vspace{2 mm}
-\textbf{Proof of Markov's Inequality}\newline
+\\
+\hline
+\end{tabu}
+}
 
+\begin{comment}
+\textbf{Proof of Markov's Inequality}\newline
 \[E(X) = \sum_a a * Pr[X = a] \]
 \[\geq \sum_{a \geq \alpha} a *  Pr[X = a] \]
 \[\geq \alpha \sum_{a \geq \alpha} Pr[X = a] \]
@@ -29,9 +32,4 @@ We take expectation on both sides to get:
 \[E[Y] \leq \frac{E[X]}{a} \]
 Now we note that the expectation of an indicator random variable is the probability that it is equal to $1$ and we have the proof:
 \[P(X \geq a) \leq \frac{E[X]}{a} \]
-\vspace{2 mm}
-\\
-\hline
-\end{tabu}
-}
-
+\end{comment}

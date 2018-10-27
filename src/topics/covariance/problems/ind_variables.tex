@@ -1,19 +1,19 @@
 \question 
 \begin{enumerate}[label=(\alph*)]
 \item Prove that if $X$ and $Y$ are independent, then $\cov(X, Y) = 0$.
-\begin{solution}[.75cm]
+\begin{solution}[.5cm]
 	\[\cov(X, Y) = \E(X \cdot Y) - \E(X) \cdot \E(Y)\]
 Remember that a property of expectation is that if $X$ and $Y$ are 
 independent, then $\E(XY) = \E(X) \cdot \E(Y)$, so we get 0 when we subtract. 
 \end{solution}
 \item Prove that the converse is not necessarily true. In other words, give an example of $2$ random variables whose covariance is $0$ but are not independent.
-\begin{solution}[1cm]
+\begin{solution}[.75cm]
 There are a number of examples that can be used. \\
 One possible solution: Let $X$ be a random variable that with uniform probability space \{-1, 1\}. Let $Y$ be a random variable such that $Y = 0$ if $X = -1$ and $Y$ is -1 or 1 with equal probability if $X = 1$. \\
-\[\cov(X, Y) = \E(X \cdot Y) - \E(X) \cdot \E(Y)\]
+\[\cov(X, Y) = \E(XY) - \E(X) \cdot \E(Y)\]
 $\E(X)$ and $\E(Y)$ = 0, so: 
-\[\cov(X, Y) = \E(X \cdot Y)\]
-\[\E(X \cdot Y) = \P(X = -1) \cdot -1 \cdot 0 + \P(X = 1, Y = 1) \cdot 1 \cdot 1 + \P(X = 1, Y = -1) \cdot -1 \cdot 1 = 0\]
+\[\cov(X, Y) = \E(XY)\]
+\[= \P(X=-1)(-1)(0) + \P(X=1, Y=1)(1)(1) + \P(X=1, Y=-1)(-1)(1) = 0\]
 So, $\cov(X, Y) = 0$. But, $X$ and $Y$ are clearly dependent, and thus this is a valid counterexample. 
 
 	% haven't learned continuous yet

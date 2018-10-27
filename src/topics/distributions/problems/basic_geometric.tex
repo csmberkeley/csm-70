@@ -1,0 +1,15 @@
+\question Andy Go-es to class 20\% of days. What is the probability that:
+\begin{enumerate}[label=(\alph*)]
+    \item the first time he goes to class is the $5^{th}$ day of school? 
+    \begin{solution} [.5 cm]
+    $(1-0.2)^40.2$
+    \end{solution}
+    \item the first time he goes to class is after the $5^{th}$ day?
+    \begin{solution} [.5 cm]
+    Let $X \sim Geom(n,p)$. \[ p = \sum_{i = 6}^{\infty} (1-0.2)^{x-1}0.2\] We can solve this using the sum of an infinite geometric series, OR we can consider the following approach: in order for him to go to class after the $5^{th}$ day, all he has to do is fail to go to class for 5 days in a row. This probability is $(1-0.2)^5 = 0.32$. In general: $P(X>k) = (1-p)^k$.
+    \end{solution}
+    \item He goes to class on the $5^{th}$ day or before? 
+    \begin{solution} [.5 cm]
+    Use the complement of the last question. $p = 1-(1-0.2)^5 = 0.68$. In general: $P(X\leq k) = 1-(1-p)^k$. 
+    \end{solution}
+\end{enumerate}

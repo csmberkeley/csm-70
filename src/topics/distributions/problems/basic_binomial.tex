@@ -1,0 +1,12 @@
+\question Say that the Cleveland Browns have probability $p = 0.15$ chance of winning a football game. Assume that each game is independent from the last. The football regular season has 16 games.
+\begin{enumerate}[label=(\alph*)]
+    \item Write an expression for the probability that they win between $6$ and $8$ games during the course of a season. 
+    \begin{solution} [.5 cm]
+    \[\binom{16}{6}(0.15)^6(0.85)^{10} + \binom{16}{7}(0.15)^7(0.85)^9 + \binom{16}{8}(0.15)^8(0.85)^8\]
+    \end{solution}
+    \item Find the probability that they win at least one game during the course of a season. 
+    \begin{solution} [.5 cm]
+    We could sum up the probabilities that they win 1 game, 2 games, etc. or, we could find the probability that they win 0 games and subtract that from 1. \[p = 1 - 0.85^{16} = .92\] 
+    So even if they just have a 15\% chance of winning  a single game, they still have a 92\% chance of winning a game over the course of a season. Given that the Browns had 2 consecutive $0-16$, win-less seasons, think about just how bad they must have been ! :)
+    \end{solution}
+\end{enumerate}

@@ -1,17 +1,32 @@
-\vspace{2 mm}
-\textbf{Poisson Distribution:} Pois($\lambda$)
+{\tabulinesep=1mm
+\begin{tabu}{|p{16cm} |}
+\hline
+\textbf{Poisson Distribution:} Pois($\lambda$) \\
 The Poisson distribution is an approximation of the binomial distribution under two conditions:
 \begin{itemize}
 	\item{$n$ is very large}
 	\item{$p$ is very small}
 \end{itemize}
 
-Let $\lambda = np$ represent the "rate" at which some event occurs. We usually use this distribution when these events are rare, such as a lightbulb failing. 
+Let $\lambda = np$ represent the "rate" at which some event occurs. We usually use this distribution when these events are rare. 
 
 The probability of $k$ occurrences is 
 $$ \P[X = k] = \frac{e^{-\lambda} * \lambda^k}{k!} $$
 
-It turns out that the expectation and variance of the Poisson distribution are both equal to $\lambda$. This will be clear after we walk through the derivation of the Poisson distribution.
+\textit{Expectation}: \\
+Since $\E(X) = np$ for the binomial distribution, and we set $\lambda = np$, our expectation is $\E(X) = \lambda$.
+ 
+\textit{Variance}: \\
+For a binomial distribution, $\var(X) = np(1-p)$, which looks like $\lambda (1-p)$. However, we started with the assumption that $p$ is very small, so we can assume $(1-p) \approx 1$ and thus $\lambda (1-p) \approx \lambda$. Therefore, $\var(X) = \lambda$. 
+\\
+\hline
+\end{tabu}
+}
+
+% Derivation of distribution 
+\begin{comment}
+It turns out that the expectation and variance of the Poisson distribution are both equal to $\lambda$. 
+This will be clear after we walk through the derivation of the Poisson distribution.
 
 \textit{Derivation}: \\
 Recall, $\lambda = np$. Also, recall from calculus we have $\lim_{n \rightarrow \infty} \left(1 + \frac{x}{n}\right)^n = e^x$, implying that $\lim_{n \rightarrow \infty} \left(1 -\frac{\alpha}{n}\right)^n = e^{- \alpha}$. We will also use the fact that for large $n$, $\frac{n!}{(n-k)!} \approx n^k$. We will use these facts below.
@@ -21,11 +36,12 @@ Recall, $\lambda = np$. Also, recall from calculus we have $\lim_{n \rightarrow 
 &\approx \frac{n^k * p^k}{k!} * (1 - \frac{\lambda}{n})^{n-k} \\
 &\approx \frac{\lambda^k * e^{-\lambda}}{k!}
 \end{align}
-
 Since we started with a binomial distribution, our expectation and variance should remain the same.
+\end{comment}
 
-\textit{Expectation}: \\
-Since the expectation of a binomial is $np$, and we set $\lambda = np$, our expectation is also $E(X) = np$. We can also show this from scratch:
+% Derivation of expectation
+ \begin{comment}
+We can also show this from scratch:
 
 \begin{align*}
 \E(X) &= \sum_{k = 0}^{\infty} k* \frac{e^{-\lambda} * \lambda^k}{k!} \\ \nonumber
@@ -35,6 +51,4 @@ Since the expectation of a binomial is $np$, and we set $\lambda = np$, our expe
 &= e^{-\lambda} * \lambda * e^{\lambda} \\
 &= \lambda 
 \end{align*}
-
-\textit{Variance}: \\
-For variance, it is much easier to start with the binomial case and reason from there. The variance of a binomial is $np(1-p)$, which looks like $\lambda (1-p)$. However, we started with the assumption that $p$ is very small, so we can assume $(1-p)$ is very close to $1$ and thus $\lambda (1-p)$ is very close to $\lambda$. Therefore, $var(X) = \lambda$. 
+\end{comment}
