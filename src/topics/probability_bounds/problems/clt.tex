@@ -1,7 +1,6 @@
-\question \textbf{Coin Flipping}\newline
-Suppose you have two coins, one that has heads on both sides and another that has tails on both sides. You pick one of the two coins uniformly at random and flip it. You repeat this process $400$ times, each time picking one of the two coins uniformly at random and then flipping it, for a total of $400$ flips. \newline 
+\question Suppose you have two coins, one that has heads on both sides and another that has tails on both sides. You pick one of the two coins uniformly at random and flip it. You repeat this process $400$ times, each time picking one of the two coins uniformly at random and then flipping it, for a total of $400$ flips. \newline 
 Use the CLT to approximate the probability of getting more than 220 heads.
-\begin{solution}[3cm]
+\begin{solution}[2.5cm]
 Let $X$ be the number of heads we get. We have a $\frac{1}{2}$ probability of getting the coin with $2$ heads and thus getting a head and we have a $\frac{1}{2}$ probability of getting the coin with $2$ tails and not getting heads. Thus $X \mathtt{\sim} \mathrm{Bin}(400, \frac{1}{2})$. \newline
 Now, we know that $E[X] = 400 * \frac{1}{2} = 200$ and $\mathrm{Var}(X) = 400 * \frac{1}{2} * (1-\frac{1}{2}) = 100$, so standard deviation $\sigma = \sqrt{100} = 10$ \newline 
 Using CLT, we approximate $\frac{X - E[X]}{\sigma} = \frac{X - 200}{10}$ as $Z \mathtt{\sim}N(0, 1)$ \newline

@@ -5,8 +5,8 @@
 
 %%% Change these %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \discnumber{11}
-\title{\textsc{Inequalities, LLSE}}
-\date{April 16-18, 2018}
+\title{\textsc{Continuous Probability}}
+\date{November 12-16, 2018}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -18,13 +18,14 @@
 %%% Include topics here %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Continuous Probability}
-
+\subsection{Introduction}
+\subimport{../../topics/continuous_probability/problems/}{intro.tex}
 \subsection{Questions}
 \begin{questions}
     \subimport{../../topics/continuous_probability/problems/}{valid_pdf.tex}
-    \subimport{../../topics/continuous_probability/problems/}{finding_cts_prob.tex} 
+    %\subimport{../../topics/continuous_probability/problems/}{finding_cts_prob.tex} 
     \subimport{../../topics/continuous_probability/problems/}{find_valid_ab.tex}
-    \subimport{../../topics/continuous_probability/problems/}{exp_var.tex}
+    \subimport{../../topics/continuous_probability/problems/}{exp_var.tex} % removed part c of this question
     \subimport{../../topics/continuous_probability/problems/}{disk.tex}
 \end{questions}
 
@@ -33,31 +34,23 @@
 \subimport{../../topics/continuous_distributions/problems/}{intro.tex}
 \subsection{Questions}
 \begin{questions}
-    \subimport{../../topics/continuous_distributions/problems/}{office_hours.tex}
-    \subimport{../../topics/continuous_distributions/problems/}{bay_bridge.tex}
-    \subimport{../../topics/continuous_distributions/problems/}{hydra.tex}
+    % add uniform example here 
+    % \subimport{../../topics/continuous_distributions/problems/}{office_hours.tex}
+    \subimport{../../topics/continuous_distributions/problems/}{bay_bridge.tex} 
+    \subimport{../../topics/continuous_distributions/problems/}{hydra.tex}  
+    \subimport{../../topics/probability_bounds/problems/}{clt.tex}
 \end{questions} 
 
-\section{More Continuous Practice}
-\subsection{Questions}
-\begin{questions}
-	\subimport{../../topics/continuous_probability/problems/}{joint_uniform.tex}
-	\subimport{../../topics/continuous_probability/problems/}{joint_uniform2.tex}
-\end{questions}
-
-
 \section{Joint Densities}
+\subsection{Introduction}
+	\subimport{../../topics/joint_densities/problems/}{intro.tex}
 \subsection{Questions}
 \begin{questions}
 	\subimport{../../topics/joint_densities/problems/}{basics.tex}
+	\subimport{../../topics/continuous_probability/problems/}{joint_uniform.tex}
 	\subimport{../../topics/joint_densities/problems/}{exam.tex}
-	\subimport{../../topics/joint_densities/problems/}{section.tex}
-\end{questions}
-\section{Normal Distribution}
-\subimport{../../topics/continuous_distributions/problems/}{gaussian.tex}
-\subsection{Questions}
-\begin{questions}
-\subimport{../../topics/probability_bounds/problems/}{clt.tex}
+	%\subimport{../../topics/joint_densities/problems/}{section.tex}
+	\subimport{../../topics/joint_densities/problems/}{sum.tex}
 \end{questions}
 
 

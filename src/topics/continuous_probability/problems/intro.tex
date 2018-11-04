@@ -1,0 +1,16 @@
+{\tabulinesep=1mm
+\begin{tabu}{|p{16cm} |}
+\hline
+When quantities are real-valued or "continuous", the number of sample points $\omega$ in their probability space $\Omega$ is uncountably infinite. So, for any $\omega$, $\P(\omega) = 0$.  \\
+As such, when working with continuous random variables, instead of specifying $\P[X = a]$, we specify $\P[a \leq X \leq b]$ for some interval [a, b]:
+\[\P[a \leq X \leq b]  = \int_{a}^{b} f(x) dx\]
+The function f is known as the probability density function (PDF). f is a non-negative function over the reals whose total integral is equal to 1 ($\int_{-\infty}^{\infty} f(x) = 1$). \\
+We also define the cumulative distribution function (CDF), the function $\P[X \leq a]$:
+\[\P[X \leq a] = \int_{-\infty}^{a} f(x)dx \]
+Expectation and variance of continuous R.V:
+\[\E[X] = \int_{-\infty}^{\infty} xf(x)dx \]
+\[\var[X] = \int_{-\infty}^{\infty} x^2f(x)dx - (\int_{-\infty}^{\infty} xf(x)dx)^2 \]
+\\
+\hline
+\end{tabu}
+}

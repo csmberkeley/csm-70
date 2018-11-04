@@ -19,12 +19,14 @@ This is the continuous analogue of the geometric distribution, meaning that this
 \item $\E(x) = \frac{1}{\lambda}$
 \end{itemize} 
 
-\textbf{Gaussian (Normal) Distribution}: $N(\mu, \sigma^2)$
+\textbf{Gaussian (Normal) Distribution}: $N(\mu, \sigma^2)$ 
 \begin{itemize}
-    \item The CLT states that any unspecified distribution of events will converge to the Gaussian as n increases
     \item Mean: $\mu$
     \item Variance: $\sigma^2$
     \item $f(x | \mu, \sigma^2) = \frac{1}{\sigma\sqrt(2\pi)} e^{\frac{-(x-\mu)^2}{2\sigma^2}}$
+     \item The CLT (Central Limit Theorem) states that any unspecified distribution of events will converge to the Gaussian as n increases. For a sequence of iid random variables: $X_1, X_2, ... , X_n$, each with mean $\mu$ and variance $\sigma^2, \newline$
+	\[\frac{X_1 + X_2 + ... + X_n - n\mu}{\sigma \sqrt{n}} \] 
+	approaches the standard normal distribution $Z \mathtt{\sim} N(0, 1)$ 
 \end{itemize}
 
 \end{minipage}}

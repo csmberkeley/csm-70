@@ -1,48 +1,11 @@
 \question There are certain jellyfish that don’t age called hydra. The 
 chances of them dying is purely due to environmental factors, which 
 we’ll call $\lambda$. On average, 2 hydras die within 1 day.
-\begin{enumerate}[label=(\alph*)]
-\item What is the probability you have to wait at least 5 days for a 
+What is the probability you have to wait at least 5 days for a 
 hydra dies?
-\begin{solution}[2.5cm]
+\begin{solution}[1cm]
 $\lambda = 2, X \sim Exp(2)$ \\
 $P(X\geq 5) = \int_5^\infty \lambda e^{-\lambda x} dx = \int_5^\infty 
 2e^{-2x} dx = -e^{-2x} |_5^\infty = e^{-10} = \frac{1}{e^{10}}$
 \end{solution}
 
-\item
-Let X and Y be two independent discrete random variables. Derive a 
-formula for expressing the distribution of the sum S = X + Y in terms 
-of the distributions of X and of Y.
-\begin{solution}[2.5cm]
-$P(S=m) = \sum_{i=-\infty}^\infty P(X = i)P(Y=m-i)$
-\end{solution}
-
-\item  Suppose now X and Y are continuous random variables with 
-densities f and g respectively (X,Y still independent). Based on part 
-(a) and your understanding of continuous random variables, give an 
-educated guess for the formula of the density of S = X +Y in terms of f and g.
-\begin{solution}[2cm]
-$ h(t) = \int_{-\infty}^\infty f(s) g(t-s) ds $
-\end{solution}
-
-\item Use your formula in part (c) to compute the density of S if X 
-and Y have both uniform densities on [0, a].
-\begin{solution}
-Since $f(s)$ is $\frac{1}{a}$ only when $s \in [0, a]$, and 0 everywhere 
-else, we can simplify it to $h(t) = \int_0^a \frac{1}{a} g(t-s) ds$. 
-Consider the case where $t \in [0,a]$. Then $g(t-s)$ will be nonzero 
-(and equal to $\frac{1}{a}$ only when $s \leq t$), so we can further 
-simplify $h(t) = \int_0^t \frac{1}{a} \frac{1}{a} ds = \frac{t}{a^2}$ . \\
-Now consider the case where $t \in (a, 2a]$. If so, then $g(t-s)$ is 
-always $\frac{1}{a}$ if $t-s\geq 0$ and $t-s\leq a$ and 0 otherwise. 
-Equivalently, we make sure that $s\leq t$ and $s \geq t-a$. However, 
-recall that we already assumed that $s \leq a$ (or else $f(s) = 0$), 
-so we must restrict ourselves further. Thus, we get $h(t) = \in_{t-a}^a 
-\frac{1}{a^2} ds = \frac{1}{a^2} (2a-t)$. So overall, $h(t) = 
-\frac{t}{a^2}$ if $t \in [0, a]$, and $h(t) = 2a-t$ if $t \in (a, 2a]$, 
-and $h(t) = 0$ everywhere else
-
-\end{solution}
-
-\end{enumerate}
