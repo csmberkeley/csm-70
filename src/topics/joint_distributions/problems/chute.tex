@@ -1,0 +1,74 @@
+ \question You have a waste-disposal chute that trash is falling through. At the end of the chute, trash either falls into the right bin with probability $3/4$, or the left bin with probability $1/4$. The right bin can hold 3 pieces of trash, while the left bin can only hold 1 piece. Being the sanitary student that you are, if you notice that a bin is filled, you block off the chute so that no more trash can fall through the chute.
+\\
+For this problem, let $R$ be the pieces that fall into the right bin, and $L$ be the number of pieces that fall into the left bin.
+\begin{enumerate}
+\item Determine the sample space (all possible outcomes of the falling trash), along with the probability of each sample point.
+\begin{solution}[.75 cm]
+The sample space is the set of all sequences the trash can fall in. $\omega = \{l, rl, rrl, rrr\}$
+\begin{gather*}
+    P(l) = \frac{1}{4}\\
+    P(rl) = \frac{3}{4}\cdot\frac{1}{4} = \frac{3}{16}\\
+    P(rrl) = \frac{3}{4}\cdot\frac{3}{4}\cdot\frac{1}{4} = \frac{9}{64}\\
+    P(rrr) = \frac{3}{4}\cdot\frac{3}{4}\cdot\frac{3}{4}=\frac{27}{64}
+\end{gather*}
+\end{solution}
+
+\item Compute the Joint Distribution of $L$ and $R$. Fill in the table:
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+    & R=0 & R=1 & R=2 & R=3 \\ \hline
+L=0 &     &     &     &     \\ \hline
+L=1 &     &     &     &     \\ \hline
+\end{tabular}
+\end{center}
+\begin{solution}[.75 cm]
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+    & R=0 & R=1 & R=2 & R=3 \\ \hline
+L=0 &0     &   0  & 0    &  27/64   \\ \hline
+L=1 &   1/4  &  3/16   &   9/64  &    0 \\ \hline
+\end{tabular}
+\end{center}
+\end{solution}
+
+\item Use the Joint Distribution to compute the Marginal Distribution of $L$ and $R$. Fill out the tables.
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+P(L=0) & P(L=1) \\ \hline
+       &        \\ \hline
+\end{tabular}
+\begin{tabular}{|l|l|l|l|}
+\hline
+P(R=0) & P(R=1) & P(R=2) & P(R=3) \\ \hline
+       &        &        &        \\ \hline
+\end{tabular}
+\end{center}
+\begin{solution}[.75 cm]
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+P(L=0) & P(L=1) \\ \hline
+   27/64    &    37/64    \\ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+P(R=0) & P(R=1) & P(R=2) & P(R=3) \\ \hline
+   1/4    &  3/16      &  9/64      &     27/64   \\ \hline
+\end{tabular}
+\end{center}
+\end{solution}
+\item Are $L$ and $R$ independent?\\
+\begin{solution}[3 mm]
+No. we just have to find some $l,r$ such that $P(L=l, R=r_) \neq P(L=l)\cdot P(R=r).$ For $l = 0$, $r = 0$, We find that this is the case.
+\end{solution}
+\item What is the total expected number of pieces of trash that will fall before you have to empty the bins?
+\begin{solution}[1 cm]
+\[E[Total] = 1\cdot\frac{1}{4} + 2\cdot\frac{3}{16} + 3\cdot(\frac{9}{64} + \frac{27}{64}) = 2.3125\]
+\end{solution}
+\end{enumerate}
+
