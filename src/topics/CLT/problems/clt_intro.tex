@@ -1,0 +1,14 @@
+\fbox{\begin{minipage}{16.3cm}
+\vspace{2 mm}
+\textbf{Gaussian (Normal) Distribution}: $N(\mu, \sigma^2)$ 
+\begin{itemize}
+    \item Mean: $\mu$
+    \item Variance: $\sigma^2$
+    \item $f(x | \mu, \sigma^2) = \frac{1}{\sigma\sqrt(2\pi)} e^{\frac{-(x-\mu)^2}{2\sigma^2}}$
+    \item The CDF of the standard normal ($\mathcal{N}(0,1)$) is often written as $\phi(Z)$. If $X \sim\mathcal{N}(0,1), P(X\leq z) = \phi(z)$
+    \item \textbf{TIP:}  if $X\sim\mathcal{N}(\mu, \sigma^2)$, define $X' = \frac{X - \mu}{\sigma}$. Now, $X' \sim\mathcal{N}(0,1)$. Note the following are equivalent: \[P(X<c) = P(X' < \frac{c-\mu}{\sigma}) = \phi(\frac{c-\mu}{\sigma})\]  
+    \item \textbf{The Central Limit Theorem: }If we have a collection of $n$ independent random variables, $X_1, X_2, ..., X_n$ all with mean = $\mu$ and finite variance $\sigma^2$ Define \[A_n = \frac{1}{n}\sum_{i=1}^n X_i.\] or the average of the random variables. 
+As $n \to \infty$, not only does $A_n \to \mu$, but also $A_n \sim
+\mathcal{N}(\text{E}[A_n], Var(A_n)) \sim \mathcal{N}(\mu,\frac{\sigma^2}{n})$. 
+\end{itemize}
+\end{minipage}}

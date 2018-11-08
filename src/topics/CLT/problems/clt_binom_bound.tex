@@ -1,0 +1,22 @@
+\question Suppose you have two coins, one that has heads on both sides and another that has tails on both sides. You pick one of the two coins uniformly at random and flip it. You repeat this process $n$ = $400$ times, each time picking one of the two coins uniformly at random and then flipping it, for a total of $400$ flips. Let $X$ be the number heads you get.\newline 
+\begin{enumerate}[label=(\alph*)]
+\item How is $X$ distributed?
+\begin{solution}[1cm]
+This is essentially the same thing as flipping a single fair coin, so we have $X \mathtt{\sim} \mathrm{Bin}(400, \frac{1}{2})$.
+\end{solution}
+\item Why doesn't distribution of $X$ look normal, even as $n \to \infty?$  Define a new random variable $T$ in terms of $X$ that does.
+\begin{solution}[1cm] 
+$X$ is the sum of many independent random variables (Each flip can be considered as an independent Bernoulli random variable, with $p = 0.5$, and $X$ is the sum of these variables). However remember to use the CLT we have to normalize by the total number of variables we are adding together. Define $T = \frac{X}{n} = \frac{X}{400}$
+\end{solution}   
+\item What is the expected value and variance of $T$?
+\begin{solution}[1cm]
+E[$T] = 0.5$, by linearity of expectation. Var($T$) = Var($\frac{X}{400}$)  = $\frac{\text{Var}(X)}{400^2} = \frac{400(0.5)(1-0.5)}{400^2} = 0.000625$
+\end{solution}
+\item Use the CLT to approximate the probability that you get more than 220 heads. You may find it useful to know that $\phi(2) = 0.9772$
+\begin{solution}[1cm] 
+We can approximate $T$ with $\mathcal{N}(0.5, 0.000625)$. From the tips on how to use the normal distribution, $T' = \frac{T-0.5}{\sqrt{0.000625}}$ is distributed like the standard normal. 
+$P(X>220) = P(T>\frac{220}{400}) = 1 - P(T \leq 0.55) = 1 - P(T' \leq \frac{0.55-0.5}{.025}) = 1 - \phi(2) = 0.0228$.
+\end{solution}
+
+\end{enumerate}
+

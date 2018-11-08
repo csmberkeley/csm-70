@@ -4,6 +4,10 @@ this point from the center of the disk. We will find the probability
 density function of this random variable.
 
 \begin{enumerate}[label=(\alph*)]
+\item Why is $R$ not $U(0,1)$?
+\begin{solution}[0.5cm]
+We can think of it somewhat in areas. There are more points that have larger radius than smaller radius, and since the likelihood of selecting any particular point is equal, it is more likely to get a larger radius than a smaller one.
+\end{solution}
 \item What is (should be) the probability that $R$ is between 0 and 
 $\frac{1}{2}$? Why?
 \begin{solution}[.5cm]
@@ -25,5 +29,9 @@ rather than the entire circle, is $\frac{\pi(b^2 - a^2)}{\pi} = b^2 - a^2$.
 satisfies these same probabilities?
 \begin{solution}[.5cm] $f(x) = 2x$ because $\int_{a}^{b} f(x)dx = 
 [x^2]_{a}^{b} = b^2 - a^2$. \end{solution}
+\item Now say that $R \sim U(0,1)$. Are you more or less likely to hit closer to the center than before?
+\begin{solution}
+More likely. Let's evaluate the probability that $R\le c, c \in (0,1)$ in both cases. In the first case, $P(R\le c) = c^2$. In the second case, $P(R\le c) = c$. For $c \in (0,1), c \ge c^2$
+\end{solution}
 
 \end{enumerate}
