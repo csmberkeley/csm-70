@@ -13,7 +13,7 @@ $P$, $\{X_n\}_{n=0}^{\infty}$) \newline
 \begin{center}
 \begin{tabular}{l l}
 \state & Set of states \\
-$\pi_0$ & Initial probability distribution \\
+$\pi_0$ & Initial probability distribution (the chance you are in any of the states) \\
 $P$ & Transition probability matrix \\
 $\{X_n\}_{n=0}^{\infty}$ & Sequence of random variables where: \\
 
@@ -43,12 +43,12 @@ $d(i)$.
 A distribution $\pi$ is \textbf{invariant} for the transition probability $P$ if it satisfies the following \textbf{balance equations}
 \[\pi \cdot P = \pi.\]
 
-\textbf{Theorem 24.3:} A finite irreducible Markov chain has a unique 
-invariant distribution.
-\textbf{Theorem 24.4:} All irreducible and aperiodic Markov chains 
-converge to the unique invariant distribution. If a Markov chain is 
-finite and reducible, the amount of time spent in each state approaches 
-the invariant distribution as n grows large
+\textbf{Theorem 1: }A finite irreducible Markov chain has a unique 
+invariant distribution.\\
+\textbf{Theorem 2: }All irreducible and aperiodic Markov chains 
+converge to the unique invariant distribution - i.e, after a large amount of steps, the chance you are in any given
+state is given by the invariant distribution. \\
+\textbf{Theorem 3: }If a Markov chain is  finite and reducible, the amount of time spent in each state approaches the invariant distribution as n grows large
 
 Equations that model what will happen at the next step are called 
 \textbf{first step equations}
