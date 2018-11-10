@@ -27,12 +27,12 @@ which gets rid of the infinite sum.
 \begin{solution}[2cm]
 "Receiving exactly 15 emails in one day" is an event, and either it happens or it does not. We will use the geometric distribution to model this. First, though, we need to find the probability $p$:
 
-$$p = e^{-15} \frac{12^{15}}{15!} \approx 0.003604$$
+$$p = e^{-12} \frac{12^{15}}{15!} \approx 0.07239$$
 
 Now, for days April 1, April 2, ... April 7, we know that we receive some number of emails that isn't 15, followed by receiving exactly 15 emails on April 8. This corresponds to 7 failures and 1 success in the geometric distribution:
 
 $$P(\text{April 8th is first day with exactly 15 emails}) = (1-p)^7 p$$
-$$\approx 0.996396^7 * 0.003604 \approx 0.003514$$
+$$ \approx 0.04278$$
 \end{solution}
 
 \item Now, calculate the probability that April 8th is the first day that we receive \textbf{at least} 15 emails.
