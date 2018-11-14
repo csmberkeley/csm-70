@@ -1,15 +1,16 @@
-\fbox{\begin{minipage}{16.3cm}
-\vspace{2mm}
-P is a \textbf{transition probability matrix} if:
+{\tabulinesep=1mm
+\begin{tabu}{|p{16cm} |}
+\hline
+P is a \textbf{transition probability matrix} if: 
 \begin{enumerate}
 \item All of the entries are non-negative.
 \item The sum of entries in each row is 1.
 \end{enumerate}
 
-\vspace{.5cm}
+\vspace{.2cm}
 
 A \textbf{Markov chain} is defined by four things: (\state, $\pi_0$, 
-$P$, $\{X_n\}_{n=0}^{\infty}$) \newline
+$P$, $\{X_n\}_{n=0}^{\infty}$) 
 \begin{center}
 \begin{tabular}{l l}
 \state & Set of states \\
@@ -23,12 +24,12 @@ $\{X_n\}_{n=0}^{\infty}$ & Sequence of random variables where: \\
 \end{tabular}
 \end{center}
 
-\vspace{.5cm}
+\vspace{.2cm}
 
 A Markov chain is \textbf{irreducible} if we can go from any state to 
 any other state, possibly in multiple steps.
 
-\vspace{.5cm}
+\vspace{.2cm}
 
 Periodicity has to do with the period of occurrence of a state. If a state $s$ has period 2, the Markov chain can be in $s$ at every other time point. If a state has period 1, it's aperiodic; otherwise, it's periodic. More quantitatively, define value \textbf{$d(i)$} for each state $i$ as:
 \[d(i) \coloneqq g.c.d\{n > 0 | P^n(i, i) = \P[X_n = i | X_0 = i] > 0 \}, 
@@ -37,12 +38,18 @@ i \in \state\]
 If $d(i) = 1$, then the Markov chain is \textbf{aperiodic}. If $d(i) 
 \neq 1$, then the Markov chain is periodic and its \textbf{period} is 
 $d(i)$.
+\\
+\hline
+\end{tabu}
+}
 
-\vspace{.5cm}
+
+
+\fbox{\begin{minipage}{16.3cm}
+\vspace{2mm}
 
 A distribution $\pi$ is \textbf{invariant} for the transition probability $P$ if it satisfies the following \textbf{balance equations}
 \[\pi \cdot P = \pi.\]
-
 \textbf{Theorem 1: }A finite irreducible Markov chain has a unique 
 invariant distribution.\\
 \textbf{Theorem 2: }All irreducible and aperiodic Markov chains 
@@ -66,7 +73,8 @@ Denote $\beta(i, j)$ as the expected amount of time it would take to
 move from $i$ to $j$.
 $\beta(0, 1) = 1 + \frac{1}{2} \cdot \beta(0, 1)$
 $\beta(1, 1) = 0$
-
 \end{minipage}
 
 \end{minipage}}
+
+
